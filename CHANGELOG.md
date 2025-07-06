@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-07-06)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Chores
+
+* configure new SDK language ([0003a6d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0003a6d5554d73c3b9de5e75762137b3e481d556))
+* update SDK settings ([4e4750d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/4e4750da4af7924e80afd05b118bbf636af7718b))
+
 ## 0.1.0-alpha.1 (2025-07-06)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
