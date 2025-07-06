@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'bluehive/internal/uploads';
-import { toFile } from 'bluehive/core/uploads';
+import { multipartFormRequestOptions, createForm } from '@bluehive/sdk/internal/uploads';
+import { toFile } from '@bluehive/sdk/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

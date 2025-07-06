@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'bluehive/core/api-promise';
+import { APIPromise } from '@bluehive/sdk/core/api-promise';
 
 import util from 'node:util';
-import BlueHive from 'bluehive';
-import { APIUserAbortError } from 'bluehive';
+import BlueHive from '@bluehive/sdk';
+import { APIUserAbortError } from '@bluehive/sdk';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
