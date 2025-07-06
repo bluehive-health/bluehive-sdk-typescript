@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/database/health',
+  operationId: 'checkDatabaseHealth',
 };
 
 export const tool: Tool = {
   name: 'check_health_database',
-  description: 'Check MongoDB database health and connectivity',
+  description: 'Check MongoDB database connectivity and retrieve health statistics.',
   inputSchema: {
     type: 'object',
     properties: {},

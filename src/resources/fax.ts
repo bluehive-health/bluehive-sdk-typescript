@@ -7,21 +7,21 @@ import { path } from '../internal/utils/path';
 
 export class Fax extends APIResource {
   /**
-   * Get list of available fax providers and their configuration status
+   * Get a list of available fax providers and their configuration status.
    */
   listProviders(options?: RequestOptions): APIPromise<FaxListProvidersResponse> {
     return this._client.get('/v1/fax/providers', options);
   }
 
   /**
-   * Get the status of a fax by its ID
+   * Retrieve the current status and details of a fax by its ID.
    */
   retrieveStatus(id: string, options?: RequestOptions): APIPromise<FaxRetrieveStatusResponse> {
     return this._client.get(path`/v1/fax/status/${id}`, options);
   }
 
   /**
-   * Send a fax document to a specified number
+   * Send a fax document to a specified number using the configured fax provider.
    */
   send(body: FaxSendParams, options?: RequestOptions): APIPromise<FaxSendResponse> {
     return this._client.post('/v1/fax/send', { body, ...options });

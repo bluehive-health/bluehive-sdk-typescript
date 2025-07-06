@@ -6,7 +6,7 @@ import { RequestOptions } from '../internal/request-options';
 
 export class Database extends APIResource {
   /**
-   * Check MongoDB database health and connectivity
+   * Check MongoDB database connectivity and retrieve health statistics.
    */
   checkHealth(options?: RequestOptions): APIPromise<DatabaseCheckHealthResponse> {
     return this._client.get('/v1/database/health', options);
