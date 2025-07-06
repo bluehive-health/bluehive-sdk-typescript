@@ -1,8 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Bluehive } from 'bluehive';
+import { BlueHive } from 'bluehive';
 
-const { stringifyQuery } = Bluehive.prototype as any;
+const { stringifyQuery } = BlueHive.prototype as any;
 
 describe(stringifyQuery, () => {
   for (const [input, expected] of [

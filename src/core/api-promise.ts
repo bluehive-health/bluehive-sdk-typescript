@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type Bluehive } from '../client';
+import { type BlueHive } from '../client';
 
 import { type PromiseOrValue } from '../internal/types';
 import { APIResponseProps, defaultParseResponse } from '../internal/parse';
@@ -11,13 +11,13 @@ import { APIResponseProps, defaultParseResponse } from '../internal/parse';
  */
 export class APIPromise<T> extends Promise<T> {
   private parsedPromise: Promise<T> | undefined;
-  #client: Bluehive;
+  #client: BlueHive;
 
   constructor(
-    client: Bluehive,
+    client: BlueHive,
     private responsePromise: Promise<APIResponseProps>,
     private parseResponse: (
-      client: Bluehive,
+      client: BlueHive,
       props: APIResponseProps,
     ) => PromiseOrValue<T> = defaultParseResponse,
   ) {
