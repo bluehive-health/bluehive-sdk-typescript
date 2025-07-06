@@ -1,5 +1,5 @@
 {
-  "name": "bluehive",
+  "name": "@bluehive/sdk",
   "version": "0.1.0-alpha.1",
   "description": "The official TypeScript library for the BlueHive API",
   "author": "BlueHive <wreiske@bluehive.com>",
@@ -47,8 +47,8 @@
     "typescript": "5.8.3"
   },
   "imports": {
-    "bluehive": ".",
-    "bluehive/*": "./src/*"
+    "@bluehive/sdk": ".",
+    "@bluehive/sdk/*": "./src/*"
   },
   "exports": {
     ".": {
