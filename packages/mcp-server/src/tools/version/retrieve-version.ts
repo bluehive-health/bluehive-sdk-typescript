@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/version',
+  operationId: 'getApiVersion',
 };
 
 export const tool: Tool = {
   name: 'retrieve_version',
-  description: 'Get current API version',
+  description: 'Retrieve the current version of the BlueHive API.',
   inputSchema: {
     type: 'object',
     properties: {},

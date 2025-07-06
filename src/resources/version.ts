@@ -6,7 +6,7 @@ import { RequestOptions } from '../internal/request-options';
 
 export class Version extends APIResource {
   /**
-   * Get current API version
+   * Retrieve the current version of the BlueHive API.
    */
   retrieve(options?: RequestOptions): APIPromise<VersionRetrieveResponse> {
     return this._client.get('/v1/version', options);

@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'post',
   httpPath: '/v1/fax/send',
+  operationId: 'sendFax',
 };
 
 export const tool: Tool = {
   name: 'send_fax',
-  description: 'Send a fax document to a specified number',
+  description: 'Send a fax document to a specified number using the configured fax provider.',
   inputSchema: {
     type: 'object',
     properties: {
