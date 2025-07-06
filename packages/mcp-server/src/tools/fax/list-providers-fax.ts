@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/fax/providers',
+  operationId: 'listFaxProviders',
 };
 
 export const tool: Tool = {
   name: 'list_providers_fax',
-  description: 'Get list of available fax providers and their configuration status',
+  description: 'Get a list of available fax providers and their configuration status.',
   inputSchema: {
     type: 'object',
     properties: {},

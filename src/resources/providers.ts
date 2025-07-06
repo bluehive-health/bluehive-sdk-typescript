@@ -6,7 +6,7 @@ import { RequestOptions } from '../internal/request-options';
 
 export class Providers extends APIResource {
   /**
-   * Look up providers by NPI number, first name, or last name
+   * Search for healthcare providers by NPI number, name, or location proximity.
    */
   lookup(
     query: ProviderLookupParams | null | undefined = {},

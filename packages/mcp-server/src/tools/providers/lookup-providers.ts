@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/providers/lookup',
+  operationId: 'searchProviders',
 };
 
 export const tool: Tool = {
   name: 'lookup_providers',
-  description: 'Look up providers by NPI number, first name, or last name',
+  description: 'Search for healthcare providers by NPI number, name, or location proximity.',
   inputSchema: {
     type: 'object',
     properties: {

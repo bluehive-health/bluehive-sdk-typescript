@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/health',
+  operationId: 'healthCheck',
 };
 
 export const tool: Tool = {
   name: 'check_health',
-  description: 'Health check endpoint',
+  description: 'Check the service health and ensure the API is running properly.',
   inputSchema: {
     type: 'object',
     properties: {},

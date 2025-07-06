@@ -12,11 +12,12 @@ export const metadata: Metadata = {
   tags: [],
   httpMethod: 'get',
   httpPath: '/v1/fax/status/{id}',
+  operationId: 'getFaxStatus',
 };
 
 export const tool: Tool = {
   name: 'retrieve_status_fax',
-  description: 'Get the status of a fax by its ID',
+  description: 'Retrieve the current status and details of a fax by its ID.',
   inputSchema: {
     type: 'object',
     properties: {

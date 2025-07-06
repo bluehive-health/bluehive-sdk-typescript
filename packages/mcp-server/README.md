@@ -167,22 +167,22 @@ The following tools are available in this MCP server.
 
 ### Resource `health`:
 
-- `check_health` (`read`): Health check endpoint
+- `check_health` (`read`): Check the service health and ensure the API is running properly.
 
 ### Resource `version`:
 
-- `retrieve_version` (`read`): Get current API version
+- `retrieve_version` (`read`): Retrieve the current version of the BlueHive API.
 
 ### Resource `providers`:
 
-- `lookup_providers` (`read`): Look up providers by NPI number, first name, or last name
+- `lookup_providers` (`read`): Search for healthcare providers by NPI number, name, or location proximity.
 
 ### Resource `database`:
 
-- `check_health_database` (`read`): Check MongoDB database health and connectivity
+- `check_health_database` (`read`): Check MongoDB database connectivity and retrieve health statistics.
 
 ### Resource `fax`:
 
-- `list_providers_fax` (`read`): Get list of available fax providers and their configuration status
-- `retrieve_status_fax` (`read`): Get the status of a fax by its ID
-- `send_fax` (`write`): Send a fax document to a specified number
+- `list_providers_fax` (`read`): Get a list of available fax providers and their configuration status.
+- `retrieve_status_fax` (`read`): Retrieve the current status and details of a fax by its ID.
+- `send_fax` (`write`): Send a fax document to a specified number using the configured fax provider.
