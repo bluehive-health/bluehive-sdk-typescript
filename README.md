@@ -1,8 +1,8 @@
-# Bluehive TypeScript API Library
+# BlueHive TypeScript API Library
 
 [![NPM version](<https://img.shields.io/npm/v/bluehive.svg?label=npm%20(stable)>)](https://npmjs.org/package/bluehive) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/bluehive)
 
-This library provides convenient access to the Bluehive REST API from server-side TypeScript or JavaScript.
+This library provides convenient access to the BlueHive REST API from server-side TypeScript or JavaScript.
 
 The REST API documentation can be found on [docs.bluehive.com](https://docs.bluehive.com/). The full API of this library can be found in [api.md](api.md).
 
@@ -11,7 +11,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:stainless-sdks/bluehive-typescript.git
+npm install git+ssh://git@github.com:bluehive-health/bluehive-sdk-typescript.git
 ```
 
 > [!NOTE]
@@ -23,9 +23,9 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 
-const client = new Bluehive({
+const client = new BlueHive({
   apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted
 });
 
@@ -40,13 +40,13 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 
-const client = new Bluehive({
+const client = new BlueHive({
   apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted
 });
 
-const response: Bluehive.HealthCheckResponse = await client.health.check();
+const response: BlueHive.HealthCheckResponse = await client.health.check();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -60,7 +60,7 @@ a subclass of `APIError` will be thrown:
 <!-- prettier-ignore -->
 ```ts
 const response = await client.health.check().catch(async (err) => {
-  if (err instanceof Bluehive.APIError) {
+  if (err instanceof BlueHive.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
     console.log(err.headers); // {server: 'nginx', ...}
@@ -94,7 +94,7 @@ You can use the `maxRetries` option to configure or disable this:
 <!-- prettier-ignore -->
 ```js
 // Configure the default for all requests:
-const client = new Bluehive({
+const client = new BlueHive({
   maxRetries: 0, // default is 2
 });
 
@@ -111,7 +111,7 @@ Requests time out after 1 minute by default. You can configure this with a `time
 <!-- prettier-ignore -->
 ```ts
 // Configure the default for all requests:
-const client = new Bluehive({
+const client = new BlueHive({
   timeout: 20 * 1000, // 20 seconds (default is 1 minute)
 });
 
@@ -137,7 +137,7 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 
 <!-- prettier-ignore -->
 ```ts
-const client = new Bluehive();
+const client = new BlueHive();
 
 const response = await client.health.check().asResponse();
 console.log(response.headers.get('X-My-Header'));
@@ -158,13 +158,13 @@ console.log(response.status);
 
 The log level can be configured in two ways:
 
-1. Via the `BLUEHIVE_LOG` environment variable
+1. Via the `BLUE_HIVE_LOG` environment variable
 2. Using the `logLevel` client option (overrides the environment variable if set)
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 
-const client = new Bluehive({
+const client = new BlueHive({
   logLevel: 'debug', // Show all log messages
 });
 ```
@@ -190,13 +190,13 @@ When providing a custom logger, the `logLevel` option still controls which messa
 below the configured level will not be sent to your logger.
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 import pino from 'pino';
 
 const logger = pino();
 
-const client = new Bluehive({
-  logger: logger.child({ name: 'Bluehive' }),
+const client = new BlueHive({
+  logger: logger.child({ name: 'BlueHive' }),
   logLevel: 'debug', // Send all messages to pino, allowing it to filter
 });
 ```
@@ -259,10 +259,10 @@ globalThis.fetch = fetch;
 Or pass it to the client:
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 import fetch from 'my-fetch';
 
-const client = new Bluehive({ fetch });
+const client = new BlueHive({ fetch });
 ```
 
 ### Fetch options
@@ -270,9 +270,9 @@ const client = new Bluehive({ fetch });
 If you want to set custom `fetch` options without overriding the `fetch` function, you can provide a `fetchOptions` object when instantiating the client or making a request. (Request-specific options override client options.)
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 
-const client = new Bluehive({
+const client = new BlueHive({
   fetchOptions: {
     // `RequestInit` options
   },
@@ -287,11 +287,11 @@ options to requests:
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/node.svg" align="top" width="18" height="21"> **Node** <sup>[[docs](https://github.com/nodejs/undici/blob/main/docs/docs/api/ProxyAgent.md#example---proxyagent-with-fetch)]</sup>
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 import * as undici from 'undici';
 
 const proxyAgent = new undici.ProxyAgent('http://localhost:8888');
-const client = new Bluehive({
+const client = new BlueHive({
   fetchOptions: {
     dispatcher: proxyAgent,
   },
@@ -301,9 +301,9 @@ const client = new Bluehive({
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/bun.svg" align="top" width="18" height="21"> **Bun** <sup>[[docs](https://bun.sh/guides/http/proxy)]</sup>
 
 ```ts
-import Bluehive from 'bluehive';
+import BlueHive from 'bluehive';
 
-const client = new Bluehive({
+const client = new BlueHive({
   fetchOptions: {
     proxy: 'http://localhost:8888',
   },
@@ -313,10 +313,10 @@ const client = new Bluehive({
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/deno.svg" align="top" width="18" height="21"> **Deno** <sup>[[docs](https://docs.deno.com/api/deno/~/Deno.createHttpClient)]</sup>
 
 ```ts
-import Bluehive from 'npm:bluehive';
+import BlueHive from 'npm:bluehive';
 
 const httpClient = Deno.createHttpClient({ proxy: { url: 'http://localhost:8888' } });
-const client = new Bluehive({
+const client = new BlueHive({
   fetchOptions: {
     client: httpClient,
   },
@@ -335,7 +335,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/bluehive-typescript/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/bluehive-health/bluehive-sdk-typescript/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
