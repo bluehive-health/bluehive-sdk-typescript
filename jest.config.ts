@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^bluehive$': '<rootDir>/src/index.ts',
-    '^bluehive/(.*)$': '<rootDir>/src/$1',
+    '^@bluehive/sdk$': '<rootDir>/src/index.ts',
+    '^@bluehive/sdk/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',
