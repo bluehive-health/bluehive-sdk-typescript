@@ -1,11 +1,11 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import type { Bluehive } from '../client';
+import type { BlueHive } from '../client';
 
 export abstract class APIResource {
-  protected _client: Bluehive;
+  protected _client: BlueHive;
 
-  constructor(client: Bluehive) {
+  constructor(client: BlueHive) {
     this._client = client;
   }
 }

@@ -49,7 +49,7 @@ export interface ClientOptions {
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
    *
-   * Defaults to process.env['BLUEHIVE_BASE_URL'].
+   * Defaults to process.env['BLUE_HIVE_BASE_URL'].
    */
   baseURL?: string | null | undefined;
 
@@ -103,7 +103,7 @@ export interface ClientOptions {
   /**
    * Set the log level.
    *
-   * Defaults to process.env['BLUEHIVE_LOG'] or 'warn' if it isn't set.
+   * Defaults to process.env['BLUE_HIVE_LOG'] or 'warn' if it isn't set.
    */
   logLevel?: LogLevel | undefined;
 
@@ -116,9 +116,9 @@ export interface ClientOptions {
 }
 
 /**
- * API Client for interfacing with the Bluehive API.
+ * API Client for interfacing with the BlueHive API.
  */
-export class Bluehive {
+export class BlueHive {
   apiKey: string;
 
   baseURL: string;
@@ -134,10 +134,10 @@ export class Bluehive {
   private _options: ClientOptions;
 
   /**
-   * API Client for interfacing with the Bluehive API.
+   * API Client for interfacing with the BlueHive API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['BLUEHIVE_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['BLUEHIVE_BASE_URL'] ?? https://api.bluehive.com] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['BLUE_HIVE_BASE_URL'] ?? https://api.bluehive.com] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {MergedRequestInit} [opts.fetchOptions] - Additional `RequestInit` options to be passed to `fetch` calls.
    * @param {Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -146,13 +146,13 @@ export class Bluehive {
    * @param {Record<string, string | undefined>} opts.defaultQuery - Default query parameters to include with every request to the API.
    */
   constructor({
-    baseURL = readEnv('BLUEHIVE_BASE_URL'),
+    baseURL = readEnv('BLUE_HIVE_BASE_URL'),
     apiKey = readEnv('BLUEHIVE_API_KEY'),
     ...opts
   }: ClientOptions = {}) {
     if (apiKey === undefined) {
-      throw new Errors.BluehiveError(
-        "The BLUEHIVE_API_KEY environment variable is missing or empty; either provide it, or instantiate the Bluehive client with an apiKey option, like new Bluehive({ apiKey: 'My API Key' }).",
+      throw new Errors.BlueHiveError(
+        "The BLUEHIVE_API_KEY environment variable is missing or empty; either provide it, or instantiate the BlueHive client with an apiKey option, like new BlueHive({ apiKey: 'My API Key' }).",
       );
     }
 
@@ -163,14 +163,14 @@ export class Bluehive {
     };
 
     this.baseURL = options.baseURL!;
-    this.timeout = options.timeout ?? Bluehive.DEFAULT_TIMEOUT /* 1 minute */;
+    this.timeout = options.timeout ?? BlueHive.DEFAULT_TIMEOUT /* 1 minute */;
     this.logger = options.logger ?? console;
     const defaultLogLevel = 'warn';
     // Set default logLevel early so that we can log a warning in parseLogLevel.
     this.logLevel = defaultLogLevel;
     this.logLevel =
       parseLogLevel(options.logLevel, 'ClientOptions.logLevel', this) ??
-      parseLogLevel(readEnv('BLUEHIVE_LOG'), "process.env['BLUEHIVE_LOG']", this) ??
+      parseLogLevel(readEnv('BLUE_HIVE_LOG'), "process.env['BLUE_HIVE_LOG']", this) ??
       defaultLogLevel;
     this.fetchOptions = options.fetchOptions;
     this.maxRetries = options.maxRetries ?? 2;
@@ -232,7 +232,7 @@ export class Bluehive {
         if (value === null) {
           return `${encodeURIComponent(key)}=`;
         }
-        throw new Errors.BluehiveError(
+        throw new Errors.BlueHiveError(
           `Cannot stringify type ${typeof value}; Expected string, number, boolean, or null. If you need to pass nested query parameters, you can manually encode them, e.g. { query: { 'foo[key1]': value1, 'foo[key2]': value2 } }, and please open a GitHub issue requesting better support for your use case.`,
         );
       })
@@ -702,10 +702,10 @@ export class Bluehive {
     }
   }
 
-  static Bluehive = this;
+  static BlueHive = this;
   static DEFAULT_TIMEOUT = 60000; // 1 minute
 
-  static BluehiveError = Errors.BluehiveError;
+  static BlueHiveError = Errors.BlueHiveError;
   static APIError = Errors.APIError;
   static APIConnectionError = Errors.APIConnectionError;
   static APIConnectionTimeoutError = Errors.APIConnectionTimeoutError;
@@ -727,12 +727,12 @@ export class Bluehive {
   database: API.Database = new API.Database(this);
   fax: API.Fax = new API.Fax(this);
 }
-Bluehive.Health = Health;
-Bluehive.Version = Version;
-Bluehive.Providers = Providers;
-Bluehive.Database = Database;
-Bluehive.Fax = Fax;
-export declare namespace Bluehive {
+BlueHive.Health = Health;
+BlueHive.Version = Version;
+BlueHive.Providers = Providers;
+BlueHive.Database = Database;
+BlueHive.Fax = Fax;
+export declare namespace BlueHive {
   export type RequestOptions = Opts.RequestOptions;
 
   export { Health as Health, type HealthCheckResponse as HealthCheckResponse };
