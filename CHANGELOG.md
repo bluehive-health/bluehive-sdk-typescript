@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-07-11)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **mcp:** support filtering tool results by a jq expression ([74ff417](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/74ff417c46b8e53ec5f40f59b7663e17599c8fa4))
+
+
+### Bug Fixes
+
+* **mcp:** relax input type for asTextContextResult ([173687b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/173687bfb69addb5ee3090b831efe08d3d3a2e45))
+
+
+### Chores
+
+* make some internal functions async ([1316105](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1316105e21109fa0c467b992e1b8ed2f320a6f4e))
+
 ## 0.1.0-alpha.2 (2025-07-06)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
