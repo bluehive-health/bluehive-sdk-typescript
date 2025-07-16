@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2025-07-16)
+
+Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
+
+### Bug Fixes
+
+* **mcp:** support jq filtering on cloudflare workers ([aea0d5f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/aea0d5ff703620b4771a4bf59b74f052f9fd3de1))
+
+
+### Chores
+
+* **mcp:** rework imports in tools ([3ff92c6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3ff92c62e05ebf18879c5095ad91d9b07fe02adc))
+
 ## 0.1.0-alpha.3 (2025-07-11)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
