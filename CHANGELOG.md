@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.5 (2025-07-18)
+
+Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
+
+### Bug Fixes
+
+* **mcp:** include required section for top-level properties and support naming transformations ([417581e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/417581e122ff14031274c07fa35b94654d7d9daf))
+
+
+### Chores
+
+* **mcp:** formatting ([ef13e96](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ef13e96cecc4f3afec481509caf2e6b15346f40e))
+* **ts:** reorder package.json imports ([b05ad5c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b05ad5cde7802ad033df6697d498f0d14c589ec1))
+
 ## 0.1.0-alpha.4 (2025-07-16)
 
 Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
