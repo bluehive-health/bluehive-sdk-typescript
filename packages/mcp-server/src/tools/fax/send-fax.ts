@@ -74,6 +74,7 @@ export const tool: Tool = {
     },
     required: ['document', 'to'],
   },
+  annotations: {},
 };
 
 export const handler = async (client: BlueHive, args: Record<string, unknown> | undefined) => {
