@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.6 (2025-07-24)
+
+Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
+
+### Chores
+
+* **internal:** codegen related update ([d996b9d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d996b9db6bbb8511ab537e3e7627cdbb54cd8e49))
+
 ## 0.1.0-alpha.5 (2025-07-18)
 
 Full Changelog: [v0.1.0-alpha.4...v0.1.0-alpha.5](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.4...v0.1.0-alpha.5)
