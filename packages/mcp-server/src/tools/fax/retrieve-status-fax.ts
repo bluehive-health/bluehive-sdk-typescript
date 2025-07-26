@@ -34,6 +34,9 @@ export const tool: Tool = {
     },
     required: ['id'],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: BlueHive, args: Record<string, unknown> | undefined) => {
