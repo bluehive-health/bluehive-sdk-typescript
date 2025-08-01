@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.7 (2025-08-01)
+
+Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
+
+### Bug Fixes
+
+* **mcp:** avoid sending `jq_filter` to base API ([bc2970c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/bc2970cc08480b06d08354f0ce627e88483a02a5))
+* **mcp:** reverse validJson capability option and limit scope ([2a7cb12](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2a7cb12d5058d19bc546b9e3ba010af64f86052f))
+
+
+### Chores
+
+* **internal:** remove redundant imports config ([cc29a12](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/cc29a12ca1195445a95ec863c638ab51b9a5759b))
+
 ## 0.1.0-alpha.6 (2025-07-26)
 
 Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
