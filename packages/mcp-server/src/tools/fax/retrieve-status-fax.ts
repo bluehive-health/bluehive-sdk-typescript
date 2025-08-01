@@ -40,8 +40,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: BlueHive, args: Record<string, unknown> | undefined) => {
-  const { id, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(args, await client.fax.retrieveStatus(id)));
+  const { id, jq_filter, ...body } = args as any;
+  return asTextContentResult(await maybeFilter(jq_filter, await client.fax.retrieveStatus(id)));
 };
 
 export default { metadata, tool, handler };
