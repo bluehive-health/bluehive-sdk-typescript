@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.8 (2025-08-02)
+
+Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
+
+### Features
+
+* **mcp:** add logging when environment variable is set ([f969623](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f9696233a4a754930a9e187753d647121f70cb31))
+
 ## 0.1.0-alpha.7 (2025-08-01)
 
 Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
