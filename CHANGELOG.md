@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.9 (2025-08-09)
+
+Full Changelog: [v0.1.0-alpha.8...v0.1.0-alpha.9](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.8...v0.1.0-alpha.9)
+
+### Features
+
+* **mcp:** add unix socket option for remote MCP ([198ba33](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/198ba3345858f01ba6124ae88fd02482a89b001c))
+
+
+### Chores
+
+* **internal:** move publish config ([83f2b9b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/83f2b9bf29ca6e8dfb04e327983e18bb3e021218))
+* **internal:** update comment in script ([5f0f8cc](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5f0f8ccab9d1e472b42fa9ba3b41fee6a91a187f))
+* **mcp:** refactor streamable http transport ([8af2363](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8af236318e712af4dad82498d0c74c8d94d85174))
+* update @stainless-api/prism-cli to v5.15.0 ([7798fc6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7798fc60e6fcebc39b895a5916dc7a8db58629ec))
+
 ## 0.1.0-alpha.8 (2025-08-06)
 
 Full Changelog: [v0.1.0-alpha.7...v0.1.0-alpha.8](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.7...v0.1.0-alpha.8)
