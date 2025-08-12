@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource database', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('checkHealth', async () => {
     const responsePromise = client.database.checkHealth();
     const rawResponse = await responsePromise.asResponse();

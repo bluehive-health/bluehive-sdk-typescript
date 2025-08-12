@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource providers', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('lookup', async () => {
     const responsePromise = client.providers.lookup();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource providers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('lookup: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
