@@ -18,6 +18,12 @@ import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
 import { Database, DatabaseCheckHealthResponse } from './resources/database';
 import {
+  EmployerCreateParams,
+  EmployerCreateResponse,
+  EmployerRetrieveResponse,
+  Employers,
+} from './resources/employers';
+import {
   Fax,
   FaxListProvidersResponse,
   FaxRetrieveStatusResponse,
@@ -25,6 +31,13 @@ import {
   FaxSendResponse,
 } from './resources/fax';
 import { Health, HealthCheckResponse } from './resources/health';
+import {
+  Hl7,
+  Hl7ProcessParams,
+  Hl7ProcessResponse,
+  Hl7SendResultsParams,
+  Hl7SendResultsResponse,
+} from './resources/hl7';
 import { ProviderLookupParams, ProviderLookupResponse, Providers } from './resources/providers';
 import { Version, VersionRetrieveResponse } from './resources/version';
 import { type Fetch } from './internal/builtin-types';
@@ -729,12 +742,16 @@ export class BlueHive {
   providers: API.Providers = new API.Providers(this);
   database: API.Database = new API.Database(this);
   fax: API.Fax = new API.Fax(this);
+  employers: API.Employers = new API.Employers(this);
+  hl7: API.Hl7 = new API.Hl7(this);
 }
 BlueHive.Health = Health;
 BlueHive.Version = Version;
 BlueHive.Providers = Providers;
 BlueHive.Database = Database;
 BlueHive.Fax = Fax;
+BlueHive.Employers = Employers;
+BlueHive.Hl7 = Hl7;
 export declare namespace BlueHive {
   export type RequestOptions = Opts.RequestOptions;
 
@@ -756,5 +773,20 @@ export declare namespace BlueHive {
     type FaxRetrieveStatusResponse as FaxRetrieveStatusResponse,
     type FaxSendResponse as FaxSendResponse,
     type FaxSendParams as FaxSendParams,
+  };
+
+  export {
+    Employers as Employers,
+    type EmployerCreateResponse as EmployerCreateResponse,
+    type EmployerRetrieveResponse as EmployerRetrieveResponse,
+    type EmployerCreateParams as EmployerCreateParams,
+  };
+
+  export {
+    Hl7 as Hl7,
+    type Hl7ProcessResponse as Hl7ProcessResponse,
+    type Hl7SendResultsResponse as Hl7SendResultsResponse,
+    type Hl7ProcessParams as Hl7ProcessParams,
+    type Hl7SendResultsParams as Hl7SendResultsParams,
   };
 }
