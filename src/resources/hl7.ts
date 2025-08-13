@@ -39,7 +39,7 @@ export type Hl7ProcessParams = Hl7ProcessParams.Variant0 | Hl7ProcessParams.Vari
 export declare namespace Hl7ProcessParams {
   export interface Variant0 {
     /**
-     * Raw HL7 message content
+     * Raw HL7 message content (for text/plain)
      */
     body?: string;
   }
