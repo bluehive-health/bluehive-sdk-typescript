@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource fax', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listProviders', async () => {
     const responsePromise = client.fax.listProviders();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource fax', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStatus', async () => {
     const responsePromise = client.fax.retrieveStatus('id');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource fax', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('send: only required params', async () => {
     const responsePromise = client.fax.send({
       document: { content: 'content', contentType: 'application/pdf' },
@@ -47,7 +47,7 @@ describe('resource fax', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('send: required and optional params', async () => {
     const response = await client.fax.send({
       document: { content: 'content', contentType: 'application/pdf', filename: 'filename' },
