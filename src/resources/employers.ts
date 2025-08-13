@@ -221,7 +221,7 @@ export interface EmployerCreateParams {
   /**
    * Additional metadata for the employer
    */
-  metadata?: { [key: string]: unknown };
+  metadata?: unknown;
 
   /**
    * Whether the employer has an onsite clinic
