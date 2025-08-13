@@ -11,6 +11,10 @@ import check_health_database from './database/check-health-database';
 import list_providers_fax from './fax/list-providers-fax';
 import retrieve_status_fax from './fax/retrieve-status-fax';
 import send_fax from './fax/send-fax';
+import create_employers from './employers/create-employers';
+import retrieve_employers from './employers/retrieve-employers';
+import process_hl7 from './hl7/process-hl7';
+import send_results_hl7 from './hl7/send-results-hl7';
 
 export const endpoints: Endpoint[] = [];
 
@@ -25,6 +29,10 @@ addEndpoint(check_health_database);
 addEndpoint(list_providers_fax);
 addEndpoint(retrieve_status_fax);
 addEndpoint(send_fax);
+addEndpoint(create_employers);
+addEndpoint(retrieve_employers);
+addEndpoint(process_hl7);
+addEndpoint(send_results_hl7);
 
 export type Filter = {
   type: 'resource' | 'operation' | 'tag' | 'tool';
