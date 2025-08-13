@@ -27,7 +27,7 @@ export const tool: Tool = {
         properties: {
           body: {
             type: 'string',
-            description: 'Raw HL7 message content',
+            description: 'Raw HL7 message content (for text/plain)',
           },
         },
         required: [],
