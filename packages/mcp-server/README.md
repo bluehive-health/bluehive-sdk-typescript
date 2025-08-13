@@ -186,3 +186,13 @@ The following tools are available in this MCP server.
 - `list_providers_fax` (`read`): Get a list of available fax providers and their configuration status.
 - `retrieve_status_fax` (`read`): Retrieve the current status and details of a fax by its ID.
 - `send_fax` (`write`): Send a fax document to a specified number using the configured fax provider.
+
+### Resource `employers`:
+
+- `create_employers` (`write`): Create a new employer in the system.
+- `retrieve_employers` (`read`): Retrieve an employer by their unique ID.
+
+### Resource `hl7`:
+
+- `process_hl7` (`write`): Process incoming HL7 messages from EHR systems
+- `send_results_hl7` (`write`): Send lab results or documents via HL7
