@@ -50,7 +50,7 @@ describe('resource employers', () => {
       checkr: { id: 'id', status: 'status' },
       demo: true,
       employeeConsent: true,
-      metadata: {},
+      metadata: { foo: 'bar' },
       onsiteClinic: true,
       website: 'website',
     });
