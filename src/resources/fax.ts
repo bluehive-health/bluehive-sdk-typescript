@@ -115,7 +115,7 @@ export interface FaxRetrieveStatusResponse {
   /**
    * Provider-specific additional data
    */
-  providerData?: unknown;
+  providerData?: { [key: string]: unknown };
 }
 
 export interface FaxSendResponse {
