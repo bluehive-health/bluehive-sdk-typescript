@@ -140,6 +140,7 @@ export const tool: Tool = {
       metadata: {
         type: 'object',
         description: 'Additional metadata for the employer',
+        additionalProperties: true,
       },
       onsiteClinic: {
         type: 'boolean',
