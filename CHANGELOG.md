@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-08-16)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Features
+
+* **api:** api update ([7694f76](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7694f76df1a124ccb2656e2f7f46fbe652cfa643))
+* **api:** api update ([3379a9c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3379a9ce233571f26f763fe17fe38d700fd5da4a))
+* **api:** api update ([5e87001](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5e870017abaf391e03f87b48594aaab35bf79505))
+* **api:** manual updates ([9d42183](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9d42183b137af176d615d9121f95abb6851e4b83))
+* **api:** manual updates ([1f2e04b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1f2e04b1d9711227deb606d8eb44b4267af7e689))
+
+
+### Bug Fixes
+
+* **mcp:** generate additionalProperties=true for map schemas to avoid validation issues ([c2d88f7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c2d88f7d89660c6b56dc42a1baafb18138e1ec3c))
+
+
+### Chores
+
+* **deps:** update dependency @types/node to v20.17.58 ([e5de0bf](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e5de0bfab1637b2199fbf7623533ad68c850e1a2))
+* **internal:** formatting change ([66a2f75](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/66a2f75cda5764d6eec850c7e8287e9e7903663c))
+* **mcp:** document remote server in README.md ([b5da081](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b5da081d4b80baa2374a076b0a0ba19ef485778e))
+* **mcp:** minor cleanup of types and package.json ([8714d75](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8714d75b52c920115659faceafaf297dd129fecc))
+* **mcp:** update README ([4d2fca8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/4d2fca899fb79ae9e494376963888053239d340e))
+
 ## 0.1.0-alpha.10 (2025-08-13)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
