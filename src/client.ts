@@ -745,6 +745,7 @@ export class BlueHive {
   employers: API.Employers = new API.Employers(this);
   hl7: API.Hl7 = new API.Hl7(this);
 }
+
 BlueHive.Health = Health;
 BlueHive.Version = Version;
 BlueHive.Providers = Providers;
@@ -752,6 +753,7 @@ BlueHive.Database = Database;
 BlueHive.Fax = Fax;
 BlueHive.Employers = Employers;
 BlueHive.Hl7 = Hl7;
+
 export declare namespace BlueHive {
   export type RequestOptions = Opts.RequestOptions;
 
