@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from '@bluehive/sdk/client';
+import { ClientOptions } from '@bluehive/sdk';
 
 export type WorkerInput = {
   opts: ClientOptions;
