@@ -126,6 +126,43 @@ over time, you can manually enable or disable certain capabilities:
 --resource=cards,accounts --operation=read --tag=kyc --no-tool=create_cards
 ```
 
+## Running remotely
+
+Launching the client with `--transport=http` launches the server as a remote server using Streamable HTTP transport. The `--port` setting can choose the port it will run on, and the `--socket` setting allows it to run on a Unix socket.
+
+Authorization can be provided via the following headers:
+| Header | Equivalent client option | Security scheme |
+| --------------------- | ------------------------ | --------------- |
+| `x-blue-hive-api-key` | `apiKey` | ApiKeyAuth |
+
+A configuration JSON for this server might look like this, assuming the server is hosted at `http://localhost:3000`:
+
+```json
+{
+  "mcpServers": {
+    "blue_hive_sdk_api": {
+      "url": "http://localhost:3000",
+      "headers": {
+        "x-blue-hive-api-key": "My API Key"
+      }
+    }
+  }
+}
+```
+
+The command-line arguments for filtering tools and specifying clients can also be used as query parameters in the URL.
+For example, to exclude specific tools while including others, use the URL:
+
+```
+http://localhost:3000?resource=cards&resource=accounts&no_tool=create_cards
+```
+
+Or, to configure for the Cursor client, with a custom max tool name length, use the URL:
+
+```
+http://localhost:3000?client=cursor&capability=tool-name-length%3D40
+```
+
 ## Importing the tools and server individually
 
 ```js
@@ -186,3 +223,13 @@ The following tools are available in this MCP server.
 - `list_providers_fax` (`read`): Get a list of available fax providers and their configuration status.
 - `retrieve_status_fax` (`read`): Retrieve the current status and details of a fax by its ID.
 - `send_fax` (`write`): Send a fax document to a specified number using the configured fax provider.
+
+### Resource `employers`:
+
+- `create_employers` (`write`): Create a new employer in the system.
+- `retrieve_employers` (`read`): Retrieve an employer by their unique ID.
+
+### Resource `hl7`:
+
+- `process_hl7` (`write`): Process incoming HL7 messages from EHR systems
+- `send_results_hl7` (`write`): Send lab results or documents via HL7
