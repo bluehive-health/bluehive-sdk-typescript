@@ -1,5 +1,45 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-08-29)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Features
+
+* **api:** api update ([7694f76](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7694f76df1a124ccb2656e2f7f46fbe652cfa643))
+* **api:** api update ([3379a9c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3379a9ce233571f26f763fe17fe38d700fd5da4a))
+* **api:** api update ([5e87001](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5e870017abaf391e03f87b48594aaab35bf79505))
+* **api:** manual updates ([9d42183](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9d42183b137af176d615d9121f95abb6851e4b83))
+* **api:** manual updates ([1f2e04b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1f2e04b1d9711227deb606d8eb44b4267af7e689))
+* **mcp:** add code execution tool ([0a98b77](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0a98b77d060d4a95387a36e1ae76c87e643bf328))
+* **mcp:** add option to infer mcp client ([ba00fba](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ba00fba96d360c4336a95b449723aaf49923bc03))
+* **mcp:** parse query string as mcp client options in mcp server ([49dd9a2](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/49dd9a2f6c72b9ff8474fd07efaeb17fb812b89d))
+
+
+### Bug Fixes
+
+* **mcp:** generate additionalProperties=true for map schemas to avoid validation issues ([c2d88f7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c2d88f7d89660c6b56dc42a1baafb18138e1ec3c))
+
+
+### Chores
+
+* add package to package.json ([9120b5a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9120b5a0ad5892418aac8cbde1e4786a4af6e023))
+* **client:** qualify global Blob ([fb7f860](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fb7f8603957fb2faab7c33877a7d87b0b161d508))
+* **deps:** update dependency @types/node to v20.17.58 ([e5de0bf](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e5de0bfab1637b2199fbf7623533ad68c850e1a2))
+* **internal:** codegen related update ([eb6a62f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/eb6a62fbd1481da8293fe871be791f01d23d4e93))
+* **internal:** codegen related update ([d9c4ded](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d9c4ded0410f085adcc47f2c4c2a22a35b5ee95e))
+* **internal:** formatting change ([66a2f75](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/66a2f75cda5764d6eec850c7e8287e9e7903663c))
+* **internal:** make mcp-server publishing public by defaut ([25392d1](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/25392d1143f46d0ff66ad0c43ffc7e2f20139e8f))
+* **internal:** refactor array check ([7fd8194](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7fd8194de68cccce3131d201227b6235fb0a36f5))
+* **internal:** update global Error reference ([17928e9](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/17928e9bfc876eb31bb4648eabd5769ac135063a))
+* **mcp:** add cors to oauth metadata route ([a860e64](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a860e646f5fc2900957ed201b2d696d171c395e2))
+* **mcp:** document remote server in README.md ([b5da081](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b5da081d4b80baa2374a076b0a0ba19ef485778e))
+* **mcp:** minor cleanup of types and package.json ([8714d75](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8714d75b52c920115659faceafaf297dd129fecc))
+* **mcp:** update package.json ([a0958a6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a0958a65e54dc9e108da218fe95fb67f9a2f938b))
+* **mcp:** update README ([4d2fca8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/4d2fca899fb79ae9e494376963888053239d340e))
+* **mcp:** update types ([7b9ffc1](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7b9ffc178cc527f8de65a84fc0f0c89777a1389e))
+* update CI script ([4ffb7df](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/4ffb7dfe47810ba88e0da44c2138a71ca75c4edd))
+
 ## 0.1.0-alpha.10 (2025-08-13)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)

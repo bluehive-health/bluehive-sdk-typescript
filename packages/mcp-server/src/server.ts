@@ -32,7 +32,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'blue_hive_sdk_api',
-      version: '0.1.0-alpha.10',
+      version: '0.1.0-alpha.11',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
