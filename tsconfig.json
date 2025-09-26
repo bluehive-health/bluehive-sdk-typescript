@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "@bluehive/sdk/*": ["src/*"],
-      "@bluehive/sdk": ["src/index.ts"]
+      "@bluehive/sdk/*": ["./src/*"],
+      "@bluehive/sdk": ["./src/index.ts"]
     },
     "noEmit": true,
 
