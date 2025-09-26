@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "@bluehive/sdk/*": ["dist/src/*"],
-      "@bluehive/sdk": ["dist/src/index.ts"]
+      "@bluehive/sdk/*": ["./dist/src/*"],
+      "@bluehive/sdk": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
