@@ -69,9 +69,7 @@ Methods:
 Types:
 
 - <code><a href="./src/resources/hl7.ts">Hl7ProcessResponse</a></code>
-- <code><a href="./src/resources/hl7.ts">Hl7SendResultsResponse</a></code>
 
 Methods:
 
 - <code title="post /v1/hl7/">client.hl7.<a href="./src/resources/hl7.ts">process</a>({ ...params }) -> string</code>
-- <code title="post /v1/hl7/results">client.hl7.<a href="./src/resources/hl7.ts">sendResults</a>({ ...params }) -> string</code>

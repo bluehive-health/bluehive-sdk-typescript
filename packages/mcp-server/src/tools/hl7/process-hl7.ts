@@ -42,6 +42,30 @@ export const tool: Tool = {
         },
         required: ['message'],
       },
+      {
+        type: 'object',
+        properties: {
+          f: {
+            type: 'string',
+          },
+          interface: {
+            type: 'string',
+          },
+          login_passwd: {
+            type: 'string',
+          },
+          login_user: {
+            type: 'string',
+          },
+          message: {
+            type: 'string',
+          },
+          message_b64: {
+            type: 'string',
+          },
+        },
+        required: [],
+      },
     ],
     properties: {
       jq_filter: {
