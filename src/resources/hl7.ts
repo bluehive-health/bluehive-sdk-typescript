@@ -15,13 +15,6 @@ export class Hl7 extends APIResource {
     const { body } = params ?? {};
     return this._client.post('/v1/hl7/', { body: body, ...options });
   }
-
-  /**
-   * Send lab results or documents via HL7
-   */
-  sendResults(body: Hl7SendResultsParams, options?: RequestOptions): APIPromise<string> {
-    return this._client.post('/v1/hl7/results', { body, ...options });
-  }
 }
 
 /**
@@ -29,12 +22,10 @@ export class Hl7 extends APIResource {
  */
 export type Hl7ProcessResponse = string;
 
-/**
- * Result of HL7 message send
- */
-export type Hl7SendResultsResponse = string;
-
-export type Hl7ProcessParams = Hl7ProcessParams.Variant0 | Hl7ProcessParams.Variant1;
+export type Hl7ProcessParams =
+  | Hl7ProcessParams.Variant0
+  | Hl7ProcessParams.Variant1
+  | Hl7ProcessParams.Variant2;
 
 export declare namespace Hl7ProcessParams {
   export interface Variant0 {
@@ -50,29 +41,24 @@ export declare namespace Hl7ProcessParams {
      */
     message: string;
   }
-}
 
-export interface Hl7SendResultsParams {
-  employeeId: string;
+  export interface Variant2 {
+    f?: string;
 
-  file: Hl7SendResultsParams.File;
-}
+    interface?: string;
 
-export namespace Hl7SendResultsParams {
-  export interface File {
-    base64: string;
+    login_passwd?: string;
 
-    name: string;
+    login_user?: string;
 
-    type: string;
+    message?: string;
+
+    message_b64?: string;
+
+    [k: string]: unknown;
   }
 }
 
 export declare namespace Hl7 {
-  export {
-    type Hl7ProcessResponse as Hl7ProcessResponse,
-    type Hl7SendResultsResponse as Hl7SendResultsResponse,
-    type Hl7ProcessParams as Hl7ProcessParams,
-    type Hl7SendResultsParams as Hl7SendResultsParams,
-  };
+  export { type Hl7ProcessResponse as Hl7ProcessResponse, type Hl7ProcessParams as Hl7ProcessParams };
 }
