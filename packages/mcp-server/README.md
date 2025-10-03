@@ -226,8 +226,8 @@ The following tools are available in this MCP server.
 
 ### Resource `employers`:
 
-- `create_employers` (`write`): Create a new employer in the system.
-- `retrieve_employers` (`read`): Retrieve an employer by their unique ID.
+- `create_employers` (`write`): Create Employer
+- `retrieve_employers` (`read`): Get Employer
 
 ### Resource `hl7`:
 
