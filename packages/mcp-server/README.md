@@ -232,4 +232,3 @@ The following tools are available in this MCP server.
 ### Resource `hl7`:
 
 - `process_hl7` (`write`): Process incoming HL7 messages from EHR systems
-- `send_results_hl7` (`write`): Send lab results or documents via HL7

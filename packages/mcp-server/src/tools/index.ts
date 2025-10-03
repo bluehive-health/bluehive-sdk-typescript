@@ -14,7 +14,6 @@ import send_fax from './fax/send-fax';
 import create_employers from './employers/create-employers';
 import retrieve_employers from './employers/retrieve-employers';
 import process_hl7 from './hl7/process-hl7';
-import send_results_hl7 from './hl7/send-results-hl7';
 
 export const endpoints: Endpoint[] = [];
 
@@ -32,7 +31,6 @@ addEndpoint(send_fax);
 addEndpoint(create_employers);
 addEndpoint(retrieve_employers);
 addEndpoint(process_hl7);
-addEndpoint(send_results_hl7);
 
 export type Filter = {
   type: 'resource' | 'operation' | 'tag' | 'tool';
