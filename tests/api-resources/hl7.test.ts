@@ -23,9 +23,19 @@ describe('resource hl7', () => {
   // Prism tests are disabled
   test.skip('process: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.hl7.process({ body: 'body' }, { path: '/_stainless_unknown_path' })).rejects.toThrow(
-      BlueHive.NotFoundError,
-    );
+    await expect(
+      client.hl7.process(
+        {
+          f: 'f',
+          interface: 'interface',
+          login_passwd: 'login_passwd',
+          login_user: 'login_user',
+          message: 'message',
+          message_b64: 'message_b64',
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(BlueHive.NotFoundError);
   });
 
   // Prism tests are disabled
