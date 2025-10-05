@@ -25,7 +25,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "blue_hive_sdk_api": {
       "command": "npx",
-      "args": ["-y", "@bluehive/sdk-mcp", "--client=claude", "--tools=all"],
+      "args": ["-y", "@bluehive/sdk-mcp", "--client=claude", "--tools=dynamic"],
       "env": {
         "BLUEHIVE_API_KEY": "My API Key"
       }
@@ -228,7 +228,42 @@ The following tools are available in this MCP server.
 
 - `create_employers` (`write`): Create Employer
 - `retrieve_employers` (`read`): Get Employer
+- `list_employers` (`read`): Get Employers for Current User
+
+### Resource `employers.service_bundles`:
+
+- `create_employers_service_bundles` (`write`): Create Service Bundle
+- `retrieve_employers_service_bundles` (`read`): Get Service Bundle
+- `update_employers_service_bundles` (`write`): Update Service Bundle
+- `list_employers_service_bundles` (`read`): List Service Bundles
+- `delete_employers_service_bundles` (`write`): Delete Service Bundle
 
 ### Resource `hl7`:
 
 - `process_hl7` (`write`): Process incoming HL7 messages from EHR systems
+
+### Resource `orders`:
+
+- `create_orders` (`write`): Create orders for consumers (self-pay or employer-sponsored), employers, or bulk orders. Consolidates functionality from legacy Order.createOrder and Order.SendOrder methods.
+- `retrieve_orders` (`read`): Retrieve details for a specific order
+- `update_orders` (`write`): Update order details and associated order items. Allows updating order status, metadata, and modifying order item services.
+- `retrieve_results_orders` (`read`): Retrieve results for an order. Supports filtering by serviceId, status, date window, and pagination.
+- `schedule_appointment_orders` (`write`): Schedule an appointment or walk-in for an existing order. Sends HL7 SIU^S12 message for appointment booking.
+- `send_for_employee_orders` (`write`): Send an order for a specific employee. Requires API key, login token, and user ID. This endpoint specifically handles employer-to-employee order sending.
+- `update_status_orders` (`write`): Update the status of an existing order
+- `upload_results_orders` (`write`): Upload test results for a specific order item. Supports both existing fileIds and base64 encoded files. Requires order access code and employee verification.
+
+### Resource `employees`:
+
+- `create_employees` (`write`): Create a new employee in the system.
+- `retrieve_employees` (`read`): Retrieve an employee by their unique ID.
+- `update_employees` (`write`): Update an existing employee in the system.
+- `list_employees` (`read`): List all employees for a given employer with pagination.
+- `delete_employees` (`write`): Delete an employee from the system. Cannot delete employees with existing orders.
+- `link_user_employees` (`write`): Link an employee to a user account with specified roles
+- `unlink_user_employees` (`write`): Remove the link between an employee and a user account
+
+### Resource `integrations`:
+
+- `list_integrations` (`read`): Returns the current brand integrations object keyed by integration name (empty object if none). Brand resolved via x-brand-id header.
+- `check_active_integrations` (`read`): Returns true if the named integration is active for the given brand (brand resolved via x-brand-id header).

@@ -18,11 +18,20 @@ import * as API from './resources/index';
 import { APIPromise } from './core/api-promise';
 import { Database, DatabaseCheckHealthResponse } from './resources/database';
 import {
-  EmployerCreateParams,
-  EmployerCreateResponse,
-  EmployerRetrieveResponse,
-  Employers,
-} from './resources/employers';
+  EmployeeCreateParams,
+  EmployeeCreateResponse,
+  EmployeeDeleteResponse,
+  EmployeeLinkUserParams,
+  EmployeeLinkUserResponse,
+  EmployeeListParams,
+  EmployeeListResponse,
+  EmployeeRetrieveResponse,
+  EmployeeUnlinkUserParams,
+  EmployeeUnlinkUserResponse,
+  EmployeeUpdateParams,
+  EmployeeUpdateResponse,
+  Employees,
+} from './resources/employees';
 import {
   Fax,
   FaxListProvidersResponse,
@@ -32,8 +41,41 @@ import {
 } from './resources/fax';
 import { Health, HealthCheckResponse } from './resources/health';
 import { Hl7, Hl7ProcessParams, Hl7ProcessResponse } from './resources/hl7';
+import {
+  IntegrationCheckActiveParams,
+  IntegrationCheckActiveResponse,
+  IntegrationListParams,
+  IntegrationListResponse,
+  Integrations,
+} from './resources/integrations';
+import {
+  OrderCreateParams,
+  OrderCreateResponse,
+  OrderRetrieveResponse,
+  OrderRetrieveResultsParams,
+  OrderRetrieveResultsResponse,
+  OrderScheduleAppointmentParams,
+  OrderScheduleAppointmentResponse,
+  OrderSendForEmployeeParams,
+  OrderSendForEmployeeResponse,
+  OrderUpdateParams,
+  OrderUpdateResponse,
+  OrderUpdateStatusParams,
+  OrderUpdateStatusResponse,
+  OrderUploadResultsParams,
+  OrderUploadResultsResponse,
+  Orders,
+} from './resources/orders';
 import { ProviderLookupParams, ProviderLookupResponse, Providers } from './resources/providers';
 import { Version, VersionRetrieveResponse } from './resources/version';
+import {
+  EmployerCreateParams,
+  EmployerCreateResponse,
+  EmployerListParams,
+  EmployerListResponse,
+  EmployerRetrieveResponse,
+  Employers,
+} from './resources/employers/employers';
 import { type Fetch } from './internal/builtin-types';
 import { HeadersLike, NullableHeaders, buildHeaders } from './internal/headers';
 import { FinalRequestOptions, RequestOptions } from './internal/request-options';
@@ -738,6 +780,9 @@ export class BlueHive {
   fax: API.Fax = new API.Fax(this);
   employers: API.Employers = new API.Employers(this);
   hl7: API.Hl7 = new API.Hl7(this);
+  orders: API.Orders = new API.Orders(this);
+  employees: API.Employees = new API.Employees(this);
+  integrations: API.Integrations = new API.Integrations(this);
 }
 
 BlueHive.Health = Health;
@@ -747,6 +792,9 @@ BlueHive.Database = Database;
 BlueHive.Fax = Fax;
 BlueHive.Employers = Employers;
 BlueHive.Hl7 = Hl7;
+BlueHive.Orders = Orders;
+BlueHive.Employees = Employees;
+BlueHive.Integrations = Integrations;
 
 export declare namespace BlueHive {
   export type RequestOptions = Opts.RequestOptions;
@@ -775,12 +823,57 @@ export declare namespace BlueHive {
     Employers as Employers,
     type EmployerCreateResponse as EmployerCreateResponse,
     type EmployerRetrieveResponse as EmployerRetrieveResponse,
+    type EmployerListResponse as EmployerListResponse,
     type EmployerCreateParams as EmployerCreateParams,
+    type EmployerListParams as EmployerListParams,
   };
 
   export {
     Hl7 as Hl7,
     type Hl7ProcessResponse as Hl7ProcessResponse,
     type Hl7ProcessParams as Hl7ProcessParams,
+  };
+
+  export {
+    Orders as Orders,
+    type OrderCreateResponse as OrderCreateResponse,
+    type OrderRetrieveResponse as OrderRetrieveResponse,
+    type OrderUpdateResponse as OrderUpdateResponse,
+    type OrderRetrieveResultsResponse as OrderRetrieveResultsResponse,
+    type OrderScheduleAppointmentResponse as OrderScheduleAppointmentResponse,
+    type OrderSendForEmployeeResponse as OrderSendForEmployeeResponse,
+    type OrderUpdateStatusResponse as OrderUpdateStatusResponse,
+    type OrderUploadResultsResponse as OrderUploadResultsResponse,
+    type OrderCreateParams as OrderCreateParams,
+    type OrderUpdateParams as OrderUpdateParams,
+    type OrderRetrieveResultsParams as OrderRetrieveResultsParams,
+    type OrderScheduleAppointmentParams as OrderScheduleAppointmentParams,
+    type OrderSendForEmployeeParams as OrderSendForEmployeeParams,
+    type OrderUpdateStatusParams as OrderUpdateStatusParams,
+    type OrderUploadResultsParams as OrderUploadResultsParams,
+  };
+
+  export {
+    Employees as Employees,
+    type EmployeeCreateResponse as EmployeeCreateResponse,
+    type EmployeeRetrieveResponse as EmployeeRetrieveResponse,
+    type EmployeeUpdateResponse as EmployeeUpdateResponse,
+    type EmployeeListResponse as EmployeeListResponse,
+    type EmployeeDeleteResponse as EmployeeDeleteResponse,
+    type EmployeeLinkUserResponse as EmployeeLinkUserResponse,
+    type EmployeeUnlinkUserResponse as EmployeeUnlinkUserResponse,
+    type EmployeeCreateParams as EmployeeCreateParams,
+    type EmployeeUpdateParams as EmployeeUpdateParams,
+    type EmployeeListParams as EmployeeListParams,
+    type EmployeeLinkUserParams as EmployeeLinkUserParams,
+    type EmployeeUnlinkUserParams as EmployeeUnlinkUserParams,
+  };
+
+  export {
+    Integrations as Integrations,
+    type IntegrationListResponse as IntegrationListResponse,
+    type IntegrationCheckActiveResponse as IntegrationCheckActiveResponse,
+    type IntegrationListParams as IntegrationListParams,
+    type IntegrationCheckActiveParams as IntegrationCheckActiveParams,
   };
 }
