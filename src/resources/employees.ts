@@ -53,10 +53,11 @@ export class Employees extends APIResource {
    * Remove the link between an employee and a user account
    */
   unlinkUser(
-    body: EmployeeUnlinkUserParams,
+    params: EmployeeUnlinkUserParams,
     options?: RequestOptions,
   ): APIPromise<EmployeeUnlinkUserResponse> {
-    return this._client.delete('/v1/employees/unlink-user', { body, ...options });
+    const { employeeId, userId } = params;
+    return this._client.delete('/v1/employees/unlink-user', { query: { employeeId, userId }, ...options });
   }
 }
 
