@@ -7,15 +7,10 @@ const client = new BlueHive({
   baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
 });
 
-describe('resource employers', () => {
+describe('resource integrations', () => {
   // Prism tests are disabled
-  test.skip('create: only required params', async () => {
-    const responsePromise = client.employers.create({
-      address: { city: 'city', state: 'state', street1: 'street1', zipCode: 'zipCode' },
-      email: 'dev@stainless.com',
-      name: 'name',
-      phones: [{ number: 'number' }],
-    });
+  test.skip('list: only required params', async () => {
+    const responsePromise = client.integrations.list({ 'x-brand-id': 'x' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -26,32 +21,13 @@ describe('resource employers', () => {
   });
 
   // Prism tests are disabled
-  test.skip('create: required and optional params', async () => {
-    const response = await client.employers.create({
-      address: {
-        city: 'city',
-        state: 'state',
-        street1: 'street1',
-        zipCode: 'zipCode',
-        country: 'country',
-        street2: 'street2',
-      },
-      email: 'dev@stainless.com',
-      name: 'name',
-      phones: [{ number: 'number', primary: true, type: 'type' }],
-      billingAddress: { foo: 'bar' },
-      checkr: { id: 'id', status: 'status' },
-      demo: true,
-      employeeConsent: true,
-      metadata: { foo: 'bar' },
-      onsiteClinic: true,
-      website: 'website',
-    });
+  test.skip('list: required and optional params', async () => {
+    const response = await client.integrations.list({ 'x-brand-id': 'x' });
   });
 
   // Prism tests are disabled
-  test.skip('retrieve', async () => {
-    const responsePromise = client.employers.retrieve('employerId');
+  test.skip('checkActive: only required params', async () => {
+    const responsePromise = client.integrations.checkActive('name', { 'x-brand-id': 'x' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -59,5 +35,10 @@ describe('resource employers', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
+  });
+
+  // Prism tests are disabled
+  test.skip('checkActive: required and optional params', async () => {
+    const response = await client.integrations.checkActive('name', { 'x-brand-id': 'x' });
   });
 });
