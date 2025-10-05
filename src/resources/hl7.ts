@@ -6,14 +6,11 @@ import { RequestOptions } from '../internal/request-options';
 
 export class Hl7 extends APIResource {
   /**
-   * Process incoming HL7 messages from EHR systems
+   * Process incoming HL7 messages from EHR systems. Accepts JSON with "message"
+   * field, raw text/plain HL7 content, or form-encoded data.
    */
-  process(
-    params: Hl7ProcessParams | null | undefined = undefined,
-    options?: RequestOptions,
-  ): APIPromise<string> {
-    const { body } = params ?? {};
-    return this._client.post('/v1/hl7/', { body: body, ...options });
+  process(body: Hl7ProcessParams | null | undefined = {}, options?: RequestOptions): APIPromise<string> {
+    return this._client.post('/v1/hl7/', { body, ...options });
   }
 
   /**
@@ -34,41 +31,38 @@ export type Hl7ProcessResponse = string;
  */
 export type Hl7SendResultsResponse = string;
 
-export type Hl7ProcessParams =
-  | Hl7ProcessParams.Variant0
-  | Hl7ProcessParams.Variant1
-  | Hl7ProcessParams.Variant2;
+export interface Hl7ProcessParams {
+  /**
+   * Form field (legacy support)
+   */
+  f?: string;
 
-export declare namespace Hl7ProcessParams {
-  export interface Variant0 {
-    /**
-     * Raw HL7 message content (for text/plain)
-     */
-    body?: string;
-  }
+  /**
+   * Interface identifier (legacy support)
+   */
+  interface?: string;
 
-  export interface Variant1 {
-    /**
-     * HL7 message content
-     */
-    message: string;
-  }
+  /**
+   * Login password (legacy support)
+   */
+  login_passwd?: string;
 
-  export interface Variant2 {
-    f?: string;
+  /**
+   * Login user (legacy support)
+   */
+  login_user?: string;
 
-    interface?: string;
+  /**
+   * HL7 message content - the primary way to send HL7 data
+   */
+  message?: string;
 
-    login_passwd?: string;
+  /**
+   * Base64 encoded HL7 message (legacy support)
+   */
+  message_b64?: string;
 
-    login_user?: string;
-
-    message?: string;
-
-    message_b64?: string;
-
-    [k: string]: unknown;
-  }
+  [k: string]: unknown;
 }
 
 export interface Hl7SendResultsParams {
