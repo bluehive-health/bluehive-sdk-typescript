@@ -20,6 +20,7 @@ import update_employers_service_bundles from './employers/service-bundles/update
 import list_employers_service_bundles from './employers/service-bundles/list-employers-service-bundles';
 import delete_employers_service_bundles from './employers/service-bundles/delete-employers-service-bundles';
 import process_hl7 from './hl7/process-hl7';
+import send_results_hl7 from './hl7/send-results-hl7';
 import create_orders from './orders/create-orders';
 import retrieve_orders from './orders/retrieve-orders';
 import update_orders from './orders/update-orders';
@@ -60,6 +61,7 @@ addEndpoint(update_employers_service_bundles);
 addEndpoint(list_employers_service_bundles);
 addEndpoint(delete_employers_service_bundles);
 addEndpoint(process_hl7);
+addEndpoint(send_results_hl7);
 addEndpoint(create_orders);
 addEndpoint(retrieve_orders);
 addEndpoint(update_orders);
