@@ -40,7 +40,13 @@ import {
   FaxSendResponse,
 } from './resources/fax';
 import { Health, HealthCheckResponse } from './resources/health';
-import { Hl7, Hl7SendResultsParams, Hl7SendResultsResponse } from './resources/hl7';
+import {
+  Hl7,
+  Hl7ProcessParams,
+  Hl7ProcessResponse,
+  Hl7SendResultsParams,
+  Hl7SendResultsResponse,
+} from './resources/hl7';
 import {
   IntegrationCheckActiveParams,
   IntegrationCheckActiveResponse,
@@ -830,7 +836,9 @@ export declare namespace BlueHive {
 
   export {
     Hl7 as Hl7,
+    type Hl7ProcessResponse as Hl7ProcessResponse,
     type Hl7SendResultsResponse as Hl7SendResultsResponse,
+    type Hl7ProcessParams as Hl7ProcessParams,
     type Hl7SendResultsParams as Hl7SendResultsParams,
   };
 
