@@ -22,7 +22,9 @@ The full API of this library can be found in [api.md](api.md).
 ```js
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive();
+const client = new BlueHive({
+  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted
+});
 
 const response = await client.health.check();
 
@@ -37,7 +39,9 @@ This library includes TypeScript definitions for all request params and response
 ```ts
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive();
+const client = new BlueHive({
+  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted
+});
 
 const response: BlueHive.HealthCheckResponse = await client.health.check();
 ```
