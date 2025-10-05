@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.14 (2025-10-05)
+
+Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
+
+### Features
+
+* **api:** api update ([20626f5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/20626f5abdeb69fa8058a5fa9338b44765de4284))
+
 ## 0.1.0-alpha.13 (2025-10-05)
 
 Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
