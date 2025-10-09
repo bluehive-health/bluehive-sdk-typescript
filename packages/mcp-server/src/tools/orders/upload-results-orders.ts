@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'upload_results_orders',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpload test results for a specific order item. Supports both existing fileIds and base64 encoded files. Requires order access code and employee verification.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    message: {\n      type: 'string'\n    },\n    success: {\n      type: 'boolean'\n    }\n  }\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpload test results for a specific order item. Supports both existing fileIds and base64 encoded files. Requires order access code and employee verification.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/order_upload_results_response',\n  $defs: {\n    order_upload_results_response: {\n      type: 'object',\n      properties: {\n        message: {\n          type: 'string'\n        },\n        success: {\n          type: 'boolean'\n        }\n      }\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

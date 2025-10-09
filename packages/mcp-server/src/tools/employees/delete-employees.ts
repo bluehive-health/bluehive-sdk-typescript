@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'delete_employees',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nDelete an employee from the system. Cannot delete employees with existing orders.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  description: 'Employee deleted successfully',\n  properties: {\n    message: {\n      type: 'string'\n    },\n    success: {\n      type: 'boolean'\n    }\n  },\n  required: [    'message',\n    'success'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nDelete an employee from the system. Cannot delete employees with existing orders.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/employee_delete_response',\n  $defs: {\n    employee_delete_response: {\n      type: 'object',\n      description: 'Employee deleted successfully',\n      properties: {\n        message: {\n          type: 'string'\n        },\n        success: {\n          type: 'boolean'\n        }\n      },\n      required: [        'message',\n        'success'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
