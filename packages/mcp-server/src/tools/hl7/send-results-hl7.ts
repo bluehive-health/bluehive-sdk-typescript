@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'send_results_hl7',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nSend lab results or documents via HL7\n\n# Response Schema\n```json\n{\n  type: 'string',\n  description: 'Result of HL7 message send'\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nSend lab results or documents via HL7\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/hl7_send_results_response',\n  $defs: {\n    hl7_send_results_response: {\n      type: 'string',\n      description: 'Result of HL7 message send'\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

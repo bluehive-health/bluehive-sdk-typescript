@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'create_employees',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreate a new employee in the system.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  description: 'Employee created successfully',\n  properties: {\n    employeeId: {\n      type: 'string',\n      description: 'ID of the created employee'\n    },\n    message: {\n      type: 'string'\n    },\n    success: {\n      type: 'boolean'\n    }\n  },\n  required: [    'employeeId',\n    'message',\n    'success'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nCreate a new employee in the system.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/employee_create_response',\n  $defs: {\n    employee_create_response: {\n      type: 'object',\n      description: 'Employee created successfully',\n      properties: {\n        employeeId: {\n          type: 'string',\n          description: 'ID of the created employee'\n        },\n        message: {\n          type: 'string'\n        },\n        success: {\n          type: 'boolean'\n        }\n      },\n      required: [        'employeeId',\n        'message',\n        'success'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'check_active_integrations',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nReturns true if the named integration is active for the given brand (brand resolved via x-brand-id header).\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    active: {\n      type: 'boolean'\n    }\n  },\n  required: [    'active'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nReturns true if the named integration is active for the given brand (brand resolved via x-brand-id header).\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/integration_check_active_response',\n  $defs: {\n    integration_check_active_response: {\n      type: 'object',\n      properties: {\n        active: {\n          type: 'boolean'\n        }\n      },\n      required: [        'active'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

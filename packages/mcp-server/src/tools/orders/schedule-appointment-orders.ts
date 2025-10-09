@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'schedule_appointment_orders',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nSchedule an appointment or walk-in for an existing order. Sends HL7 SIU^S12 message for appointment booking.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    message: {\n      type: 'string'\n    },\n    success: {\n      type: 'boolean'\n    }\n  },\n  required: [    'message',\n    'success'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nSchedule an appointment or walk-in for an existing order. Sends HL7 SIU^S12 message for appointment booking.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/order_schedule_appointment_response',\n  $defs: {\n    order_schedule_appointment_response: {\n      type: 'object',\n      properties: {\n        message: {\n          type: 'string'\n        },\n        success: {\n          type: 'boolean'\n        }\n      },\n      required: [        'message',\n        'success'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

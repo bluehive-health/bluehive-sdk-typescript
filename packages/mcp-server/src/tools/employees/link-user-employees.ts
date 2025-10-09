@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'link_user_employees',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nLink an employee to a user account with specified roles\n\n# Response Schema\n```json\n{\n  type: 'object',\n  description: 'Employee linked successfully',\n  properties: {\n    linkId: {\n      type: 'string',\n      description: 'ID of the created link'\n    },\n    message: {\n      type: 'string'\n    },\n    success: {\n      type: 'boolean'\n    }\n  },\n  required: [    'linkId',\n    'message',\n    'success'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nLink an employee to a user account with specified roles\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/employee_link_user_response',\n  $defs: {\n    employee_link_user_response: {\n      type: 'object',\n      description: 'Employee linked successfully',\n      properties: {\n        linkId: {\n          type: 'string',\n          description: 'ID of the created link'\n        },\n        message: {\n          type: 'string'\n        },\n        success: {\n          type: 'boolean'\n        }\n      },\n      required: [        'linkId',\n        'message',\n        'success'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
