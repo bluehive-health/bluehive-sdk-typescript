@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'list_integrations',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nReturns the current brand integrations object keyed by integration name (empty object if none). Brand resolved via x-brand-id header.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    integrations: {\n      type: 'object',\n      additionalProperties: true\n    }\n  },\n  required: [    'integrations'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nReturns the current brand integrations object keyed by integration name (empty object if none). Brand resolved via x-brand-id header.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/integration_list_response',\n  $defs: {\n    integration_list_response: {\n      type: 'object',\n      properties: {\n        integrations: {\n          type: 'object',\n          additionalProperties: true\n        }\n      },\n      required: [        'integrations'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

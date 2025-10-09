@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'retrieve_version',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieve the current version of the BlueHive API.\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    version: {\n      type: 'string'\n    }\n  },\n  required: [    'version'\n  ]\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieve the current version of the BlueHive API.\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/version_retrieve_response',\n  $defs: {\n    version_retrieve_response: {\n      type: 'object',\n      properties: {\n        version: {\n          type: 'string'\n        }\n      },\n      required: [        'version'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {

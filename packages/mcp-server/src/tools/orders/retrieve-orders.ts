@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'retrieve_orders',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieve details for a specific order\n\n# Response Schema\n```json\n{\n  type: 'object',\n  properties: {\n    orderId: {\n      type: 'string'\n    },\n    orderNumber: {\n      type: 'string'\n    },\n    status: {\n      type: 'string'\n    }\n  }\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nRetrieve details for a specific order\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/order_retrieve_response',\n  $defs: {\n    order_retrieve_response: {\n      type: 'object',\n      properties: {\n        orderId: {\n          type: 'string'\n        },\n        orderNumber: {\n          type: 'string'\n        },\n        status: {\n          type: 'string'\n        }\n      }\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
