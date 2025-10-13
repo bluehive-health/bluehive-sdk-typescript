@@ -74,7 +74,15 @@ export interface ServiceBundleCreateResponse {
 
   createdBy?: string;
 
+  limit?: number;
+
+  occurrence?: string;
+
+  recurring?: boolean;
+
   roles?: Array<string> | null;
+
+  startDate?: string;
 
   updatedAt?: string;
 
@@ -94,7 +102,15 @@ export interface ServiceBundleRetrieveResponse {
 
   createdBy?: string;
 
+  limit?: number;
+
+  occurrence?: string;
+
+  recurring?: boolean;
+
   roles?: Array<string> | null;
+
+  startDate?: string;
 
   updatedAt?: string;
 
@@ -114,7 +130,15 @@ export interface ServiceBundleUpdateResponse {
 
   createdBy?: string;
 
+  limit?: number;
+
+  occurrence?: string;
+
+  recurring?: boolean;
+
   roles?: Array<string> | null;
+
+  startDate?: string;
 
   updatedAt?: string;
 
@@ -137,7 +161,15 @@ export namespace ServiceBundleListResponse {
 
     createdBy?: string;
 
+    limit?: number;
+
+    occurrence?: string;
+
+    recurring?: boolean;
+
     roles?: Array<string> | null;
+
+    startDate?: string;
 
     updatedAt?: string;
 
@@ -152,7 +184,15 @@ export interface ServiceBundleCreateParams {
 
   _id?: string;
 
+  limit?: number;
+
+  occurrence?: string;
+
+  recurring?: boolean;
+
   roles?: Array<string> | null;
+
+  startDate?: string;
 }
 
 export interface ServiceBundleRetrieveParams {
@@ -183,7 +223,27 @@ export interface ServiceBundleUpdateParams {
   /**
    * Body param:
    */
+  limit?: number;
+
+  /**
+   * Body param:
+   */
+  occurrence?: string;
+
+  /**
+   * Body param:
+   */
+  recurring?: boolean;
+
+  /**
+   * Body param:
+   */
   roles?: Array<string> | null;
+
+  /**
+   * Body param:
+   */
+  startDate?: string;
 }
 
 export interface ServiceBundleDeleteParams {

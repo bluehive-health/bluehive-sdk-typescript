@@ -29,7 +29,11 @@ describe('resource serviceBundles', () => {
       bundleName: 'x',
       serviceIds: ['string'],
       _id: '_id',
+      limit: 0,
+      occurrence: 'occurrence',
+      recurring: true,
       roles: ['string'],
+      startDate: 'startDate',
     });
   });
 
@@ -73,7 +77,11 @@ describe('resource serviceBundles', () => {
       bundleName: 'x',
       serviceIds: ['string'],
       _id: '_id',
+      limit: 0,
+      occurrence: 'occurrence',
+      recurring: true,
       roles: ['string'],
+      startDate: 'startDate',
     });
   });
 
