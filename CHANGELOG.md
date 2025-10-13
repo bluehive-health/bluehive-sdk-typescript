@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-10-13)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Features
+
+* **api:** api update ([557ac05](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/557ac056a50af7eade322b01ea42ca947243b58a))
+
+
+### Chores
+
+* extract some types in mcp docs ([c7304ab](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c7304abee172407052e746ba93e36978c6b5144d))
+* **internal:** use npm pack for build uploads ([9b6a029](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9b6a02941fbb000f4f979c9659b5c2df2b8a6e4d))
+
 ## 0.1.0-alpha.14 (2025-10-05)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
