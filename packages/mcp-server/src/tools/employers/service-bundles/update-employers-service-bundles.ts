@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const tool: Tool = {
   name: 'update_employers_service_bundles',
   description:
-    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpdate Service Bundle\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/service_bundle_update_response',\n  $defs: {\n    service_bundle_update_response: {\n      type: 'object',\n      properties: {\n        _id: {\n          type: 'string'\n        },\n        bundleName: {\n          type: 'string'\n        },\n        employerId: {\n          type: 'string'\n        },\n        serviceIds: {\n          type: 'array',\n          items: {\n            type: 'string'\n          }\n        },\n        createdAt: {\n          type: 'string'\n        },\n        createdBy: {\n          type: 'string'\n        },\n        roles: {\n          type: 'array',\n          items: {\n            type: 'string'\n          }\n        },\n        updatedAt: {\n          type: 'string'\n        },\n        updatedBy: {\n          type: 'string'\n        }\n      },\n      required: [        '_id',\n        'bundleName',\n        'employerId',\n        'serviceIds'\n      ]\n    }\n  }\n}\n```",
+    "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\nUpdate Service Bundle\n\n# Response Schema\n```json\n{\n  $ref: '#/$defs/service_bundle_update_response',\n  $defs: {\n    service_bundle_update_response: {\n      type: 'object',\n      properties: {\n        _id: {\n          type: 'string'\n        },\n        bundleName: {\n          type: 'string'\n        },\n        employerId: {\n          type: 'string'\n        },\n        serviceIds: {\n          type: 'array',\n          items: {\n            type: 'string'\n          }\n        },\n        createdAt: {\n          type: 'string'\n        },\n        createdBy: {\n          type: 'string'\n        },\n        limit: {\n          type: 'number'\n        },\n        occurrence: {\n          type: 'string'\n        },\n        recurring: {\n          type: 'boolean'\n        },\n        roles: {\n          type: 'array',\n          items: {\n            type: 'string'\n          }\n        },\n        startDate: {\n          type: 'string'\n        },\n        updatedAt: {\n          type: 'string'\n        },\n        updatedBy: {\n          type: 'string'\n        }\n      },\n      required: [        '_id',\n        'bundleName',\n        'employerId',\n        'serviceIds'\n      ]\n    }\n  }\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
@@ -40,11 +40,23 @@ export const tool: Tool = {
       _id: {
         type: 'string',
       },
+      limit: {
+        type: 'number',
+      },
+      occurrence: {
+        type: 'string',
+      },
+      recurring: {
+        type: 'boolean',
+      },
       roles: {
         type: 'array',
         items: {
           type: 'string',
         },
+      },
+      startDate: {
+        type: 'string',
       },
       jq_filter: {
         type: 'string',
