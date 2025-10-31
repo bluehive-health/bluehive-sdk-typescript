@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.16 (2025-10-31)
+
+Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
+
+### Bug Fixes
+
+* **mcpb:** pin @anthropic-ai/mcpb version ([e2eb5aa](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e2eb5aa4ded08b66fd9abcc660bce71f494b283b))
+
 ## 0.1.0-alpha.15 (2025-10-13)
 
 Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
