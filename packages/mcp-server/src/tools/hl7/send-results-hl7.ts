@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { maybeFilter } from '@bluehive/sdk-mcp/filtering';
-import { Metadata, asTextContentResult } from '@bluehive/sdk-mcp/tools/types';
+import { isJqError, maybeFilter } from '@bluehive/sdk-mcp/filtering';
+import { Metadata, asErrorResult, asTextContentResult } from '@bluehive/sdk-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import BlueHive from '@bluehive/sdk';
@@ -59,7 +59,14 @@ export const tool: Tool = {
 
 export const handler = async (client: BlueHive, args: Record<string, unknown> | undefined) => {
   const { jq_filter, ...body } = args as any;
-  return asTextContentResult(await maybeFilter(jq_filter, await client.hl7.sendResults(body)));
+  try {
+    return asTextContentResult(await maybeFilter(jq_filter, await client.hl7.sendResults(body)));
+  } catch (error) {
+    if (isJqError(error)) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
 };
 
 export default { metadata, tool, handler };
