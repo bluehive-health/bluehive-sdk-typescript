@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.1.0-alpha.17 (2025-11-13)
+
+Full Changelog: [v0.1.0-alpha.16...v0.1.0-alpha.17](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.16...v0.1.0-alpha.17)
+
+### Features
+
+* **mcp:** enable optional code execution tool on http mcp servers ([deb0efc](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/deb0efc64db85306bd6cb7f11f7a41b4bd2c12c0))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on jq failure ([fd1479f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fd1479f36e88926874ac5385b1442a79ef6ce37b))
+
+
+### Chores
+
+* **internal:** codegen related update ([a2aafe0](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a2aafe0b5dfb6f3b539aa09914fcee4a4bb723f2))
+* **internal:** codegen related update ([4d694ff](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/4d694ff85c3a3381613c1b69b5acdc21f5111314))
+* **internal:** grammar fix (it's -&gt; its) ([7bdc83e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7bdc83e830cdfb368a78f8b36979290c89db034f))
+* mcp code tool explicit error message when missing a run function ([3811039](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3811039eeefb58f27d098f34a67e4b003ff99482))
+* **mcp:** add friendlier MCP code tool errors on incorrect method invocations ([849f8b5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/849f8b53839f4f2c10c47f316f3659938dbad26f))
+* **mcp:** add line numbers to code tool errors ([7de94a8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7de94a8633782b1f4ec7f8bdaf73b217e3ce54e1))
+* **mcp:** clarify http auth error ([ca1becd](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ca1becd19943e009a8396cf80247648656f8c416))
+* use structured error when code execution tool errors ([997c7a4](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/997c7a4417e44af6be10f56e2bfcda6eef632069))
+
+
+### Documentation
+
+* **mcp:** add a README button for one-click add to Cursor ([e47da4c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e47da4ce37d019b8e7700b9f68fa86a95eaee218))
+* **mcp:** add a README link to add server to VS Code or Claude Code ([b603ae4](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b603ae4bf2e3886d09af2923926b169577d73305))
+
 ## 0.1.0-alpha.16 (2025-10-31)
 
 Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
