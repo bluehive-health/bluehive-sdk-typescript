@@ -113,7 +113,21 @@ export namespace OrderCreateResponse {
 
     message?: string;
 
+    partialSuccess?: boolean;
+
     selfPay?: boolean;
+
+    unavailableServices?: Array<UnionMember0.UnavailableService>;
+  }
+
+  export namespace UnionMember0 {
+    export interface UnavailableService {
+      reason: string;
+
+      serviceId: string;
+
+      serviceName?: string;
+    }
   }
 
   export interface UnionMember1 {
@@ -124,6 +138,10 @@ export namespace OrderCreateResponse {
     success: true;
 
     message?: string;
+
+    partialSuccess?: boolean;
+
+    unavailableServices?: Array<UnionMember1.UnavailableService>;
   }
 
   export namespace UnionMember1 {
@@ -133,6 +151,14 @@ export namespace OrderCreateResponse {
       orderNumber: string;
 
       providerId: string;
+    }
+
+    export interface UnavailableService {
+      reason: string;
+
+      serviceId: string;
+
+      serviceName?: string;
     }
   }
 }
@@ -227,6 +253,29 @@ export namespace OrderSendForEmployeeResponse {
     success: true;
 
     message?: string;
+
+    /**
+     * True when some services were unavailable but order was still created
+     */
+    partialSuccess?: boolean;
+
+    /**
+     * Services that could not be included in the order
+     */
+    unavailableServices?: Array<UnionMember0.UnavailableService>;
+  }
+
+  export namespace UnionMember0 {
+    export interface UnavailableService {
+      /**
+       * Why the service was unavailable
+       */
+      reason: string;
+
+      serviceId: string;
+
+      serviceName?: string;
+    }
   }
 
   export interface UnionMember1 {
@@ -237,6 +286,16 @@ export namespace OrderSendForEmployeeResponse {
     success: true;
 
     message?: string;
+
+    /**
+     * True when some services were unavailable but orders were still created
+     */
+    partialSuccess?: boolean;
+
+    /**
+     * Services that could not be included in any order
+     */
+    unavailableServices?: Array<UnionMember1.UnavailableService>;
   }
 
   export namespace UnionMember1 {
@@ -246,6 +305,17 @@ export namespace OrderSendForEmployeeResponse {
       orderNumber: string;
 
       providerId: string;
+    }
+
+    export interface UnavailableService {
+      /**
+       * Why the service was unavailable
+       */
+      reason: string;
+
+      serviceId: string;
+
+      serviceName?: string;
     }
   }
 }
