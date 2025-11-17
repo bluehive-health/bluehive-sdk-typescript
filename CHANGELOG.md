@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.18 (2025-11-17)
+
+Full Changelog: [v0.1.0-alpha.17...v0.1.0-alpha.18](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.17...v0.1.0-alpha.18)
+
+### Features
+
+* **api:** api update ([ece869d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ece869dba63349da2c6385f2422c2379d88fc6fb))
+
+
+### Chores
+
+* **mcp:** upgrade jq-web ([60add0f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/60add0fb179cd7472e1e7b324577a557371548c5))
+
 ## 0.1.0-alpha.17 (2025-11-13)
 
 Full Changelog: [v0.1.0-alpha.16...v0.1.0-alpha.17](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.16...v0.1.0-alpha.17)
