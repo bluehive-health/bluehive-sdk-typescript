@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.19 (2025-12-02)
+
+Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
+
+### Features
+
+* **mcp:** add detail field to docs search tool ([6788431](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/678843190a3101c36ca3bceb82e6228eb340befb))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on api error ([f37a851](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f37a851e0f1b6d2215e0c371b304fdf7d001f552))
+
+
+### Chores
+
+* **client:** fix logger property type ([2c55e73](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2c55e736b04a443e10fe14a1df3815087d64ebc2))
+
 ## 0.1.0-alpha.18 (2025-11-17)
 
 Full Changelog: [v0.1.0-alpha.17...v0.1.0-alpha.18](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.17...v0.1.0-alpha.18)
