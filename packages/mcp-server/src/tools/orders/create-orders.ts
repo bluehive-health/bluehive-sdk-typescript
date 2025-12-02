@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Metadata, asTextContentResult } from '@bluehive/sdk-mcp/tools/types';
+import { Metadata, asErrorResult, asTextContentResult } from '@bluehive/sdk-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import BlueHive from '@bluehive/sdk';
@@ -639,7 +639,14 @@ export const tool: Tool = {
 
 export const handler = async (client: BlueHive, args: Record<string, unknown> | undefined) => {
   const body = args as any;
-  return asTextContentResult(await client.orders.create(body));
+  try {
+    return asTextContentResult(await client.orders.create(body));
+  } catch (error) {
+    if (error instanceof BlueHive.APIError) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
 };
 
 export default { metadata, tool, handler };
