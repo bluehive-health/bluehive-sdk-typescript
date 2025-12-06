@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.20 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
+
+### Features
+
+* **mcp:** add typescript check to code execution tool ([b52a18c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b52a18c15d8b18dd5f0ab972902ce9872b4f736a))
+* **mcp:** handle code mode calls in the Stainless API ([1721be3](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1721be3e9c7887b65dfb1f67ce7b829f4aa6ef16))
+* **mcp:** return logs on code tool errors ([0a503ab](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0a503ab6562b27e48e84717c8ce29accee22ccc4))
+
+
+### Bug Fixes
+
+* **mcp:** return correct lines on typescript errors ([7fef38c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7fef38c8fc822904f8e0116a4d8c21f58d077e56))
+
+
+### Chores
+
+* **internal:** upgrade eslint ([fbe7ad8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fbe7ad82994decacdccb5ed9360772202da78f33))
+* use latest @modelcontextprotocol/sdk ([7a0d906](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7a0d906e850ed7aaee3de0057e9d8812da9756b4))
+
 ## 0.1.0-alpha.19 (2025-12-02)
 
 Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
