@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.21 (2025-12-17)
+
+Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
+
+### Bug Fixes
+
+* **mcp:** add client instantiation options to code tool ([7b212a8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7b212a8b27327cfc4c637a1315112e6cbe7a3aa9))
+* **mcp:** correct code tool API endpoint ([f5b6fb9](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f5b6fb92050b1008834a0f985e2908a0d8425082))
+
+
+### Chores
+
+* **internal:** codegen related update ([459c50a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/459c50a2558e83142819aa952a63f074a5a62166))
+* **internal:** codegen related update ([fc8142e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fc8142ecbe9a7da8f40a33e65d327b28647e519e))
+* **mcp:** update lockfile ([56bf6a7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/56bf6a704508e0edc165eb156c20cef07ffe5ed7))
+
 ## 0.1.0-alpha.20 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
