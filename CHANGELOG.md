@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.22 (2025-12-19)
+
+Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
+
+### ⚠ BREAKING CHANGES
+
+* **mcp:** remove deprecated tool schemes
+* **mcp:** **Migration:** To migrate, simply modify the command used to invoke the MCP server. Currently, the only supported tool scheme is code mode. Now, starting the server with just `node /path/to/mcp/server` or `npx package-name` will invoke code tools: changing your command to one of these is likely all you will need to do.
+
+### Bug Fixes
+
+* **mcp:** pass base url to code tool ([e9a276b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e9a276b5216d557015c38ec33e688c0925d98855))
+
+
+### Chores
+
+* **mcp:** remove deprecated tool schemes ([61639b4](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/61639b4c9cc65ee5f13f57fb3f6a3748870b01cc))
+
 ## 0.1.0-alpha.21 (2025-12-17)
 
 Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
