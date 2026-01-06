@@ -21,7 +21,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'blue_hive_sdk_api',
-      version: '0.1.0-alpha.22',
+      version: '0.1.0-alpha.23',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
