@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.23 (2026-01-06)
+
+Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
+
+### Bug Fixes
+
+* **mcp:** correct code tool api output types ([57df6ab](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/57df6ab38b60eac743c126596c26ee2a466fd19c))
+
+
+### Chores
+
+* **internal:** codegen related update ([6fc5ed5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/6fc5ed517c39761a8afa51c7f5bd2c9264fa1bbe))
+
+
+### Documentation
+
+* prominently feature MCP server setup in root SDK readmes ([1dfb1db](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1dfb1db4995120afe99e79f90259193d2b328e1f))
+
 ## 0.1.0-alpha.22 (2025-12-19)
 
 Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
