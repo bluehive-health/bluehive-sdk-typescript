@@ -39,7 +39,7 @@ For clients with a configuration JSON, it might look something like this:
 If you use Cursor, you can install the MCP server by using the button below. You will need to set your environment variables
 in Cursor's `mcp.json`, which can be found in Cursor Settings > Tools & MCP > New MCP Server.
 
-[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=@bluehive/sdk-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBibHVlaGl2ZS9zZGstbWNwIl0sImVudiI6eyJCTFVFSElWRV9BUElfS0VZIjoiU2V0IHlvdXIgQkxVRUhJVkVfQVBJX0tFWSBoZXJlLiJ9fQ)
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=%40bluehive%2Fsdk-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBibHVlaGl2ZS9zZGstbWNwIl0sImVudiI6eyJCTFVFSElWRV9BUElfS0VZIjoiU2V0IHlvdXIgQkxVRUhJVkVfQVBJX0tFWSBoZXJlLiJ9fQ)
 
 ### VS Code
 
@@ -54,7 +54,7 @@ If you use Claude Code, you can install the MCP server by running the command be
 environment variables in Claude Code's `.claude.json`, which can be found in your home directory.
 
 ```
-claude mcp add --transport stdio blue_hive_sdk_api --env BLUEHIVE_API_KEY="Your BLUEHIVE_API_KEY here." -- npx -y @bluehive/sdk-mcp
+claude mcp add bluehive_sdk_mcp_api --env BLUEHIVE_API_KEY="Your BLUEHIVE_API_KEY here." -- npx -y @bluehive/sdk-mcp
 ```
 
 ## Code Mode
