@@ -11,7 +11,12 @@ describe('resource employers', () => {
   // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employers.create({
-      address: { city: 'city', state: 'state', street1: 'street1', zipCode: 'zipCode' },
+      address: {
+        city: 'city',
+        state: 'state',
+        street1: 'street1',
+        zipCode: 'zipCode',
+      },
       email: 'dev@stainless.com',
       name: 'name',
       phones: [{ number: 'number' }],
@@ -38,7 +43,13 @@ describe('resource employers', () => {
       },
       email: 'dev@stainless.com',
       name: 'name',
-      phones: [{ number: 'number', primary: true, type: 'type' }],
+      phones: [
+        {
+          number: 'number',
+          primary: true,
+          type: 'type',
+        },
+      ],
       billingAddress: { foo: 'bar' },
       checkr: { id: 'id', status: 'status' },
       demo: true,

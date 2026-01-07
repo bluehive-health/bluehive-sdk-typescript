@@ -54,7 +54,13 @@ describe('resource orders', () => {
         street2: 'street2',
       },
       providerId: 'providerId',
-      services: [{ _id: 'x', quantity: 1, autoAccept: true }],
+      services: [
+        {
+          _id: 'x',
+          quantity: 1,
+          autoAccept: true,
+        },
+      ],
       _id: '_id',
       brandId: 'brandId',
       dueDate: '2019-12-27T18:11:19.117Z',
@@ -153,7 +159,11 @@ describe('resource orders', () => {
   // Prism tests are disabled
   test.skip('scheduleAppointment: only required params', async () => {
     const responsePromise = client.orders.scheduleAppointment('orderId', {
-      appointment: { date: 'date', dateTime: '2019-12-27T18:11:19.117Z', time: 'time' },
+      appointment: {
+        date: 'date',
+        dateTime: '2019-12-27T18:11:19.117Z',
+        time: 'time',
+      },
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -261,7 +271,13 @@ describe('resource orders', () => {
       serviceId: 'x',
       dob: '7321-69-10',
       fileIds: ['x'],
-      files: [{ base64: 'x', name: 'x', type: 'x' }],
+      files: [
+        {
+          base64: 'x',
+          name: 'x',
+          type: 'x',
+        },
+      ],
       lastName: 'x',
     });
   });

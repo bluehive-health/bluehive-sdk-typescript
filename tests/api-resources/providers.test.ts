@@ -25,7 +25,12 @@ describe('resource providers', () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
       client.providers.lookup(
-        { firstname: 'firstname', lastname: 'lastname', npi: 'npi', zipcode: 'zipcode' },
+        {
+          firstname: 'firstname',
+          lastname: 'lastname',
+          npi: 'npi',
+          zipcode: 'zipcode',
+        },
         { path: '/_stainless_unknown_path' },
       ),
     ).rejects.toThrow(BlueHive.NotFoundError);
