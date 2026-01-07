@@ -50,7 +50,11 @@ describe('resource fax', () => {
   // Prism tests are disabled
   test.skip('send: required and optional params', async () => {
     const response = await client.fax.send({
-      document: { content: 'content', contentType: 'application/pdf', filename: 'filename' },
+      document: {
+        content: 'content',
+        contentType: 'application/pdf',
+        filename: 'filename',
+      },
       to: 'to',
       from: 'from',
       provider: 'provider',

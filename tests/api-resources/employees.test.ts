@@ -148,7 +148,11 @@ describe('resource employees', () => {
 
   // Prism tests are disabled
   test.skip('linkUser: required and optional params', async () => {
-    const response = await client.employees.linkUser({ employeeId: 'x', userId: 'x', role: ['string'] });
+    const response = await client.employees.linkUser({
+      employeeId: 'x',
+      userId: 'x',
+      role: ['string'],
+    });
   });
 
   // Prism tests are disabled

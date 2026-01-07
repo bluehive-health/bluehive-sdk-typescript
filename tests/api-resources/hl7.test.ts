@@ -12,7 +12,11 @@ describe('resource hl7', () => {
   test.skip('sendResults: only required params', async () => {
     const responsePromise = client.hl7.sendResults({
       employeeId: 'employeeId',
-      file: { base64: 'base64', name: 'name', type: 'type' },
+      file: {
+        base64: 'base64',
+        name: 'name',
+        type: 'type',
+      },
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -27,7 +31,11 @@ describe('resource hl7', () => {
   test.skip('sendResults: required and optional params', async () => {
     const response = await client.hl7.sendResults({
       employeeId: 'employeeId',
-      file: { base64: 'base64', name: 'name', type: 'type' },
+      file: {
+        base64: 'base64',
+        name: 'name',
+        type: 'type',
+      },
     });
   });
 });
