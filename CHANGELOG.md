@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.24 (2026-01-07)
+
+Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
+
+### Bug Fixes
+
+* **mcp:** fix options parsing ([9f0163f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9f0163f05c270ac0233d2a99672ca838043d190a))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([8bb49fd](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8bb49fd902cafa13bf09663fb063a9196792af36))
+
 ## 0.1.0-alpha.23 (2026-01-06)
 
 Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
