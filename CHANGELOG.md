@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.25 (2026-01-08)
+
+Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
+
+### Bug Fixes
+
+* **mcp:** fix env parsing ([1f5f72c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1f5f72cd1acd91640837721537d0521db49e3d3e))
+
 ## 0.1.0-alpha.24 (2026-01-07)
 
 Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
