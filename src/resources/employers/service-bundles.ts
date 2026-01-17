@@ -201,47 +201,47 @@ export interface ServiceBundleRetrieveParams {
 
 export interface ServiceBundleUpdateParams {
   /**
-   * Path param:
+   * Path param
    */
   employerId: string;
 
   /**
-   * Body param:
+   * Body param
    */
   bundleName: string;
 
   /**
-   * Body param:
+   * Body param
    */
   serviceIds: Array<string>;
 
   /**
-   * Body param:
+   * Body param
    */
   _id?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   limit?: number;
 
   /**
-   * Body param:
+   * Body param
    */
   occurrence?: string;
 
   /**
-   * Body param:
+   * Body param
    */
   recurring?: boolean;
 
   /**
-   * Body param:
+   * Body param
    */
   roles?: Array<string> | null;
 
   /**
-   * Body param:
+   * Body param
    */
   startDate?: string;
 }
