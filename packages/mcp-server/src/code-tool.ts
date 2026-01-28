@@ -2,7 +2,7 @@
 
 import { McpTool, Metadata, ToolCallResult, asErrorResult, asTextContentResult } from './types';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import { readEnv, readEnvOrError } from './server';
+import { readEnv, requireValue } from './server';
 import { WorkerInput, WorkerOutput } from './code-tool-types';
 import { BlueHive } from '@bluehive/sdk';
 
@@ -71,7 +71,10 @@ export function codeTool(): McpTool {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
-          BLUEHIVE_API_KEY: readEnvOrError('BLUEHIVE_API_KEY') ?? client.apiKey ?? undefined,
+          BLUEHIVE_API_KEY: requireValue(
+            readEnv('BLUEHIVE_API_KEY') ?? client.apiKey,
+            'set BLUEHIVE_API_KEY environment variable or provide apiKey client option',
+          ),
           BLUE_HIVE_BASE_URL: readEnv('BLUE_HIVE_BASE_URL') ?? client.baseURL ?? undefined,
         }),
       },
