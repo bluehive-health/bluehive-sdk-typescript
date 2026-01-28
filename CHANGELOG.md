@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.1.0-alpha.27 (2026-01-28)
+
+Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
+
+### Bug Fixes
+
+* **mcp:** allow falling back for required env variables ([40711fc](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/40711fc024e8516245e221c87cb99187e118698b))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([f18b268](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f18b268a9815aeea1263c4f1c55d00a9a06246bd))
+* fix typo in descriptions ([29b6be5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/29b6be5a5821507bb8d47e224a3aefc81906182a))
+* **internal:** codegen related update ([a37333c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a37333c92f86146d285e0038be9a0e933b1d14c1))
+* **internal:** codegen related update ([d1ea57d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d1ea57dc4045112e8a77d166f873d485b34de294))
+* **internal:** codegen related update ([bae08d1](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/bae08d1e0af8a5a1729f0d0064397ea11571ad23))
+* **internal:** codegen related update ([1704a75](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1704a75b189709d476cbb1efd47cf9dbc3573219))
+* **internal:** codegen related update ([187bc9c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/187bc9cfe22529926fb1fb6c7d7d00b0509f1dba))
+* **internal:** update `actions/checkout` version ([4543498](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/45434981fbaed3aab0545b4dcbcf0bcee6578b69))
+* **internal:** update lock file ([0651a87](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0651a870e945106d6ef73fa2c2c3bcfd49532d1b))
+* **internal:** upgrade babel, qs, js-yaml ([344d16c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/344d16cd5341e84fff50a3bb5265b8cb68efcee2))
+* **mcp:** add intent param to execute tool ([e5389d8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e5389d8fe44a80b75c5df37ec4de3c730f567b58))
+* **mcp:** pass intent param to execute handler ([15b9e2a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/15b9e2a60d5c6c9aa18ecdf369f018f23792375d))
+* **mcp:** upgrade dependencies ([6558c92](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/6558c92cd02c099aac6f69bfdfc5d8cebdb9b182))
+
 ## 0.1.0-alpha.26 (2026-01-09)
 
 Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
