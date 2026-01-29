@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.28 (2026-01-29)
+
+Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
+
+### Bug Fixes
+
+* **docs:** fix mcp installation instructions for remote servers ([873e966](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/873e9665388c7185e49049c7897b3fd2655e2e7c))
+
 ## 0.1.0-alpha.27 (2026-01-28)
 
 Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
