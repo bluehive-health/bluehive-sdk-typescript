@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.29 (2026-02-03)
+
+Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
+
+### Bug Fixes
+
+* **client:** avoid memory leak with abort signals ([cbcb477](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/cbcb4777e3ffe59c9294219170fa973aa2cd13c2))
+
+
+### Chores
+
+* **mcp:** up tsconfig lib version to es2022 ([c8de269](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c8de2694296b179caa3c3224d7b8d734f60db317))
+
 ## 0.1.0-alpha.28 (2026-01-29)
 
 Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
