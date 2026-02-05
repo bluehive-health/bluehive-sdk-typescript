@@ -74,6 +74,18 @@ export interface ServiceBundleCreateResponse {
 
   createdBy?: string;
 
+  /**
+   * Indicates if this bundle originated from a third-party integration. Externally
+   * managed bundles cannot be edited or deleted in BlueHive.
+   */
+  externallyManaged?: boolean;
+
+  /**
+   * Name of the third-party integration that manages this bundle (e.g., "Enterprise
+   * Health"). Null if bundle was created in BlueHive.
+   */
+  integration?: string | null;
+
   limit?: number;
 
   occurrence?: string;
@@ -102,6 +114,18 @@ export interface ServiceBundleRetrieveResponse {
 
   createdBy?: string;
 
+  /**
+   * Indicates if this bundle originated from a third-party integration. Externally
+   * managed bundles cannot be edited or deleted in BlueHive.
+   */
+  externallyManaged?: boolean;
+
+  /**
+   * Name of the third-party integration that manages this bundle (e.g., "Enterprise
+   * Health"). Null if bundle was created in BlueHive.
+   */
+  integration?: string | null;
+
   limit?: number;
 
   occurrence?: string;
@@ -129,6 +153,18 @@ export interface ServiceBundleUpdateResponse {
   createdAt?: string;
 
   createdBy?: string;
+
+  /**
+   * Indicates if this bundle originated from a third-party integration. Externally
+   * managed bundles cannot be edited or deleted in BlueHive.
+   */
+  externallyManaged?: boolean;
+
+  /**
+   * Name of the third-party integration that manages this bundle (e.g., "Enterprise
+   * Health"). Null if bundle was created in BlueHive.
+   */
+  integration?: string | null;
 
   limit?: number;
 
@@ -160,6 +196,18 @@ export namespace ServiceBundleListResponse {
     createdAt?: string;
 
     createdBy?: string;
+
+    /**
+     * Indicates if this bundle originated from a third-party integration. Externally
+     * managed bundles cannot be edited or deleted in BlueHive.
+     */
+    externallyManaged?: boolean;
+
+    /**
+     * Name of the third-party integration that manages this bundle (e.g., "Enterprise
+     * Health"). Null if bundle was created in BlueHive.
+     */
+    integration?: string | null;
 
     limit?: number;
 
