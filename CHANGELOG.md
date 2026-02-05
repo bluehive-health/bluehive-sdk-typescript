@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.30 (2026-02-05)
+
+Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
+
+### Features
+
+* **mcp:** add initial server instructions ([2929b05](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2929b05c76ece517a1b4ac7d79c04738b72859c5))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([b4e4c86](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b4e4c86404a1e7d63b5961483165a665cf0ebeb9))
+* **client:** restructure abort controller binding ([f396425](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f396425701e863ecb50e617f36ef9345cd64e84c))
+* **internal:** refactor flag parsing for MCP servers and add debug flag ([6cf9e66](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/6cf9e664d7b25e5940d5718ab2d41d3382354646))
+* **internal:** support oauth authorization code flow for MCP servers ([fccb3a0](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fccb3a001d4b35a83b188a0fdc954f63d57cdb10))
+
 ## 0.1.0-alpha.29 (2026-02-03)
 
 Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
