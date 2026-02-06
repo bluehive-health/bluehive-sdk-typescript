@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.32 (2026-02-06)
+
+Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([3d85b7f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3d85b7ff718341577230316099d2e8124033a0df))
+
 ## 0.1.0-alpha.31 (2026-02-05)
 
 Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
