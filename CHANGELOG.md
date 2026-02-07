@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.33 (2026-02-07)
+
+Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
+
+### Chores
+
+* **internal:** add health check to MCP server when running in HTTP mode ([28b1e9e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/28b1e9e6410513ba5202818e0fa2554b86f8816d))
+
 ## 0.1.0-alpha.32 (2026-02-06)
 
 Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
