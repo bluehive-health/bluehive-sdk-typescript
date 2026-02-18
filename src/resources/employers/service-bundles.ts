@@ -86,6 +86,8 @@ export interface ServiceBundleCreateResponse {
    */
   integration?: string | null;
 
+  integrationData?: ServiceBundleCreateResponse.IntegrationData;
+
   limit?: number;
 
   occurrence?: string;
@@ -99,6 +101,18 @@ export interface ServiceBundleCreateResponse {
   updatedAt?: string;
 
   updatedBy?: string;
+}
+
+export namespace ServiceBundleCreateResponse {
+  export interface IntegrationData {
+    'enterprise-health'?: IntegrationData.EnterpriseHealth;
+  }
+
+  export namespace IntegrationData {
+    export interface EnterpriseHealth {
+      addOnServices?: boolean;
+    }
+  }
 }
 
 export interface ServiceBundleRetrieveResponse {
@@ -126,6 +140,8 @@ export interface ServiceBundleRetrieveResponse {
    */
   integration?: string | null;
 
+  integrationData?: ServiceBundleRetrieveResponse.IntegrationData;
+
   limit?: number;
 
   occurrence?: string;
@@ -139,6 +155,18 @@ export interface ServiceBundleRetrieveResponse {
   updatedAt?: string;
 
   updatedBy?: string;
+}
+
+export namespace ServiceBundleRetrieveResponse {
+  export interface IntegrationData {
+    'enterprise-health'?: IntegrationData.EnterpriseHealth;
+  }
+
+  export namespace IntegrationData {
+    export interface EnterpriseHealth {
+      addOnServices?: boolean;
+    }
+  }
 }
 
 export interface ServiceBundleUpdateResponse {
@@ -166,6 +194,8 @@ export interface ServiceBundleUpdateResponse {
    */
   integration?: string | null;
 
+  integrationData?: ServiceBundleUpdateResponse.IntegrationData;
+
   limit?: number;
 
   occurrence?: string;
@@ -179,6 +209,18 @@ export interface ServiceBundleUpdateResponse {
   updatedAt?: string;
 
   updatedBy?: string;
+}
+
+export namespace ServiceBundleUpdateResponse {
+  export interface IntegrationData {
+    'enterprise-health'?: IntegrationData.EnterpriseHealth;
+  }
+
+  export namespace IntegrationData {
+    export interface EnterpriseHealth {
+      addOnServices?: boolean;
+    }
+  }
 }
 
 export type ServiceBundleListResponse = Array<ServiceBundleListResponse.ServiceBundleListResponseItem>;
@@ -209,6 +251,8 @@ export namespace ServiceBundleListResponse {
      */
     integration?: string | null;
 
+    integrationData?: ServiceBundleListResponseItem.IntegrationData;
+
     limit?: number;
 
     occurrence?: string;
@@ -222,6 +266,18 @@ export namespace ServiceBundleListResponse {
     updatedAt?: string;
 
     updatedBy?: string;
+  }
+
+  export namespace ServiceBundleListResponseItem {
+    export interface IntegrationData {
+      'enterprise-health'?: IntegrationData.EnterpriseHealth;
+    }
+
+    export namespace IntegrationData {
+      export interface EnterpriseHealth {
+        addOnServices?: boolean;
+      }
+    }
   }
 }
 
