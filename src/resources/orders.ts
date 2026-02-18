@@ -367,6 +367,11 @@ export declare namespace OrderCreateParams {
      */
     metadata?: { [key: string]: unknown };
 
+    /**
+     * Order priority level
+     */
+    priority?: 'normal' | 'high';
+
     providerCreated?: boolean;
 
     providersIds?: Array<Variant0.ProvidersID>;
@@ -453,6 +458,11 @@ export declare namespace OrderCreateParams {
     paymentMethod?: 'self-pay' | 'employer-sponsored';
 
     person?: Variant1.Person;
+
+    /**
+     * Order priority level
+     */
+    priority?: 'normal' | 'high';
 
     providerCreated?: boolean;
 
@@ -545,6 +555,11 @@ export declare namespace OrderCreateParams {
 
     person?: Variant2.Person;
 
+    /**
+     * Order priority level
+     */
+    priority?: 'normal' | 'high';
+
     providerCreated?: boolean;
 
     providerId?: string;
@@ -633,6 +648,11 @@ export declare namespace OrderCreateParams {
     paymentMethod?: 'self-pay' | 'employer-sponsored';
 
     person?: Variant3.Person;
+
+    /**
+     * Order priority level
+     */
+    priority?: 'normal' | 'high';
 
     providerCreated?: boolean;
 
@@ -856,6 +876,11 @@ export interface OrderSendForEmployeeParams {
    * passthrough, <=10KB when JSON stringified)
    */
   metadata?: { [key: string]: unknown };
+
+  /**
+   * Body param: Order priority level
+   */
+  priority?: 'normal' | 'high';
 
   /**
    * Body param: Whether this order is being created by a provider (affects
