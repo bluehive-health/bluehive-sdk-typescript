@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.33 (2026-02-19)
+
+Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
+
+### Features
+
+* **api:** api update ([35e31d0](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/35e31d0f541f138686ad501c362636520ab8ede5))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([88114de](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/88114de292161a292c443d8150c09e1f4cc707a1))
+* **internal:** add health check to MCP server when running in HTTP mode ([28b1e9e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/28b1e9e6410513ba5202818e0fa2554b86f8816d))
+* **internal:** allow basic filtering of methods allowed for MCP code mode ([2eb8ead](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2eb8eadefb7bae95c490d3e26baa847743ba00d8))
+* **internal:** allow setting x-stainless-api-key header on mcp server requests ([71b8f3d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/71b8f3de35f59dd0725f9faa1275aa658fa42695))
+* **internal:** always generate MCP server dockerfiles and upgrade associated dependencies ([3510c69](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3510c69d3fcad386c686b04b3ea736c226e00976))
+* **internal:** avoid type checking errors with ts-reset ([d9db232](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d9db232e52b6ce5c983646280bb38272a9ff1752))
+* **internal:** cache fetch instruction calls in MCP server ([5975972](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/59759725cb96eef82d80b6a3aab4e548b03223e5))
+* **internal:** improve layout of generated MCP server files ([2416a50](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2416a50082cf00e1219179d0960a9753644034c9))
+* **mcp:** forward STAINLESS_API_KEY to docs search endpoint ([3339515](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3339515f965815e96c21a6773804afebe9f4c7df))
+
 ## 0.1.0-alpha.32 (2026-02-06)
 
 Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
