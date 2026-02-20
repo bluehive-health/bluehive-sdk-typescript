@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.34 (2026-02-20)
+
+Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
+
+### Bug Fixes
+
+* **mcp:** initialize SDK lazily to avoid failing the connection on init errors ([9ea25ac](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9ea25ac839ef76b6eeb432ed268313ceb6a686bf))
+
 ## 0.1.0-alpha.33 (2026-02-19)
 
 Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
