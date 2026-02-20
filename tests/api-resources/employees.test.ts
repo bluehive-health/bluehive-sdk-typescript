@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource employees', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employees.create({
       email: 'dev@stainless.com',
@@ -24,7 +24,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employees.create({
       email: 'dev@stainless.com',
@@ -50,7 +50,7 @@ describe('resource employees', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.employees.retrieve('employeeId');
     const rawResponse = await responsePromise.asResponse();
@@ -62,7 +62,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.employees.update({ _id: 'x' });
     const rawResponse = await responsePromise.asResponse();
@@ -74,7 +74,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.employees.update({
       _id: 'x',
@@ -101,7 +101,7 @@ describe('resource employees', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.employees.list({ employerId: 'employerId' });
     const rawResponse = await responsePromise.asResponse();
@@ -113,7 +113,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.employees.list({
       employerId: 'employerId',
@@ -122,7 +122,7 @@ describe('resource employees', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.employees.delete('employeeId');
     const rawResponse = await responsePromise.asResponse();
@@ -134,7 +134,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('linkUser: only required params', async () => {
     const responsePromise = client.employees.linkUser({ employeeId: 'x', userId: 'x' });
     const rawResponse = await responsePromise.asResponse();
@@ -146,7 +146,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('linkUser: required and optional params', async () => {
     const response = await client.employees.linkUser({
       employeeId: 'x',
@@ -155,7 +155,7 @@ describe('resource employees', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('unlinkUser: only required params', async () => {
     const responsePromise = client.employees.unlinkUser({ employeeId: 'employeeId', userId: 'userId' });
     const rawResponse = await responsePromise.asResponse();
@@ -167,7 +167,7 @@ describe('resource employees', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('unlinkUser: required and optional params', async () => {
     const response = await client.employees.unlinkUser({ employeeId: 'employeeId', userId: 'userId' });
   });

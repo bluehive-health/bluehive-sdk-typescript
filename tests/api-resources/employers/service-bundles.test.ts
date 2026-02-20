@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource serviceBundles', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employers.serviceBundles.create('employerId', {
       bundleName: 'x',
@@ -23,7 +23,7 @@ describe('resource serviceBundles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employers.serviceBundles.create('employerId', {
       bundleName: 'x',
@@ -37,7 +37,7 @@ describe('resource serviceBundles', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.employers.serviceBundles.retrieve('id', { employerId: 'employerId' });
     const rawResponse = await responsePromise.asResponse();
@@ -49,12 +49,12 @@ describe('resource serviceBundles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.employers.serviceBundles.retrieve('id', { employerId: 'employerId' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.employers.serviceBundles.update('id', {
       employerId: 'employerId',
@@ -70,7 +70,7 @@ describe('resource serviceBundles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.employers.serviceBundles.update('id', {
       employerId: 'employerId',
@@ -85,7 +85,7 @@ describe('resource serviceBundles', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.employers.serviceBundles.list('employerId');
     const rawResponse = await responsePromise.asResponse();
@@ -97,7 +97,7 @@ describe('resource serviceBundles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.employers.serviceBundles.delete('id', { employerId: 'employerId' });
     const rawResponse = await responsePromise.asResponse();
@@ -109,7 +109,7 @@ describe('resource serviceBundles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.employers.serviceBundles.delete('id', { employerId: 'employerId' });
   });

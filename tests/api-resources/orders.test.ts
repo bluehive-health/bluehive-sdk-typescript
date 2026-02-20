@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource orders', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.orders.create({
       paymentMethod: 'self-pay',
@@ -35,7 +35,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.orders.create({
       paymentMethod: 'self-pay',
@@ -79,7 +79,7 @@ describe('resource orders', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.orders.retrieve('orderId');
     const rawResponse = await responsePromise.asResponse();
@@ -91,7 +91,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.orders.update('orderId');
     const rawResponse = await responsePromise.asResponse();
@@ -103,7 +103,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -126,7 +126,7 @@ describe('resource orders', () => {
     ).rejects.toThrow(BlueHive.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveResults', async () => {
     const responsePromise = client.orders.retrieveResults('orderId');
     const rawResponse = await responsePromise.asResponse();
@@ -138,7 +138,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveResults: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -157,7 +157,7 @@ describe('resource orders', () => {
     ).rejects.toThrow(BlueHive.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scheduleAppointment: only required params', async () => {
     const responsePromise = client.orders.scheduleAppointment('orderId', {
       appointment: {
@@ -175,7 +175,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scheduleAppointment: required and optional params', async () => {
     const response = await client.orders.scheduleAppointment('orderId', {
       appointment: {
@@ -190,7 +190,7 @@ describe('resource orders', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendForEmployee: only required params', async () => {
     const responsePromise = client.orders.sendForEmployee({
       employeeId: 'employeeId',
@@ -209,7 +209,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendForEmployee: required and optional params', async () => {
     const response = await client.orders.sendForEmployee({
       employeeId: 'employeeId',
@@ -229,7 +229,7 @@ describe('resource orders', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateStatus: only required params', async () => {
     const responsePromise = client.orders.updateStatus('orderId', { status: 'order_sent' });
     const rawResponse = await responsePromise.asResponse();
@@ -241,7 +241,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('updateStatus: required and optional params', async () => {
     const response = await client.orders.updateStatus('orderId', {
       status: 'order_sent',
@@ -249,7 +249,7 @@ describe('resource orders', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('uploadResults: only required params', async () => {
     const responsePromise = client.orders.uploadResults('orderId', {
       captchaToken: 'x',
@@ -265,7 +265,7 @@ describe('resource orders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('uploadResults: required and optional params', async () => {
     const response = await client.orders.uploadResults('orderId', {
       captchaToken: 'x',

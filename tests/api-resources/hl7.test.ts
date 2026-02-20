@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource hl7', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendResults: only required params', async () => {
     const responsePromise = client.hl7.sendResults({
       employeeId: 'employeeId',
@@ -27,7 +27,7 @@ describe('resource hl7', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sendResults: required and optional params', async () => {
     const response = await client.hl7.sendResults({
       employeeId: 'employeeId',
