@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource integrations', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.integrations.list({ 'x-brand-id': 'x' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource integrations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.integrations.list({ 'x-brand-id': 'x' });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkActive: only required params', async () => {
     const responsePromise = client.integrations.checkActive('name', { 'x-brand-id': 'x' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,7 +37,7 @@ describe('resource integrations', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkActive: required and optional params', async () => {
     const response = await client.integrations.checkActive('name', { 'x-brand-id': 'x' });
   });

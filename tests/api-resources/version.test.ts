@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource version', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.version.retrieve();
     const rawResponse = await responsePromise.asResponse();

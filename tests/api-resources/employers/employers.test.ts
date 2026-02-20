@@ -8,7 +8,7 @@ const client = new BlueHive({
 });
 
 describe('resource employers', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employers.create({
       address: {
@@ -30,7 +30,7 @@ describe('resource employers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employers.create({
       address: {
@@ -60,7 +60,7 @@ describe('resource employers', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.employers.retrieve('employerId');
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource employers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.employers.list({ 'login-token': 'login-token', 'user-id': 'user-id' });
     const rawResponse = await responsePromise.asResponse();
@@ -84,7 +84,7 @@ describe('resource employers', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.employers.list({ 'login-token': 'login-token', 'user-id': 'user-id' });
   });
