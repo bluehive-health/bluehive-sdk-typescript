@@ -60,7 +60,7 @@ $ yarn link @bluehive/sdk
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global @bluehive/sdk
+$ pnpm link --global @bluehive/sdk
 ```
 
 ## Running tests
