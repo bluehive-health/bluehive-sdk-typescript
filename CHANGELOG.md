@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.35 (2026-02-24)
+
+Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([e47caa2](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e47caa26f9ccb580a1ea051b9bfa886dbd4943a9))
+
+
+### Chores
+
+* **internal:** remove mock server code ([cd4cb2d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/cd4cb2d2f269e2dd3464468b44169e2fbdf275a1))
+* **mcp:** correctly update version in sync with sdk ([76ca23f](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/76ca23f4dbd2e48e3003b84e161ee042c42e4305))
+* update mock server docs ([8ed587b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8ed587b93ef96b7e1cd5d0175bbee1768a1007a4))
+
 ## 0.1.0-alpha.34 (2026-02-20)
 
 Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
