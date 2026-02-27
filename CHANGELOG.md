@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.37 (2026-02-27)
+
+Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
+
+### Bug Fixes
+
+* **mcp:** update prompt ([87bdb24](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/87bdb2435066b927d9ce6ab04fe191dd42eced63))
+
 ## 0.1.0-alpha.36 (2026-02-27)
 
 Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
