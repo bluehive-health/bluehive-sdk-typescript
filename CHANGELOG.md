@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.36 (2026-02-27)
+
+Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
+
+### Features
+
+* **mcp:** add an option to disable code tool ([a1ddec5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a1ddec5e92ee970e45fb59cda0450493060cf749))
+
+
+### Chores
+
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([7c15712](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7c1571292c25a021e7a2aeb3f6ef99c050ff62d7))
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([5e7e20c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5e7e20cb27a4070706e6c623ffd7a309318351eb))
+* **internal:** make MCP code execution location configurable via a flag ([d9bf5fe](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d9bf5fe91c299b9b4b2cdeaea07a5ef53a7c525a))
+* **internal:** move stringifyQuery implementation to internal function ([a8fc008](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a8fc0087c84769ec3f0779aba7ed6972da4e9d9f))
+* **internal:** upgrade @modelcontextprotocol/sdk and hono ([5c0dc7a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5c0dc7aeab5d7c8e4d3099799f23210f6f424ba3))
+
 ## 0.1.0-alpha.35 (2026-02-24)
 
 Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
