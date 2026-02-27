@@ -1,6 +1,6 @@
 {
   "name": "@bluehive/sdk",
-  "version": "0.1.0-alpha.35",
+  "version": "0.1.0-alpha.36",
   "description": "The official TypeScript library for the BlueHive API",
   "author": "BlueHive <wreiske@bluehive.com>",
   "types": "dist/index.d.ts",
