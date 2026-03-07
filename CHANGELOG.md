@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.38 (2026-03-07)
+
+Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([aa954f5](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/aa954f5a263a5f4e77ee3073e545a4257a1e88ee))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([913235d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/913235dd0ee8aab80911e5bf5bf83e9cf33c22db))
+* **internal:** codegen related update ([fb9dc16](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/fb9dc1620815b7507754f0ca156902a22212effa))
+* **internal:** codegen related update ([ffff397](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ffff39748cc7f0c0a083e6408b6e21018f73d0c1))
+* **internal:** use x-stainless-mcp-client-envs header for MCP remote code tool calls ([9598475](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/95984759091593d68a4c15aba854b7502abb680d))
+* **mcp-server:** return access instructions for 404 without API key ([0275ace](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0275ace3a073e7fd9a1e0e26fb2f4282b0a0bb48))
+
 ## 0.1.0-alpha.37 (2026-02-27)
 
 Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
