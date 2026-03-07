@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.39 (2026-03-07)
+
+Full Changelog: [v0.1.0-alpha.38...v0.1.0-alpha.39](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.38...v0.1.0-alpha.39)
+
+### Chores
+
+* **mcp-server:** improve instructions ([0de27c8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0de27c859a2bacfaf01596ba9e7332fa7504d5f3))
+
 ## 0.1.0-alpha.38 (2026-03-07)
 
 Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
