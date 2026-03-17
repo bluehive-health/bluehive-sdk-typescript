@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.0-alpha.39 (2026-03-17)
+
+Full Changelog: [v0.1.0-alpha.38...v0.1.0-alpha.39](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.38...v0.1.0-alpha.39)
+
+### Features
+
+* **api:** api update ([dd4bc18](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/dd4bc185d8845c75d759eb4117a901aef451fa75))
+
+
+### Chores
+
+* **internal:** bump @modelcontextprotocol/sdk, @hono/node-server, and minimatch ([2fd4e86](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2fd4e86c0d16fe279e414ca7a70db1c3ffed3ae0))
+* **internal:** make generated MCP servers compatible with Cloudflare worker environments ([a009a7a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a009a7a84841304e462309970ad8c9d345d99fea))
+* **internal:** support x-stainless-mcp-client-envs header in MCP servers ([1dfa213](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/1dfa2132e483091a6365b47ee062ec62ffc8798b))
+* **internal:** support x-stainless-mcp-client-permissions headers in MCP servers ([3596ac8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3596ac8ce739160e2f09392626faaa725d76bdf1))
+* **internal:** tweak CI branches ([3725484](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/37254842cf1da1728381793a5273c32771f750ac))
+* **internal:** update dependencies to address dependabot vulnerabilities ([b1c95aa](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b1c95aa6692a09f72895978b88297b074c5d730d))
+* **mcp-server:** improve instructions ([0de27c8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0de27c859a2bacfaf01596ba9e7332fa7504d5f3))
+
 ## 0.1.0-alpha.38 (2026-03-07)
 
 Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
