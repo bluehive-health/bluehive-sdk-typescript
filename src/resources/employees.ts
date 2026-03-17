@@ -586,6 +586,12 @@ export interface EmployeeListParams {
   employerId: string;
 
   /**
+   * Filter by account status. If omitted, returns all employees regardless of
+   * status.
+   */
+  activeAccount?: 'Active' | 'Inactive';
+
+  /**
    * Maximum number of employees to return (default: 50)
    */
   limit?: string;
@@ -594,6 +600,12 @@ export interface EmployeeListParams {
    * Number of employees to skip (default: 0)
    */
   offset?: string;
+
+  /**
+   * Search term to filter employees by first name, last name, or email
+   * (case-insensitive)
+   */
+  search?: string;
 }
 
 export interface EmployeeLinkUserParams {
