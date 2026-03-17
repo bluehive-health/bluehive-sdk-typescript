@@ -117,8 +117,10 @@ describe('resource employees', () => {
   test.skip('list: required and optional params', async () => {
     const response = await client.employees.list({
       employerId: 'employerId',
+      activeAccount: 'Active',
       limit: '269125115713',
       offset: '269125115713',
+      search: 'search',
     });
   });
 
