@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.40 (2026-03-24)
+
+Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.39...v0.1.0-alpha.40)
+
+### Features
+
+* **api:** api update ([5d7d202](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5d7d20206d2554e37a6896c80d10588986a12f25))
+
+
+### Chores
+
+* **internal:** fix MCP server TS errors that occur with required client options ([75b77cf](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/75b77cf21e1c94e49c76e31c116c9c93a0037f25))
+* **internal:** update gitignore ([e91c4f6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e91c4f61ac319c99f2478087dcf127ffae81f862))
+
 ## 0.1.0-alpha.39 (2026-03-17)
 
 Full Changelog: [v0.1.0-alpha.38...v0.1.0-alpha.39](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.38...v0.1.0-alpha.39)
