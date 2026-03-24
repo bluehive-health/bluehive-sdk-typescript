@@ -165,6 +165,7 @@ describe('resource orders', () => {
         dateTime: '2019-12-27T18:11:19.117Z',
         time: 'time',
       },
+      orderAccessCode: 'orderAccessCode',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
