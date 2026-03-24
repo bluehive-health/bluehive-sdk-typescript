@@ -766,7 +766,7 @@ export interface OrderScheduleAppointmentParams {
   /**
    * Order access code for authorization
    */
-  orderAccessCode?: string;
+  orderAccessCode: string;
 
   /**
    * Provider ID for authorization
