@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.41 (2026-03-27)
+
+Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
+
+### Features
+
+* **api:** api update ([41c122d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/41c122dd70b1b23be6b5687aaba191f73c04572e))
+
+
+### Chores
+
+* **ci:** skip lint on metadata-only changes ([f36b0c9](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f36b0c976e274a6a51c48f2d3a454aec51a60c91))
+* **internal:** support custom-instructions-path flag in MCP servers ([f37c241](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/f37c2414cc05da458368d350fc47860389745796))
+
 ## 0.1.0-alpha.40 (2026-03-24)
 
 Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.39...v0.1.0-alpha.40)
