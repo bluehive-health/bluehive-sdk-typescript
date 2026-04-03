@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.42 (2026-04-03)
+
+Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
+
+### Chores
+
+* **ci:** escape input path in publish-npm workflow ([a1031b7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a1031b70bd393c7ad662377de22e90ddfa4fb4e9))
+* **internal:** fix MCP docker image builds in yarn projects ([5f48e69](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5f48e692934befef76584a6a429e486b87f0fa88))
+* **internal:** improve local docs search for MCP servers ([520d2d2](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/520d2d225ef77718b584c2140d7a775dc3a08752))
+* **internal:** improve local docs search for MCP servers ([529a8e6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/529a8e6f48326de2464a20c60e6e5bf0f12c4c7e))
+* **internal:** support local docs search in MCP servers ([077c1ce](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/077c1ce1be4f5dc0dea03633b85b7439c90c979d))
+* **internal:** support type annotations when running MCP in local execution mode ([5462ea3](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5462ea38efb89bfbefa09c5827f1db28be5989fa))
+* **internal:** use link instead of file in MCP server package.json files ([2225971](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2225971d7c7b84e86ce7f4d128a6494e84f022c6))
+* **mcp-server:** add support for session id, forward client info ([c44d40e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c44d40e29859f40664a8761488a7003639b0780e))
+* **mcp-server:** log client info ([5709686](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5709686ecc44e91860d6984ccf1316dfe973bfaa))
+
 ## 0.1.0-alpha.41 (2026-03-27)
 
 Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
