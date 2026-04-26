@@ -2,25 +2,22 @@
 
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive({
-  apiKey: 'My API Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-});
+const client = new BlueHive({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
 
 describe('resource employers', () => {
   // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employers.create({
-      address: {
-        city: 'city',
-        state: 'state',
-        street1: 'street1',
-        zipCode: 'zipCode',
-      },
-      email: 'dev@stainless.com',
-      name: 'name',
-      phones: [{ number: 'number' }],
-    });
+    address: {
+    city: 'city',
+    state: 'state',
+    street1: 'street1',
+    zipCode: 'zipCode',
+  },
+    email: 'dev@stainless.com',
+    name: 'name',
+    phones: [{ number: 'number' }],
+  });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -33,31 +30,29 @@ describe('resource employers', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employers.create({
-      address: {
-        city: 'city',
-        state: 'state',
-        street1: 'street1',
-        zipCode: 'zipCode',
-        country: 'country',
-        street2: 'street2',
-      },
-      email: 'dev@stainless.com',
-      name: 'name',
-      phones: [
-        {
-          number: 'number',
-          primary: true,
-          type: 'type',
-        },
-      ],
-      billingAddress: { foo: 'bar' },
-      checkr: { id: 'id', status: 'status' },
-      demo: true,
-      employeeConsent: true,
-      metadata: { foo: 'bar' },
-      onsiteClinic: true,
-      website: 'website',
-    });
+    address: {
+    city: 'city',
+    state: 'state',
+    street1: 'street1',
+    zipCode: 'zipCode',
+    country: 'country',
+    street2: 'street2',
+  },
+    email: 'dev@stainless.com',
+    name: 'name',
+    phones: [{
+    number: 'number',
+    primary: true,
+    type: 'type',
+  }],
+    billingAddress: { foo: 'bar' },
+    checkr: { id: 'id', status: 'status' },
+    demo: true,
+    employeeConsent: true,
+    metadata: { foo: 'bar' },
+    onsiteClinic: true,
+    website: 'website',
+  });
   });
 
   // Mock server tests are disabled

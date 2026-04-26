@@ -63,5 +63,7 @@ export namespace DatabaseCheckHealthResponse {
 }
 
 export declare namespace Database {
-  export { type DatabaseCheckHealthResponse as DatabaseCheckHealthResponse };
+  export {
+    type DatabaseCheckHealthResponse as DatabaseCheckHealthResponse
+  };
 }

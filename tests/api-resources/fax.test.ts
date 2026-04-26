@@ -2,10 +2,7 @@
 
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive({
-  apiKey: 'My API Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-});
+const client = new BlueHive({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
 
 describe('resource fax', () => {
   // Mock server tests are disabled
@@ -35,9 +32,9 @@ describe('resource fax', () => {
   // Mock server tests are disabled
   test.skip('send: only required params', async () => {
     const responsePromise = client.fax.send({
-      document: { content: 'content', contentType: 'application/pdf' },
-      to: 'to',
-    });
+    document: { content: 'content', contentType: 'application/pdf' },
+    to: 'to',
+  });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -50,15 +47,15 @@ describe('resource fax', () => {
   // Mock server tests are disabled
   test.skip('send: required and optional params', async () => {
     const response = await client.fax.send({
-      document: {
-        content: 'content',
-        contentType: 'application/pdf',
-        filename: 'filename',
-      },
-      to: 'to',
-      from: 'from',
-      provider: 'provider',
-      subject: 'subject',
-    });
+    document: {
+    content: 'content',
+    contentType: 'application/pdf',
+    filename: 'filename',
+  },
+    to: 'to',
+    from: 'from',
+    provider: 'provider',
+    subject: 'subject',
+  });
   });
 });

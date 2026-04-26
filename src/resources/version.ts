@@ -18,5 +18,7 @@ export interface VersionRetrieveResponse {
 }
 
 export declare namespace Version {
-  export { type VersionRetrieveResponse as VersionRetrieveResponse };
+  export {
+    type VersionRetrieveResponse as VersionRetrieveResponse
+  };
 }

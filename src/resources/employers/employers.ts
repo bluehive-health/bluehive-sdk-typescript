@@ -2,17 +2,7 @@
 
 import { APIResource } from '../../core/resource';
 import * as ServiceBundlesAPI from './service-bundles';
-import {
-  ServiceBundleCreateParams,
-  ServiceBundleCreateResponse,
-  ServiceBundleDeleteParams,
-  ServiceBundleListResponse,
-  ServiceBundleRetrieveParams,
-  ServiceBundleRetrieveResponse,
-  ServiceBundleUpdateParams,
-  ServiceBundleUpdateResponse,
-  ServiceBundles,
-} from './service-bundles';
+import { ServiceBundleCreateParams, ServiceBundleCreateResponse, ServiceBundleDeleteParams, ServiceBundleListResponse, ServiceBundleRetrieveParams, ServiceBundleRetrieveResponse, ServiceBundleUpdateParams, ServiceBundleUpdateResponse, ServiceBundles } from './service-bundles';
 import { APIPromise } from '../../core/api-promise';
 import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
@@ -39,11 +29,8 @@ export class Employers extends APIResource {
    * Get Employers for Current User
    */
   list(params: EmployerListParams, options?: RequestOptions): APIPromise<EmployerListResponse> {
-    const { 'login-token': loginToken, 'user-id': userID } = params;
-    return this._client.get('/v1/employers/list', {
-      ...options,
-      headers: buildHeaders([{ 'login-token': loginToken, 'user-id': userID }, options?.headers]),
-    });
+    const { 'login-token': loginToken, 'user-id': userID } = params
+    return this._client.get('/v1/employers/list', { ...options, headers: buildHeaders([{'login-token': loginToken, 'user-id': userID}, options?.headers]) });
   }
 }
 
@@ -71,9 +58,9 @@ export interface EmployerCreateResponse {
   website?: string;
 }
 
-export type EmployerRetrieveResponse = { [key: string]: unknown };
+export type EmployerRetrieveResponse = { [key: string]: unknown }
 
-export type EmployerListResponse = Array<{ [key: string]: unknown }>;
+export type EmployerListResponse = Array<{ [key: string]: unknown }>
 
 export interface EmployerCreateParams {
   address: EmployerCreateParams.Address;
@@ -143,7 +130,7 @@ export declare namespace Employers {
     type EmployerRetrieveResponse as EmployerRetrieveResponse,
     type EmployerListResponse as EmployerListResponse,
     type EmployerCreateParams as EmployerCreateParams,
-    type EmployerListParams as EmployerListParams,
+    type EmployerListParams as EmployerListParams
   };
 
   export {
@@ -155,6 +142,6 @@ export declare namespace Employers {
     type ServiceBundleCreateParams as ServiceBundleCreateParams,
     type ServiceBundleRetrieveParams as ServiceBundleRetrieveParams,
     type ServiceBundleUpdateParams as ServiceBundleUpdateParams,
-    type ServiceBundleDeleteParams as ServiceBundleDeleteParams,
+    type ServiceBundleDeleteParams as ServiceBundleDeleteParams
   };
 }
