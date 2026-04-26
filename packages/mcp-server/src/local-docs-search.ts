@@ -62,13 +62,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## check\n\n`client.health.check(): { status: 'ok'; }`\n\n**get** `/v1/health`\n\nCheck the service health and ensure the API is running properly.\n\n### Returns\n\n- `{ status: 'ok'; }`\n\n  - `status: 'ok'`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.health.check();\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Health.Check',
+      typescript: {
+        method: 'client.health.check',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Health.Check(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.health.check();\n\nconsole.log(response.status);",
       },
-      http: {
-        example: 'curl https://api.bluehive.com/v1/health \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+      python: {
+        method: 'health.check',
+        example:
+          'from bluehive import BlueHive\n\nclient = BlueHive()\nresponse = client.health.check()\nprint(response.status)',
       },
       java: {
         method: 'health().check',
@@ -80,20 +82,18 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.health.HealthCheckParams\nimport com.bluehive.api.models.health.HealthCheckResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: HealthCheckResponse = client.health().check()\n}',
       },
-      python: {
-        method: 'health.check',
+      go: {
+        method: 'client.Health.Check',
         example:
-          'from bluehive import BlueHive\n\nclient = BlueHive()\nresponse = client.health.check()\nprint(response.status)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Health.Check(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
       },
       ruby: {
         method: 'health.check',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.health.check\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.health.check',
-        example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.health.check();\n\nconsole.log(response.status);",
+      http: {
+        example: 'curl https://api.bluehive.com/v1/health \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -109,13 +109,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.version.retrieve(): { version: string; }`\n\n**get** `/v1/version`\n\nRetrieve the current version of the BlueHive API.\n\n### Returns\n\n- `{ version: string; }`\n\n  - `version: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst version = await client.version.retrieve();\n\nconsole.log(version);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Version.Get',
+      typescript: {
+        method: 'client.version.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tversion, err := client.Version.Get(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", version.Version)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst version = await client.version.retrieve();\n\nconsole.log(version.version);",
       },
-      http: {
-        example: 'curl https://api.bluehive.com/v1/version \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+      python: {
+        method: 'version.retrieve',
+        example:
+          'from bluehive import BlueHive\n\nclient = BlueHive()\nversion = client.version.retrieve()\nprint(version.version)',
       },
       java: {
         method: 'version().retrieve',
@@ -127,20 +129,18 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.version.VersionRetrieveParams\nimport com.bluehive.api.models.version.VersionRetrieveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val version: VersionRetrieveResponse = client.version().retrieve()\n}',
       },
-      python: {
-        method: 'version.retrieve',
+      go: {
+        method: 'client.Version.Get',
         example:
-          'from bluehive import BlueHive\n\nclient = BlueHive()\nversion = client.version.retrieve()\nprint(version.version)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tversion, err := client.Version.Get(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", version.Version)\n}\n',
       },
       ruby: {
         method: 'version.retrieve',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nversion = blue_hive.version.retrieve\n\nputs(version)',
       },
-      typescript: {
-        method: 'client.version.retrieve',
-        example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst version = await client.version.retrieve();\n\nconsole.log(version.version);",
+      http: {
+        example: 'curl https://api.bluehive.com/v1/version \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -158,14 +158,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## lookup\n\n`client.providers.lookup(firstname?: string, lastname?: string, npi?: string, zipcode?: string): { count: number; providers: object[]; }`\n\n**get** `/v1/providers/lookup`\n\nSearch for healthcare providers by NPI number, name, or location proximity.\n\n### Parameters\n\n- `firstname?: string`\n  Provider first name\n\n- `lastname?: string`\n  Provider last name\n\n- `npi?: string`\n  Provider NPI number\n\n- `zipcode?: string`\n  ZIP code to filter results by proximity\n\n### Returns\n\n- `{ count: number; providers: { address_1: string; address_2: string; city: string; country: string; distance: number; fax_number: string; firstname: string; lastname: string; npi: string; postal_code: string; state_province: string; work_phone: string; }[]; }`\n\n  - `count: number`\n  - `providers: { address_1: string; address_2: string; city: string; country: string; distance: number; fax_number: string; firstname: string; lastname: string; npi: string; postal_code: string; state_province: string; work_phone: string; }[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.providers.lookup();\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Providers.Lookup',
+      typescript: {
+        method: 'client.providers.lookup',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Providers.Lookup(context.TODO(), githubcombluehivehealthbluehivesdkgo.ProviderLookupParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Providers)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.providers.lookup();\n\nconsole.log(response.providers);",
       },
-      http: {
+      python: {
+        method: 'providers.lookup',
         example:
-          'curl https://api.bluehive.com/v1/providers/lookup \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.providers.lookup()\nprint(response.providers)',
       },
       java: {
         method: 'providers().lookup',
@@ -177,20 +178,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.providers.ProviderLookupParams\nimport com.bluehive.api.models.providers.ProviderLookupResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: ProviderLookupResponse = client.providers().lookup()\n}',
       },
-      python: {
-        method: 'providers.lookup',
+      go: {
+        method: 'client.Providers.Lookup',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.providers.lookup()\nprint(response.providers)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Providers.Lookup(context.TODO(), githubcombluehivehealthbluehivesdkgo.ProviderLookupParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Providers)\n}\n',
       },
       ruby: {
         method: 'providers.lookup',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.providers.lookup\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.providers.lookup',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.providers.lookup();\n\nconsole.log(response.providers);",
+          'curl https://api.bluehive.com/v1/providers/lookup \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -207,14 +207,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## check_health\n\n`client.database.checkHealth(): { status: 'ok' | 'error'; timestamp: string; database?: string; error?: string; stats?: object; }`\n\n**get** `/v1/database/health`\n\nCheck MongoDB database connectivity and retrieve health statistics.\n\n### Returns\n\n- `{ status: 'ok' | 'error'; timestamp: string; database?: string; error?: string; stats?: { collections?: number; dataSize?: number; documents?: number; }; }`\n\n  - `status: 'ok' | 'error'`\n  - `timestamp: string`\n  - `database?: string`\n  - `error?: string`\n  - `stats?: { collections?: number; dataSize?: number; documents?: number; }`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.database.checkHealth();\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Database.CheckHealth',
+      typescript: {
+        method: 'client.database.checkHealth',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Database.CheckHealth(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.database.checkHealth();\n\nconsole.log(response.status);",
       },
-      http: {
+      python: {
+        method: 'database.check_health',
         example:
-          'curl https://api.bluehive.com/v1/database/health \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.database.check_health()\nprint(response.status)',
       },
       java: {
         method: 'database().checkHealth',
@@ -226,20 +227,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.database.DatabaseCheckHealthParams\nimport com.bluehive.api.models.database.DatabaseCheckHealthResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: DatabaseCheckHealthResponse = client.database().checkHealth()\n}',
       },
-      python: {
-        method: 'database.check_health',
+      go: {
+        method: 'client.Database.CheckHealth',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.database.check_health()\nprint(response.status)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Database.CheckHealth(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Status)\n}\n',
       },
       ruby: {
         method: 'database.check_health',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.database.check_health\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.database.checkHealth',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.database.checkHealth();\n\nconsole.log(response.status);",
+          'curl https://api.bluehive.com/v1/database/health \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -263,14 +263,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## send\n\n`client.fax.send(document: { content: string; contentType: string; filename?: string; }, to: string, from?: string, provider?: string, subject?: string): { id: string; createdAt: string; from: string; provider: string; status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'; to: string; estimatedDelivery?: string; }`\n\n**post** `/v1/fax/send`\n\nSend a fax document to a specified number using the configured fax provider.\n\n### Parameters\n\n- `document: { content: string; contentType: string; filename?: string; }`\n  - `content: string`\n    Base64 encoded document content\n  - `contentType: string`\n    MIME type of the document\n  - `filename?: string`\n    Optional filename for the document\n\n- `to: string`\n  Recipient fax number (E.164 format preferred)\n\n- `from?: string`\n  Sender fax number (optional, uses default if not provided)\n\n- `provider?: string`\n  Optional provider override (uses default if not specified)\n\n- `subject?: string`\n  Subject line for the fax\n\n### Returns\n\n- `{ id: string; createdAt: string; from: string; provider: string; status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'; to: string; estimatedDelivery?: string; }`\n\n  - `id: string`\n  - `createdAt: string`\n  - `from: string`\n  - `provider: string`\n  - `status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'`\n  - `to: string`\n  - `estimatedDelivery?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.fax.send({\n  document: { content: 'content', contentType: 'application/pdf' },\n  to: 'to',\n});\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Fax.Send',
+      typescript: {
+        method: 'client.fax.send',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.Send(context.TODO(), githubcombluehivehealthbluehivesdkgo.FaxSendParams{\n\t\tDocument: githubcombluehivehealthbluehivesdkgo.FaxSendParamsDocument{\n\t\t\tContent:     "content",\n\t\t\tContentType: "application/pdf",\n\t\t},\n\t\tTo: "to",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.send({\n  document: { content: 'content', contentType: 'application/pdf' },\n  to: 'to',\n});\n\nconsole.log(response.id);",
       },
-      http: {
+      python: {
+        method: 'fax.send',
         example:
-          'curl https://api.bluehive.com/v1/fax/send \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "document": {\n            "content": "content",\n            "contentType": "application/pdf"\n          },\n          "to": "to"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.send(\n    document={\n        "content": "content",\n        "content_type": "application/pdf",\n    },\n    to="to",\n)\nprint(response.id)',
       },
       java: {
         method: 'fax().send',
@@ -282,20 +283,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.fax.FaxSendParams\nimport com.bluehive.api.models.fax.FaxSendResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: FaxSendParams = FaxSendParams.builder()\n        .document(FaxSendParams.Document.builder()\n            .content("content")\n            .contentType(FaxSendParams.Document.ContentType.APPLICATION_PDF)\n            .build())\n        .to("to")\n        .build()\n    val response: FaxSendResponse = client.fax().send(params)\n}',
       },
-      python: {
-        method: 'fax.send',
+      go: {
+        method: 'client.Fax.Send',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.send(\n    document={\n        "content": "content",\n        "content_type": "application/pdf",\n    },\n    to="to",\n)\nprint(response.id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.Send(context.TODO(), githubcombluehivehealthbluehivesdkgo.FaxSendParams{\n\t\tDocument: githubcombluehivehealthbluehivesdkgo.FaxSendParamsDocument{\n\t\t\tContent:     "content",\n\t\t\tContentType: "application/pdf",\n\t\t},\n\t\tTo: "to",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.ID)\n}\n',
       },
       ruby: {
         method: 'fax.send_',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.fax.send_(document: {content: "content", contentType: :"application/pdf"}, to: "to")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.fax.send',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.send({\n  document: { content: 'content', contentType: 'application/pdf' },\n  to: 'to',\n});\n\nconsole.log(response.id);",
+          'curl https://api.bluehive.com/v1/fax/send \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "document": {\n            "content": "content",\n            "contentType": "application/pdf"\n          },\n          "to": "to"\n        }\'',
       },
     },
   },
@@ -313,14 +313,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve_status\n\n`client.fax.retrieveStatus(id: string): { id: string; createdAt: string; from: string; provider: string; status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'; to: string; updatedAt: string; cost?: number; deliveredAt?: string; duration?: number; errorMessage?: string; pageCount?: number; providerData?: object; }`\n\n**get** `/v1/fax/status/{id}`\n\nRetrieve the current status and details of a fax by its ID.\n\n### Parameters\n\n- `id: string`\n\n### Returns\n\n- `{ id: string; createdAt: string; from: string; provider: string; status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'; to: string; updatedAt: string; cost?: number; deliveredAt?: string; duration?: number; errorMessage?: string; pageCount?: number; providerData?: object; }`\n\n  - `id: string`\n  - `createdAt: string`\n  - `from: string`\n  - `provider: string`\n  - `status: 'queued' | 'dialing' | 'sending' | 'delivered' | 'failed' | 'cancelled' | 'retrying'`\n  - `to: string`\n  - `updatedAt: string`\n  - `cost?: number`\n  - `deliveredAt?: string`\n  - `duration?: number`\n  - `errorMessage?: string`\n  - `pageCount?: number`\n  - `providerData?: object`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.fax.retrieveStatus('id');\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Fax.GetStatus',
+      typescript: {
+        method: 'client.fax.retrieveStatus',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.GetStatus(context.TODO(), "id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.retrieveStatus('id');\n\nconsole.log(response.id);",
       },
-      http: {
+      python: {
+        method: 'fax.retrieve_status',
         example:
-          'curl https://api.bluehive.com/v1/fax/status/$ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.retrieve_status(\n    "id",\n)\nprint(response.id)',
       },
       java: {
         method: 'fax().retrieveStatus',
@@ -332,20 +333,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.fax.FaxRetrieveStatusParams\nimport com.bluehive.api.models.fax.FaxRetrieveStatusResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: FaxRetrieveStatusResponse = client.fax().retrieveStatus("id")\n}',
       },
-      python: {
-        method: 'fax.retrieve_status',
+      go: {
+        method: 'client.Fax.GetStatus',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.retrieve_status(\n    "id",\n)\nprint(response.id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.GetStatus(context.TODO(), "id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.ID)\n}\n',
       },
       ruby: {
         method: 'fax.retrieve_status',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.fax.retrieve_status("id")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.fax.retrieveStatus',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.retrieveStatus('id');\n\nconsole.log(response.id);",
+          'curl https://api.bluehive.com/v1/fax/status/$ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -361,14 +361,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list_providers\n\n`client.fax.listProviders(): { providers: object[]; }`\n\n**get** `/v1/fax/providers`\n\nGet a list of available fax providers and their configuration status.\n\n### Returns\n\n- `{ providers: { configured: boolean; isDefault: boolean; name: string; }[]; }`\n\n  - `providers: { configured: boolean; isDefault: boolean; name: string; }[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.fax.listProviders();\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Fax.ListProviders',
+      typescript: {
+        method: 'client.fax.listProviders',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.ListProviders(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Providers)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.listProviders();\n\nconsole.log(response.providers);",
       },
-      http: {
+      python: {
+        method: 'fax.list_providers',
         example:
-          'curl https://api.bluehive.com/v1/fax/providers \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.list_providers()\nprint(response.providers)',
       },
       java: {
         method: 'fax().listProviders',
@@ -380,20 +381,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.fax.FaxListProvidersParams\nimport com.bluehive.api.models.fax.FaxListProvidersResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: FaxListProvidersResponse = client.fax().listProviders()\n}',
       },
-      python: {
-        method: 'fax.list_providers',
+      go: {
+        method: 'client.Fax.ListProviders',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.fax.list_providers()\nprint(response.providers)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Fax.ListProviders(context.TODO())\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Providers)\n}\n',
       },
       ruby: {
         method: 'fax.list_providers',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.fax.list_providers\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.fax.listProviders',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.fax.listProviders();\n\nconsole.log(response.providers);",
+          'curl https://api.bluehive.com/v1/fax/providers \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -423,14 +423,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.employers.create(address: { city: string; state: string; street1: string; zipCode: string; country?: string; street2?: string; }, email: string, name: string, phones: { number: string; primary?: boolean; type?: string; }[], billingAddress?: object, checkr?: { id: string; status?: string; }, demo?: boolean, employeeConsent?: boolean, metadata?: object, onsiteClinic?: boolean, website?: string): { _id: string; address: object; email: string; name: string; phones: object[]; createdAt?: string; createdBy?: string; demo?: boolean; employeeConsent?: boolean; onsiteClinic?: boolean; website?: string; }`\n\n**post** `/v1/employers`\n\nCreate Employer\n\n### Parameters\n\n- `address: { city: string; state: string; street1: string; zipCode: string; country?: string; street2?: string; }`\n  - `city: string`\n  - `state: string`\n  - `street1: string`\n  - `zipCode: string`\n  - `country?: string`\n  - `street2?: string`\n\n- `email: string`\n\n- `name: string`\n\n- `phones: { number: string; primary?: boolean; type?: string; }[]`\n\n- `billingAddress?: object`\n\n- `checkr?: { id: string; status?: string; }`\n  - `id: string`\n  - `status?: string`\n\n- `demo?: boolean`\n\n- `employeeConsent?: boolean`\n\n- `metadata?: object`\n\n- `onsiteClinic?: boolean`\n\n- `website?: string`\n\n### Returns\n\n- `{ _id: string; address: object; email: string; name: string; phones: object[]; createdAt?: string; createdBy?: string; demo?: boolean; employeeConsent?: boolean; onsiteClinic?: boolean; website?: string; }`\n\n  - `_id: string`\n  - `address: object`\n  - `email: string`\n  - `name: string`\n  - `phones: object[]`\n  - `createdAt?: string`\n  - `createdBy?: string`\n  - `demo?: boolean`\n  - `employeeConsent?: boolean`\n  - `onsiteClinic?: boolean`\n  - `website?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employer = await client.employers.create({\n  address: {\n  city: 'city',\n  state: 'state',\n  street1: 'street1',\n  zipCode: 'zipCode',\n},\n  email: 'dev@stainless.com',\n  name: 'name',\n  phones: [{ number: 'number' }],\n});\n\nconsole.log(employer);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.New',
+      typescript: {
+        method: 'client.employers.create',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployer, err := client.Employers.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployerNewParams{\n\t\tAddress: githubcombluehivehealthbluehivesdkgo.EmployerNewParamsAddress{\n\t\t\tCity:    "city",\n\t\t\tState:   "state",\n\t\t\tStreet1: "street1",\n\t\t\tZipCode: "zipCode",\n\t\t},\n\t\tEmail: "dev@stainless.com",\n\t\tName:  "name",\n\t\tPhones: []githubcombluehivehealthbluehivesdkgo.EmployerNewParamsPhone{{\n\t\t\tNumber: "number",\n\t\t}},\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employer.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employer = await client.employers.create({\n  address: {\n    city: 'city',\n    state: 'state',\n    street1: 'street1',\n    zipCode: 'zipCode',\n  },\n  email: 'dev@stainless.com',\n  name: 'name',\n  phones: [{ number: 'number' }],\n});\n\nconsole.log(employer._id);",
       },
-      http: {
+      python: {
+        method: 'employers.create',
         example:
-          'curl https://api.bluehive.com/v1/employers \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "address": {\n            "city": "city",\n            "state": "state",\n            "street1": "street1",\n            "zipCode": "zipCode"\n          },\n          "email": "dev@stainless.com",\n          "name": "name",\n          "phones": [\n            {\n              "number": "number"\n            }\n          ]\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployer = client.employers.create(\n    address={\n        "city": "city",\n        "state": "state",\n        "street1": "street1",\n        "zip_code": "zipCode",\n    },\n    email="dev@stainless.com",\n    name="name",\n    phones=[{\n        "number": "number"\n    }],\n)\nprint(employer._id)',
       },
       java: {
         method: 'employers().create',
@@ -442,20 +443,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.EmployerCreateParams\nimport com.bluehive.api.models.employers.EmployerCreateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployerCreateParams = EmployerCreateParams.builder()\n        .address(EmployerCreateParams.Address.builder()\n            .city("city")\n            .state("state")\n            .street1("street1")\n            .zipCode("zipCode")\n            .build())\n        .email("dev@stainless.com")\n        .name("name")\n        .addPhone(EmployerCreateParams.Phone.builder()\n            .number("number")\n            .build())\n        .build()\n    val employer: EmployerCreateResponse = client.employers().create(params)\n}',
       },
-      python: {
-        method: 'employers.create',
+      go: {
+        method: 'client.Employers.New',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployer = client.employers.create(\n    address={\n        "city": "city",\n        "state": "state",\n        "street1": "street1",\n        "zip_code": "zipCode",\n    },\n    email="dev@stainless.com",\n    name="name",\n    phones=[{\n        "number": "number"\n    }],\n)\nprint(employer._id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployer, err := client.Employers.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployerNewParams{\n\t\tAddress: githubcombluehivehealthbluehivesdkgo.EmployerNewParamsAddress{\n\t\t\tCity:    "city",\n\t\t\tState:   "state",\n\t\t\tStreet1: "street1",\n\t\t\tZipCode: "zipCode",\n\t\t},\n\t\tEmail: "dev@stainless.com",\n\t\tName:  "name",\n\t\tPhones: []githubcombluehivehealthbluehivesdkgo.EmployerNewParamsPhone{{\n\t\t\tNumber: "number",\n\t\t}},\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employer.ID)\n}\n',
       },
       ruby: {
         method: 'employers.create',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployer = blue_hive.employers.create(\n  address: {city: "city", state: "state", street1: "street1", zipCode: "zipCode"},\n  email: "dev@stainless.com",\n  name: "name",\n  phones: [{number: "number"}]\n)\n\nputs(employer)',
       },
-      typescript: {
-        method: 'client.employers.create',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employer = await client.employers.create({\n  address: {\n    city: 'city',\n    state: 'state',\n    street1: 'street1',\n    zipCode: 'zipCode',\n  },\n  email: 'dev@stainless.com',\n  name: 'name',\n  phones: [{ number: 'number' }],\n});\n\nconsole.log(employer._id);",
+          'curl https://api.bluehive.com/v1/employers \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "address": {\n            "city": "city",\n            "state": "state",\n            "street1": "street1",\n            "zipCode": "zipCode"\n          },\n          "email": "dev@stainless.com",\n          "name": "name",\n          "phones": [\n            {\n              "number": "number"\n            }\n          ]\n        }\'',
       },
     },
   },
@@ -472,14 +472,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.employers.retrieve(employerId: string): object`\n\n**get** `/v1/employers/{employerId}`\n\nGet Employer\n\n### Parameters\n\n- `employerId: string`\n\n### Returns\n\n- `object`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employer = await client.employers.retrieve('employerId');\n\nconsole.log(employer);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.Get',
+      typescript: {
+        method: 'client.employers.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployer, err := client.Employers.Get(context.TODO(), "employerId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employer)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employer = await client.employers.retrieve('employerId');\n\nconsole.log(employer);",
       },
-      http: {
+      python: {
+        method: 'employers.retrieve',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployer = client.employers.retrieve(\n    "employerId",\n)\nprint(employer)',
       },
       java: {
         method: 'employers().retrieve',
@@ -491,20 +492,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.EmployerRetrieveParams\nimport com.bluehive.api.models.employers.EmployerRetrieveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val employer: EmployerRetrieveResponse = client.employers().retrieve("employerId")\n}',
       },
-      python: {
-        method: 'employers.retrieve',
+      go: {
+        method: 'client.Employers.Get',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployer = client.employers.retrieve(\n    "employerId",\n)\nprint(employer)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployer, err := client.Employers.Get(context.TODO(), "employerId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employer)\n}\n',
       },
       ruby: {
         method: 'employers.retrieve',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployer = blue_hive.employers.retrieve("employerId")\n\nputs(employer)',
       },
-      typescript: {
-        method: 'client.employers.retrieve',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employer = await client.employers.retrieve('employerId');\n\nconsole.log(employer);",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -521,14 +521,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.employers.list(login-token: string, user-id: string): object[]`\n\n**get** `/v1/employers/list`\n\nGet Employers for Current User\n\n### Parameters\n\n- `login-token: string`\n\n- `user-id: string`\n\n### Returns\n\n- `object[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employers = await client.employers.list({ 'login-token': 'login-token', 'user-id': 'user-id' });\n\nconsole.log(employers);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.List',
+      typescript: {
+        method: 'client.employers.list',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployers, err := client.Employers.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployerListParams{\n\t\tLoginToken: "login-token",\n\t\tUserID:     "user-id",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employers)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employers = await client.employers.list({\n  'login-token': 'login-token',\n  'user-id': 'user-id',\n});\n\nconsole.log(employers);",
       },
-      http: {
+      python: {
+        method: 'employers.list',
         example:
-          'curl https://api.bluehive.com/v1/employers/list \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployers = client.employers.list(\n    login_token="login-token",\n    user_id="user-id",\n)\nprint(employers)',
       },
       java: {
         method: 'employers().list',
@@ -540,20 +541,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.EmployerListParams\nimport com.bluehive.api.models.employers.EmployerListResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployerListParams = EmployerListParams.builder()\n        .loginToken("login-token")\n        .userId("user-id")\n        .build()\n    val employers: List<EmployerListResponse> = client.employers().list(params)\n}',
       },
-      python: {
-        method: 'employers.list',
+      go: {
+        method: 'client.Employers.List',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployers = client.employers.list(\n    login_token="login-token",\n    user_id="user-id",\n)\nprint(employers)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployers, err := client.Employers.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployerListParams{\n\t\tLoginToken: "login-token",\n\t\tUserID:     "user-id",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employers)\n}\n',
       },
       ruby: {
         method: 'employers.list',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployers = blue_hive.employers.list(login_token: "login-token", user_id: "user-id")\n\nputs(employers)',
       },
-      typescript: {
-        method: 'client.employers.list',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employers = await client.employers.list({\n  'login-token': 'login-token',\n  'user-id': 'user-id',\n});\n\nconsole.log(employers);",
+          'curl https://api.bluehive.com/v1/employers/list \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -581,14 +581,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.employers.serviceBundles.create(employerId: string, bundleName: string, serviceIds: string[], _id?: string, limit?: number, occurrence?: string, recurring?: boolean, roles?: string[], startDate?: string): { _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: object; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n**post** `/v1/employers/{employerId}/service-bundles`\n\nCreate Service Bundle\n\n### Parameters\n\n- `employerId: string`\n\n- `bundleName: string`\n\n- `serviceIds: string[]`\n\n- `_id?: string`\n\n- `limit?: number`\n\n- `occurrence?: string`\n\n- `recurring?: boolean`\n\n- `roles?: string[]`\n\n- `startDate?: string`\n\n### Returns\n\n- `{ _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n  - `_id: string`\n  - `bundleName: string`\n  - `employerId: string`\n  - `serviceIds: string[]`\n  - `createdAt?: string`\n  - `createdBy?: string`\n  - `externallyManaged?: boolean`\n  - `integration?: string`\n  - `integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }`\n  - `limit?: number`\n  - `occurrence?: string`\n  - `recurring?: boolean`\n  - `roles?: string[]`\n  - `startDate?: string`\n  - `updatedAt?: string`\n  - `updatedBy?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst serviceBundle = await client.employers.serviceBundles.create('employerId', { bundleName: 'x', serviceIds: ['string'] });\n\nconsole.log(serviceBundle);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.ServiceBundles.New',
+      typescript: {
+        method: 'client.employers.serviceBundles.create',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.New(\n\t\tcontext.TODO(),\n\t\t"employerId",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleNewParams{\n\t\t\tBundleName: "x",\n\t\t\tServiceIDs: []string{"string"},\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.create('employerId', {\n  bundleName: 'x',\n  serviceIds: ['string'],\n});\n\nconsole.log(serviceBundle._id);",
       },
-      http: {
+      python: {
+        method: 'employers.service_bundles.create',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "bundleName": "x",\n          "serviceIds": [\n            "string"\n          ]\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.create(\n    employer_id="employerId",\n    bundle_name="x",\n    service_ids=["string"],\n)\nprint(service_bundle._id)',
       },
       java: {
         method: 'employers().serviceBundles().create',
@@ -600,20 +601,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleCreateParams\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleCreateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: ServiceBundleCreateParams = ServiceBundleCreateParams.builder()\n        .employerId("employerId")\n        .bundleName("x")\n        .addServiceId("string")\n        .build()\n    val serviceBundle: ServiceBundleCreateResponse = client.employers().serviceBundles().create(params)\n}',
       },
-      python: {
-        method: 'employers.service_bundles.create',
+      go: {
+        method: 'client.Employers.ServiceBundles.New',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.create(\n    employer_id="employerId",\n    bundle_name="x",\n    service_ids=["string"],\n)\nprint(service_bundle._id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.New(\n\t\tcontext.TODO(),\n\t\t"employerId",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleNewParams{\n\t\t\tBundleName: "x",\n\t\t\tServiceIDs: []string{"string"},\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
       },
       ruby: {
         method: 'employers.service_bundles.create',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nservice_bundle = blue_hive.employers.service_bundles.create("employerId", bundle_name: "x", service_ids: ["string"])\n\nputs(service_bundle)',
       },
-      typescript: {
-        method: 'client.employers.serviceBundles.create',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.create('employerId', {\n  bundleName: 'x',\n  serviceIds: ['string'],\n});\n\nconsole.log(serviceBundle._id);",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "bundleName": "x",\n          "serviceIds": [\n            "string"\n          ]\n        }\'',
       },
     },
   },
@@ -631,14 +631,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.employers.serviceBundles.list(employerId: string): { _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: object; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }[]`\n\n**get** `/v1/employers/{employerId}/service-bundles`\n\nList Service Bundles\n\n### Parameters\n\n- `employerId: string`\n\n### Returns\n\n- `{ _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst serviceBundles = await client.employers.serviceBundles.list('employerId');\n\nconsole.log(serviceBundles);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.ServiceBundles.List',
+      typescript: {
+        method: 'client.employers.serviceBundles.list',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundles, err := client.Employers.ServiceBundles.List(context.TODO(), "employerId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundles)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundles = await client.employers.serviceBundles.list('employerId');\n\nconsole.log(serviceBundles);",
       },
-      http: {
+      python: {
+        method: 'employers.service_bundles.list',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundles = client.employers.service_bundles.list(\n    "employerId",\n)\nprint(service_bundles)',
       },
       java: {
         method: 'employers().serviceBundles().list',
@@ -650,20 +651,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleListParams\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleListResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val serviceBundles: List<ServiceBundleListResponse> = client.employers().serviceBundles().list("employerId")\n}',
       },
-      python: {
-        method: 'employers.service_bundles.list',
+      go: {
+        method: 'client.Employers.ServiceBundles.List',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundles = client.employers.service_bundles.list(\n    "employerId",\n)\nprint(service_bundles)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundles, err := client.Employers.ServiceBundles.List(context.TODO(), "employerId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundles)\n}\n',
       },
       ruby: {
         method: 'employers.service_bundles.list',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nservice_bundles = blue_hive.employers.service_bundles.list("employerId")\n\nputs(service_bundles)',
       },
-      typescript: {
-        method: 'client.employers.serviceBundles.list',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundles = await client.employers.serviceBundles.list('employerId');\n\nconsole.log(serviceBundles);",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -681,14 +681,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.employers.serviceBundles.retrieve(employerId: string, id: string): { _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: object; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n**get** `/v1/employers/{employerId}/service-bundles/{id}`\n\nGet Service Bundle\n\n### Parameters\n\n- `employerId: string`\n\n- `id: string`\n\n### Returns\n\n- `{ _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n  - `_id: string`\n  - `bundleName: string`\n  - `employerId: string`\n  - `serviceIds: string[]`\n  - `createdAt?: string`\n  - `createdBy?: string`\n  - `externallyManaged?: boolean`\n  - `integration?: string`\n  - `integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }`\n  - `limit?: number`\n  - `occurrence?: string`\n  - `recurring?: boolean`\n  - `roles?: string[]`\n  - `startDate?: string`\n  - `updatedAt?: string`\n  - `updatedBy?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst serviceBundle = await client.employers.serviceBundles.retrieve('id', { employerId: 'employerId' });\n\nconsole.log(serviceBundle);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.ServiceBundles.Get',
+      typescript: {
+        method: 'client.employers.serviceBundles.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.Get(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleGetParams{\n\t\t\tEmployerID: "employerId",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.retrieve('id', {\n  employerId: 'employerId',\n});\n\nconsole.log(serviceBundle._id);",
       },
-      http: {
+      python: {
+        method: 'employers.service_bundles.retrieve',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.retrieve(\n    id="id",\n    employer_id="employerId",\n)\nprint(service_bundle._id)',
       },
       java: {
         method: 'employers().serviceBundles().retrieve',
@@ -700,20 +701,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleRetrieveParams\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleRetrieveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: ServiceBundleRetrieveParams = ServiceBundleRetrieveParams.builder()\n        .employerId("employerId")\n        .id("id")\n        .build()\n    val serviceBundle: ServiceBundleRetrieveResponse = client.employers().serviceBundles().retrieve(params)\n}',
       },
-      python: {
-        method: 'employers.service_bundles.retrieve',
+      go: {
+        method: 'client.Employers.ServiceBundles.Get',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.retrieve(\n    id="id",\n    employer_id="employerId",\n)\nprint(service_bundle._id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.Get(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleGetParams{\n\t\t\tEmployerID: "employerId",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
       },
       ruby: {
         method: 'employers.service_bundles.retrieve',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nservice_bundle = blue_hive.employers.service_bundles.retrieve("id", employer_id: "employerId")\n\nputs(service_bundle)',
       },
-      typescript: {
-        method: 'client.employers.serviceBundles.retrieve',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.retrieve('id', {\n  employerId: 'employerId',\n});\n\nconsole.log(serviceBundle._id);",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -742,14 +742,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update\n\n`client.employers.serviceBundles.update(employerId: string, id: string, bundleName: string, serviceIds: string[], _id?: string, limit?: number, occurrence?: string, recurring?: boolean, roles?: string[], startDate?: string): { _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: object; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n**put** `/v1/employers/{employerId}/service-bundles/{id}`\n\nUpdate Service Bundle\n\n### Parameters\n\n- `employerId: string`\n\n- `id: string`\n\n- `bundleName: string`\n\n- `serviceIds: string[]`\n\n- `_id?: string`\n\n- `limit?: number`\n\n- `occurrence?: string`\n\n- `recurring?: boolean`\n\n- `roles?: string[]`\n\n- `startDate?: string`\n\n### Returns\n\n- `{ _id: string; bundleName: string; employerId: string; serviceIds: string[]; createdAt?: string; createdBy?: string; externallyManaged?: boolean; integration?: string; integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }; limit?: number; occurrence?: string; recurring?: boolean; roles?: string[]; startDate?: string; updatedAt?: string; updatedBy?: string; }`\n\n  - `_id: string`\n  - `bundleName: string`\n  - `employerId: string`\n  - `serviceIds: string[]`\n  - `createdAt?: string`\n  - `createdBy?: string`\n  - `externallyManaged?: boolean`\n  - `integration?: string`\n  - `integrationData?: { enterprise-health?: { addOnServices?: boolean; }; }`\n  - `limit?: number`\n  - `occurrence?: string`\n  - `recurring?: boolean`\n  - `roles?: string[]`\n  - `startDate?: string`\n  - `updatedAt?: string`\n  - `updatedBy?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst serviceBundle = await client.employers.serviceBundles.update('id', {\n  employerId: 'employerId',\n  bundleName: 'x',\n  serviceIds: ['string'],\n});\n\nconsole.log(serviceBundle);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.ServiceBundles.Update',
+      typescript: {
+        method: 'client.employers.serviceBundles.update',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.Update(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleUpdateParams{\n\t\t\tEmployerID: "employerId",\n\t\t\tBundleName: "x",\n\t\t\tServiceIDs: []string{"string"},\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.update('id', {\n  employerId: 'employerId',\n  bundleName: 'x',\n  serviceIds: ['string'],\n});\n\nconsole.log(serviceBundle._id);",
       },
-      http: {
+      python: {
+        method: 'employers.service_bundles.update',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "bundleName": "x",\n          "serviceIds": [\n            "string"\n          ]\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.update(\n    id="id",\n    employer_id="employerId",\n    bundle_name="x",\n    service_ids=["string"],\n)\nprint(service_bundle._id)',
       },
       java: {
         method: 'employers().serviceBundles().update',
@@ -761,20 +762,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleUpdateParams\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleUpdateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: ServiceBundleUpdateParams = ServiceBundleUpdateParams.builder()\n        .employerId("employerId")\n        .id("id")\n        .bundleName("x")\n        .addServiceId("string")\n        .build()\n    val serviceBundle: ServiceBundleUpdateResponse = client.employers().serviceBundles().update(params)\n}',
       },
-      python: {
-        method: 'employers.service_bundles.update',
+      go: {
+        method: 'client.Employers.ServiceBundles.Update',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nservice_bundle = client.employers.service_bundles.update(\n    id="id",\n    employer_id="employerId",\n    bundle_name="x",\n    service_ids=["string"],\n)\nprint(service_bundle._id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tserviceBundle, err := client.Employers.ServiceBundles.Update(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleUpdateParams{\n\t\t\tEmployerID: "employerId",\n\t\t\tBundleName: "x",\n\t\t\tServiceIDs: []string{"string"},\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", serviceBundle.ID)\n}\n',
       },
       ruby: {
         method: 'employers.service_bundles.update',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nservice_bundle = blue_hive.employers.service_bundles.update(\n  "id",\n  employer_id: "employerId",\n  bundle_name: "x",\n  service_ids: ["string"]\n)\n\nputs(service_bundle)',
       },
-      typescript: {
-        method: 'client.employers.serviceBundles.update',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst serviceBundle = await client.employers.serviceBundles.update('id', {\n  employerId: 'employerId',\n  bundleName: 'x',\n  serviceIds: ['string'],\n});\n\nconsole.log(serviceBundle._id);",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "bundleName": "x",\n          "serviceIds": [\n            "string"\n          ]\n        }\'',
       },
     },
   },
@@ -790,14 +790,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## delete\n\n`client.employers.serviceBundles.delete(employerId: string, id: string): void`\n\n**delete** `/v1/employers/{employerId}/service-bundles/{id}`\n\nDelete Service Bundle\n\n### Parameters\n\n- `employerId: string`\n\n- `id: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nawait client.employers.serviceBundles.delete('id', { employerId: 'employerId' })\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employers.ServiceBundles.Delete',
+      typescript: {
+        method: 'client.employers.serviceBundles.delete',
         example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Employers.ServiceBundles.Delete(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleDeleteParams{\n\t\t\tEmployerID: "employerId",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.employers.serviceBundles.delete('id', { employerId: 'employerId' });",
       },
-      http: {
+      python: {
+        method: 'employers.service_bundles.delete',
         example:
-          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nclient.employers.service_bundles.delete(\n    id="id",\n    employer_id="employerId",\n)',
       },
       java: {
         method: 'employers().serviceBundles().delete',
@@ -809,20 +810,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employers.servicebundles.ServiceBundleDeleteParams\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: ServiceBundleDeleteParams = ServiceBundleDeleteParams.builder()\n        .employerId("employerId")\n        .id("id")\n        .build()\n    client.employers().serviceBundles().delete(params)\n}',
       },
-      python: {
-        method: 'employers.service_bundles.delete',
+      go: {
+        method: 'client.Employers.ServiceBundles.Delete',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nclient.employers.service_bundles.delete(\n    id="id",\n    employer_id="employerId",\n)',
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Employers.ServiceBundles.Delete(\n\t\tcontext.TODO(),\n\t\t"id",\n\t\tgithubcombluehivehealthbluehivesdkgo.EmployerServiceBundleDeleteParams{\n\t\t\tEmployerID: "employerId",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
       },
       ruby: {
         method: 'employers.service_bundles.delete',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresult = blue_hive.employers.service_bundles.delete("id", employer_id: "employerId")\n\nputs(result)',
       },
-      typescript: {
-        method: 'client.employers.serviceBundles.delete',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.employers.serviceBundles.delete('id', { employerId: 'employerId' });",
+          'curl https://api.bluehive.com/v1/employers/$EMPLOYER_ID/service-bundles/$ID \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -839,14 +839,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## send_results\n\n`client.hl7.sendResults(employeeId: string, file: { base64: string; name: string; type: string; }): string`\n\n**post** `/v1/hl7/results`\n\nSend lab results or documents via HL7\n\n### Parameters\n\n- `employeeId: string`\n  Employee ID to send results for\n\n- `file: { base64: string; name: string; type: string; }`\n  File containing the results\n  - `base64: string`\n    Base64 encoded file content\n  - `name: string`\n    File name\n  - `type: string`\n    MIME type of the file\n\n### Returns\n\n- `string`\n  Result of HL7 message send\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.hl7.sendResults({\n  employeeId: 'employeeId',\n  file: {\n  base64: 'base64',\n  name: 'name',\n  type: 'type',\n},\n});\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Hl7.SendResults',
+      typescript: {
+        method: 'client.hl7.sendResults',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Hl7.SendResults(context.TODO(), githubcombluehivehealthbluehivesdkgo.Hl7SendResultsParams{\n\t\tEmployeeID: "employeeId",\n\t\tFile: githubcombluehivehealthbluehivesdkgo.Hl7SendResultsParamsFile{\n\t\t\tBase64: "base64",\n\t\t\tName:   "name",\n\t\t\tType:   "type",\n\t\t},\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.hl7.sendResults({\n  employeeId: 'employeeId',\n  file: {\n    base64: 'base64',\n    name: 'name',\n    type: 'type',\n  },\n});\n\nconsole.log(response);",
       },
-      http: {
+      python: {
+        method: 'hl7.send_results',
         example:
-          'curl https://api.bluehive.com/v1/hl7/results \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "employeeId",\n          "file": {\n            "base64": "base64",\n            "name": "name",\n            "type": "type"\n          }\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.hl7.send_results(\n    employee_id="employeeId",\n    file={\n        "base64": "base64",\n        "name": "name",\n        "type": "type",\n    },\n)\nprint(response)',
       },
       java: {
         method: 'hl7().sendResults',
@@ -858,20 +859,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.hl7.Hl7SendResultsParams\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: Hl7SendResultsParams = Hl7SendResultsParams.builder()\n        .employeeId("employeeId")\n        .file(Hl7SendResultsParams.File.builder()\n            .base64("base64")\n            .name("name")\n            .type("type")\n            .build())\n        .build()\n    val response: String = client.hl7().sendResults(params)\n}',
       },
-      python: {
-        method: 'hl7.send_results',
+      go: {
+        method: 'client.Hl7.SendResults',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.hl7.send_results(\n    employee_id="employeeId",\n    file={\n        "base64": "base64",\n        "name": "name",\n        "type": "type",\n    },\n)\nprint(response)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Hl7.SendResults(context.TODO(), githubcombluehivehealthbluehivesdkgo.Hl7SendResultsParams{\n\t\tEmployeeID: "employeeId",\n\t\tFile: githubcombluehivehealthbluehivesdkgo.Hl7SendResultsParamsFile{\n\t\t\tBase64: "base64",\n\t\t\tName:   "name",\n\t\t\tType:   "type",\n\t\t},\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response)\n}\n',
       },
       ruby: {
         method: 'hl7.send_results',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.hl7.send_results(\n  employee_id: "employeeId",\n  file: {base64: "base64", name: "name", type: "type"}\n)\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.hl7.sendResults',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.hl7.sendResults({\n  employeeId: 'employeeId',\n  file: {\n    base64: 'base64',\n    name: 'name',\n    type: 'type',\n  },\n});\n\nconsole.log(response);",
+          'curl https://api.bluehive.com/v1/hl7/results \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "employeeId",\n          "file": {\n            "base64": "base64",\n            "name": "name",\n            "type": "type"\n          }\n        }\'',
       },
     },
   },
@@ -898,14 +898,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve_results\n\n`client.orders.retrieveResults(orderId: string, page?: number, pageSize?: number, serviceId?: string, since?: string, status?: string, until?: string): { meta: object; services: object[]; }`\n\n**get** `/v1/orders/{orderId}/results`\n\nRetrieve results for an order. Supports filtering by serviceId, status, date window, and pagination.\n\n### Parameters\n\n- `orderId: string`\n\n- `page?: number`\n\n- `pageSize?: number`\n\n- `serviceId?: string`\n\n- `since?: string`\n\n- `status?: string`\n\n- `until?: string`\n\n### Returns\n\n- `{ meta: { orderId: string; page: number; pageSize: number; returned: number; totalServices: number; employeeId?: string; orderNumber?: string; providerId?: string; }; services: { serviceId: string; status: string; altTxt?: string; completed_datetime?: string; contacts?: string[]; drawn_datetime?: string; fileIds?: string[]; message?: string; result?: string; resultsPosted?: string; }[]; }`\n\n  - `meta: { orderId: string; page: number; pageSize: number; returned: number; totalServices: number; employeeId?: string; orderNumber?: string; providerId?: string; }`\n  - `services: { serviceId: string; status: string; altTxt?: string; completed_datetime?: string; contacts?: string[]; drawn_datetime?: string; fileIds?: string[]; message?: string; result?: string; resultsPosted?: string; }[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.retrieveResults('orderId');\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.GetResults',
+      typescript: {
+        method: 'client.orders.retrieveResults',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.GetResults(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderGetResultsParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Meta)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.retrieveResults('orderId');\n\nconsole.log(response.meta);",
       },
-      http: {
+      python: {
+        method: 'orders.retrieve_results',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/results \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.retrieve_results(\n    order_id="orderId",\n)\nprint(response.meta)',
       },
       java: {
         method: 'orders().retrieveResults',
@@ -917,20 +918,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderRetrieveResultsParams\nimport com.bluehive.api.models.orders.OrderRetrieveResultsResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val response: OrderRetrieveResultsResponse = client.orders().retrieveResults("orderId")\n}',
       },
-      python: {
-        method: 'orders.retrieve_results',
+      go: {
+        method: 'client.Orders.GetResults',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.retrieve_results(\n    order_id="orderId",\n)\nprint(response.meta)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.GetResults(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderGetResultsParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Meta)\n}\n',
       },
       ruby: {
         method: 'orders.retrieve_results',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.retrieve_results("orderId")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.orders.retrieveResults',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.retrieveResults('orderId');\n\nconsole.log(response.meta);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/results \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -951,14 +951,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.orders.create(body?: { paymentMethod: 'self-pay' | 'employer-sponsored'; person: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; providerId: string; services: { _id: string; quantity: number; autoAccept?: boolean; }[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeId?: string; employeeIds?: string[]; employerId?: string; metadata?: object; priority?: 'normal' | 'high'; providerCreated?: boolean; providersIds?: { providerId: string; serviceId?: string; }[]; quantities?: object; reCaptchaToken?: string; servicesIds?: string[]; tokenId?: string; } | { employeeId: string; employerId: string; services: { _id: string; quantity: number; autoAccept?: boolean; }[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeIds?: string[]; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; providersIds?: { providerId: string; serviceId?: string; }[]; quantities?: object; reCaptchaToken?: string; servicesIds?: string[]; tokenId?: string; } | { employeeId: string; employerId: string; providersIds: { providerId: string; serviceId?: string; }[]; servicesIds: string[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeIds?: string[]; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; quantities?: object; reCaptchaToken?: string; services?: { _id: string; quantity: number; autoAccept?: boolean; }[]; tokenId?: string; } | { employeeIds: string[]; employerId: string; providersIds: { providerId: string; serviceId?: string; }[]; servicesIds: string[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeId?: string; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; quantities?: object; reCaptchaToken?: string; services?: { _id: string; quantity: number; autoAccept?: boolean; }[]; tokenId?: string; }): { orderId: string; orderNumber: string; success: true; hostedInvoiceUrl?: string; message?: string; partialSuccess?: boolean; selfPay?: boolean; unavailableServices?: object[]; } | { orderResults: object[]; status: 'split'; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: object[]; }`\n\n**post** `/v1/orders`\n\nCreate orders for consumers (self-pay or employer-sponsored), employers, or bulk orders. Consolidates functionality from legacy Order.createOrder and Order.SendOrder methods.\n\n### Parameters\n\n- `body?: { paymentMethod: 'self-pay' | 'employer-sponsored'; person: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; providerId: string; services: { _id: string; quantity: number; autoAccept?: boolean; }[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeId?: string; employeeIds?: string[]; employerId?: string; metadata?: object; priority?: 'normal' | 'high'; providerCreated?: boolean; providersIds?: { providerId: string; serviceId?: string; }[]; quantities?: object; reCaptchaToken?: string; servicesIds?: string[]; tokenId?: string; } | { employeeId: string; employerId: string; services: { _id: string; quantity: number; autoAccept?: boolean; }[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeIds?: string[]; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; providersIds?: { providerId: string; serviceId?: string; }[]; quantities?: object; reCaptchaToken?: string; servicesIds?: string[]; tokenId?: string; } | { employeeId: string; employerId: string; providersIds: { providerId: string; serviceId?: string; }[]; servicesIds: string[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeIds?: string[]; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; quantities?: object; reCaptchaToken?: string; services?: { _id: string; quantity: number; autoAccept?: boolean; }[]; tokenId?: string; } | { employeeIds: string[]; employerId: string; providersIds: { providerId: string; serviceId?: string; }[]; servicesIds: string[]; _id?: string; brandId?: string; dueDate?: string; dueDates?: string[]; employeeId?: string; metadata?: object; paymentMethod?: 'self-pay' | 'employer-sponsored'; person?: { city: string; dob: string; email: string; firstName: string; lastName: string; phone: string; state: string; street: string; zipcode: string; country?: string; county?: string; street2?: string; }; priority?: 'normal' | 'high'; providerCreated?: boolean; providerId?: string; quantities?: object; reCaptchaToken?: string; services?: { _id: string; quantity: number; autoAccept?: boolean; }[]; tokenId?: string; }`\n\n### Returns\n\n- `{ orderId: string; orderNumber: string; success: true; hostedInvoiceUrl?: string; message?: string; partialSuccess?: boolean; selfPay?: boolean; unavailableServices?: { reason: string; serviceId: string; serviceName?: string; }[]; } | { orderResults: { orderId: string; orderNumber: string; providerId: string; }[]; status: 'split'; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: { reason: string; serviceId: string; serviceName?: string; }[]; }`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst order = await client.orders.create();\n\nconsole.log(order);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.New',
+      typescript: {
+        method: 'client.orders.create',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.OrderNewParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.create({\n  paymentMethod: 'self-pay',\n  person: {\n    city: 'x',\n    dob: '7321-69-10',\n    email: 'email',\n    firstName: 'x',\n    lastName: 'x',\n    phone: '+)() 92))()1)',\n    state: 'xx',\n    street: 'x',\n    zipcode: '73216-0225',\n  },\n  providerId: 'providerId',\n  services: [{ _id: 'x', quantity: 1 }],\n});\n\nconsole.log(order);",
       },
-      http: {
+      python: {
+        method: 'orders.create',
         example:
-          'curl https://api.bluehive.com/v1/orders \\\n    -X POST \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.create(\n    payment_method="self-pay",\n    person={\n        "city": "x",\n        "dob": "7321-69-10",\n        "email": "email",\n        "first_name": "x",\n        "last_name": "x",\n        "phone": "+)() 92))()1)",\n        "state": "xx",\n        "street": "x",\n        "zipcode": "73216-0225",\n    },\n    provider_id="providerId",\n    services=[{\n        "_id": "x",\n        "quantity": 1,\n    }],\n)\nprint(order)',
       },
       java: {
         method: 'orders().create',
@@ -970,20 +971,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderCreateParams\nimport com.bluehive.api.models.orders.OrderCreateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val order: OrderCreateResponse = client.orders().create()\n}',
       },
-      python: {
-        method: 'orders.create',
+      go: {
+        method: 'client.Orders.New',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.create(\n    payment_method="self-pay",\n    person={\n        "city": "x",\n        "dob": "7321-69-10",\n        "email": "email",\n        "first_name": "x",\n        "last_name": "x",\n        "phone": "+)() 92))()1)",\n        "state": "xx",\n        "street": "x",\n        "zipcode": "73216-0225",\n    },\n    provider_id="providerId",\n    services=[{\n        "_id": "x",\n        "quantity": 1,\n    }],\n)\nprint(order)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.OrderNewParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order)\n}\n',
       },
       ruby: {
         method: 'orders.create',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\norder = blue_hive.orders.create\n\nputs(order)',
       },
-      typescript: {
-        method: 'client.orders.create',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.create({\n  paymentMethod: 'self-pay',\n  person: {\n    city: 'x',\n    dob: '7321-69-10',\n    email: 'email',\n    firstName: 'x',\n    lastName: 'x',\n    phone: '+)() 92))()1)',\n    state: 'xx',\n    street: 'x',\n    zipcode: '73216-0225',\n  },\n  providerId: 'providerId',\n  services: [{ _id: 'x', quantity: 1 }],\n});\n\nconsole.log(order);",
+          'curl https://api.bluehive.com/v1/orders \\\n    -X POST \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1000,14 +1000,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.orders.retrieve(orderId: string): { orderId?: string; orderNumber?: string; status?: string; }`\n\n**get** `/v1/orders/{orderId}`\n\nRetrieve details for a specific order\n\n### Parameters\n\n- `orderId: string`\n\n### Returns\n\n- `{ orderId?: string; orderNumber?: string; status?: string; }`\n\n  - `orderId?: string`\n  - `orderNumber?: string`\n  - `status?: string`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst order = await client.orders.retrieve('orderId');\n\nconsole.log(order);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.Get',
+      typescript: {
+        method: 'client.orders.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.Get(context.TODO(), "orderId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order.OrderID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.retrieve('orderId');\n\nconsole.log(order.orderId);",
       },
-      http: {
+      python: {
+        method: 'orders.retrieve',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.retrieve(\n    "orderId",\n)\nprint(order.order_id)',
       },
       java: {
         method: 'orders().retrieve',
@@ -1019,20 +1020,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderRetrieveParams\nimport com.bluehive.api.models.orders.OrderRetrieveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val order: OrderRetrieveResponse = client.orders().retrieve("orderId")\n}',
       },
-      python: {
-        method: 'orders.retrieve',
+      go: {
+        method: 'client.Orders.Get',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.retrieve(\n    "orderId",\n)\nprint(order.order_id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.Get(context.TODO(), "orderId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order.OrderID)\n}\n',
       },
       ruby: {
         method: 'orders.retrieve',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\norder = blue_hive.orders.retrieve("orderId")\n\nputs(order)',
       },
-      typescript: {
-        method: 'client.orders.retrieve',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.retrieve('orderId');\n\nconsole.log(order.orderId);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1056,14 +1056,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update\n\n`client.orders.update(orderId: string, metadata?: object, services?: { serviceId: string; dueDate?: string; results?: object; status?: 'pending' | 'in_progress' | 'completed' | 'cancelled' | 'rejected'; }[], status?: string): { message: string; orderId: string; orderNumber: string; success: true; updatedFields?: string[]; }`\n\n**post** `/v1/orders/{orderId}`\n\nUpdate order details and associated order items. Allows updating order status, metadata, and modifying order item services.\n\n### Parameters\n\n- `orderId: string`\n\n- `metadata?: object`\n  Arbitrary metadata to update on the order (non-indexed passthrough, <=10KB when JSON stringified)\n\n- `services?: { serviceId: string; dueDate?: string; results?: object; status?: 'pending' | 'in_progress' | 'completed' | 'cancelled' | 'rejected'; }[]`\n\n- `status?: string`\n\n### Returns\n\n- `{ message: string; orderId: string; orderNumber: string; success: true; updatedFields?: string[]; }`\n\n  - `message: string`\n  - `orderId: string`\n  - `orderNumber: string`\n  - `success: true`\n  - `updatedFields?: string[]`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst order = await client.orders.update('orderId');\n\nconsole.log(order);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.Update',
+      typescript: {
+        method: 'client.orders.update',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.Update(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUpdateParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.update('orderId');\n\nconsole.log(order.message);",
       },
-      http: {
+      python: {
+        method: 'orders.update',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID \\\n    -X POST \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.update(\n    order_id="orderId",\n)\nprint(order.message)',
       },
       java: {
         method: 'orders().update',
@@ -1075,20 +1076,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderUpdateParams\nimport com.bluehive.api.models.orders.OrderUpdateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val order: OrderUpdateResponse = client.orders().update("orderId")\n}',
       },
-      python: {
-        method: 'orders.update',
+      go: {
+        method: 'client.Orders.Update',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\norder = client.orders.update(\n    order_id="orderId",\n)\nprint(order.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\torder, err := client.Orders.Update(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUpdateParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", order.Message)\n}\n',
       },
       ruby: {
         method: 'orders.update',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\norder = blue_hive.orders.update("orderId")\n\nputs(order)',
       },
-      typescript: {
-        method: 'client.orders.update',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst order = await client.orders.update('orderId');\n\nconsole.log(order.message);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID \\\n    -X POST \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1105,14 +1105,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update_status\n\n`client.orders.updateStatus(orderId: string, status: string, message?: string): { message?: string; success?: boolean; }`\n\n**put** `/v1/orders/{orderId}/status`\n\nUpdate the status of an existing order\n\n### Parameters\n\n- `orderId: string`\n\n- `status: string`\n\n- `message?: string`\n\n### Returns\n\n- `{ message?: string; success?: boolean; }`\n\n  - `message?: string`\n  - `success?: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.updateStatus('orderId', { status: 'order_sent' });\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.UpdateStatus',
+      typescript: {
+        method: 'client.orders.updateStatus',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.UpdateStatus(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParams{\n\t\t\tStatus: githubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParamsStatusOrderSent,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.updateStatus('orderId', { status: 'order_sent' });\n\nconsole.log(response.message);",
       },
-      http: {
+      python: {
+        method: 'orders.update_status',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/status \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "status": "order_sent"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.update_status(\n    order_id="orderId",\n    status="order_sent",\n)\nprint(response.message)',
       },
       java: {
         method: 'orders().updateStatus',
@@ -1124,20 +1125,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderUpdateStatusParams\nimport com.bluehive.api.models.orders.OrderUpdateStatusResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: OrderUpdateStatusParams = OrderUpdateStatusParams.builder()\n        .orderId("orderId")\n        .status(OrderUpdateStatusParams.Status.ORDER_SENT)\n        .build()\n    val response: OrderUpdateStatusResponse = client.orders().updateStatus(params)\n}',
       },
-      python: {
-        method: 'orders.update_status',
+      go: {
+        method: 'client.Orders.UpdateStatus',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.update_status(\n    order_id="orderId",\n    status="order_sent",\n)\nprint(response.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.UpdateStatus(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParams{\n\t\t\tStatus: githubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParamsStatusOrderSent,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
       },
       ruby: {
         method: 'orders.update_status',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.update_status("orderId", status: :order_sent)\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.orders.updateStatus',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.updateStatus('orderId', { status: 'order_sent' });\n\nconsole.log(response.message);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/status \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "status": "order_sent"\n        }\'',
       },
     },
   },
@@ -1171,14 +1171,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## send_for_employee\n\n`client.orders.sendForEmployee(employeeId: string, employerId: string, providersIds: { providerId: string; serviceId?: string; }[], servicesIds: string[], login-token: string, user-id: string, brandId?: string, dueDate?: string, dueDates?: string[], metadata?: object, priority?: 'normal' | 'high', providerCreated?: boolean, providerId?: string, quantities?: object): { orderId: string; orderNumber: string; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: object[]; } | { orderResults: object[]; status: 'split'; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: object[]; }`\n\n**post** `/v1/orders/send`\n\nSend an order for a specific employee. Requires API key, login token, and user ID. This endpoint specifically handles employer-to-employee order sending.\n\n### Parameters\n\n- `employeeId: string`\n  Employee ID to send order to\n\n- `employerId: string`\n  Employer ID sending the order\n\n- `providersIds: { providerId: string; serviceId?: string; }[]`\n  Array mapping each service (by index) to a provider; serviceId optional\n\n- `servicesIds: string[]`\n  Array of service IDs to include in the order\n\n- `login-token: string`\n\n- `user-id: string`\n\n- `brandId?: string`\n  Brand ID for branded orders\n\n- `dueDate?: string`\n  Due date for the order (date or date-time ISO string)\n\n- `dueDates?: string[]`\n  Array of due dates per service\n\n- `metadata?: object`\n  Optional arbitrary metadata to store on the order (non-indexed passthrough, <=10KB when JSON stringified)\n\n- `priority?: 'normal' | 'high'`\n  Order priority level\n\n- `providerCreated?: boolean`\n  Whether this order is being created by a provider (affects permission checking)\n\n- `providerId?: string`\n  Single provider ID (shortcut when all services map to one provider)\n\n- `quantities?: object`\n  Service ID to quantity mapping\n\n### Returns\n\n- `{ orderId: string; orderNumber: string; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: { reason: string; serviceId: string; serviceName?: string; }[]; } | { orderResults: { orderId: string; orderNumber: string; providerId: string; }[]; status: 'split'; success: true; message?: string; partialSuccess?: boolean; unavailableServices?: { reason: string; serviceId: string; serviceName?: string; }[]; }`\n  Order sent successfully (single or split)\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.sendForEmployee({\n  employeeId: 'employeeId',\n  employerId: 'employerId',\n  providersIds: [{ providerId: 'providerId' }],\n  servicesIds: ['string'],\n  'login-token': 'login-token',\n  'user-id': 'user-id',\n});\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.SendForEmployee',
+      typescript: {
+        method: 'client.orders.sendForEmployee',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.SendForEmployee(context.TODO(), githubcombluehivehealthbluehivesdkgo.OrderSendForEmployeeParams{\n\t\tEmployeeID: "employeeId",\n\t\tEmployerID: "employerId",\n\t\tProvidersIDs: []githubcombluehivehealthbluehivesdkgo.OrderSendForEmployeeParamsProvidersID{{\n\t\t\tProviderID: "providerId",\n\t\t}},\n\t\tServicesIDs: []string{"string"},\n\t\tLoginToken:  "login-token",\n\t\tUserID:      "user-id",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.sendForEmployee({\n  employeeId: 'employeeId',\n  employerId: 'employerId',\n  providersIds: [{ providerId: 'providerId' }],\n  servicesIds: ['string'],\n  'login-token': 'login-token',\n  'user-id': 'user-id',\n});\n\nconsole.log(response);",
       },
-      http: {
+      python: {
+        method: 'orders.send_for_employee',
         example:
-          'curl https://api.bluehive.com/v1/orders/send \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "employeeId",\n          "employerId": "employerId",\n          "providersIds": [\n            {\n              "providerId": "providerId"\n            }\n          ],\n          "servicesIds": [\n            "string"\n          ]\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.send_for_employee(\n    employee_id="employeeId",\n    employer_id="employerId",\n    providers_ids=[{\n        "provider_id": "providerId"\n    }],\n    services_ids=["string"],\n    login_token="login-token",\n    user_id="user-id",\n)\nprint(response)',
       },
       java: {
         method: 'orders().sendForEmployee',
@@ -1190,20 +1191,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderSendForEmployeeParams\nimport com.bluehive.api.models.orders.OrderSendForEmployeeResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: OrderSendForEmployeeParams = OrderSendForEmployeeParams.builder()\n        .loginToken("login-token")\n        .userId("user-id")\n        .employeeId("employeeId")\n        .employerId("employerId")\n        .addProvidersId(OrderSendForEmployeeParams.ProvidersId.builder()\n            .providerId("providerId")\n            .build())\n        .addServicesId("string")\n        .build()\n    val response: OrderSendForEmployeeResponse = client.orders().sendForEmployee(params)\n}',
       },
-      python: {
-        method: 'orders.send_for_employee',
+      go: {
+        method: 'client.Orders.SendForEmployee',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.send_for_employee(\n    employee_id="employeeId",\n    employer_id="employerId",\n    providers_ids=[{\n        "provider_id": "providerId"\n    }],\n    services_ids=["string"],\n    login_token="login-token",\n    user_id="user-id",\n)\nprint(response)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.SendForEmployee(context.TODO(), githubcombluehivehealthbluehivesdkgo.OrderSendForEmployeeParams{\n\t\tEmployeeID: "employeeId",\n\t\tEmployerID: "employerId",\n\t\tProvidersIDs: []githubcombluehivehealthbluehivesdkgo.OrderSendForEmployeeParamsProvidersID{{\n\t\t\tProviderID: "providerId",\n\t\t}},\n\t\tServicesIDs: []string{"string"},\n\t\tLoginToken:  "login-token",\n\t\tUserID:      "user-id",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response)\n}\n',
       },
       ruby: {
         method: 'orders.send_for_employee',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.send_for_employee(\n  employee_id: "employeeId",\n  employer_id: "employerId",\n  providers_ids: [{providerId: "providerId"}],\n  services_ids: ["string"],\n  login_token: "login-token",\n  user_id: "user-id"\n)\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.orders.sendForEmployee',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.sendForEmployee({\n  employeeId: 'employeeId',\n  employerId: 'employerId',\n  providersIds: [{ providerId: 'providerId' }],\n  servicesIds: ['string'],\n  'login-token': 'login-token',\n  'user-id': 'user-id',\n});\n\nconsole.log(response);",
+          'curl https://api.bluehive.com/v1/orders/send \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "employeeId",\n          "employerId": "employerId",\n          "providersIds": [\n            {\n              "providerId": "providerId"\n            }\n          ],\n          "servicesIds": [\n            "string"\n          ]\n        }\'',
       },
     },
   },
@@ -1230,14 +1230,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## upload_results\n\n`client.orders.uploadResults(orderId: string, captchaToken: string, orderAccessCode: string, serviceId: string, dob?: string, fileIds?: string[], files?: { base64: string; name: string; type: string; }[], lastName?: string): { message?: string; success?: boolean; }`\n\n**post** `/v1/orders/{orderId}/upload-results`\n\nUpload test results for a specific order item. Supports both existing fileIds and base64 encoded files. Requires order access code and employee verification.\n\n### Parameters\n\n- `orderId: string`\n\n- `captchaToken: string`\n\n- `orderAccessCode: string`\n\n- `serviceId: string`\n\n- `dob?: string`\n  Date of birth in YYYY-MM-DD format\n\n- `fileIds?: string[]`\n\n- `files?: { base64: string; name: string; type: string; }[]`\n\n- `lastName?: string`\n\n### Returns\n\n- `{ message?: string; success?: boolean; }`\n\n  - `message?: string`\n  - `success?: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.uploadResults('orderId', {\n  captchaToken: 'x',\n  orderAccessCode: 'x',\n  serviceId: 'x',\n});\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.UploadResults',
+      typescript: {
+        method: 'client.orders.uploadResults',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.UploadResults(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUploadResultsParams{\n\t\t\tCaptchaToken:    "x",\n\t\t\tOrderAccessCode: "x",\n\t\t\tServiceID:       "x",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.uploadResults('orderId', {\n  captchaToken: 'x',\n  orderAccessCode: 'x',\n  serviceId: 'x',\n});\n\nconsole.log(response.message);",
       },
-      http: {
+      python: {
+        method: 'orders.upload_results',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/upload-results \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "captchaToken": "x",\n          "orderAccessCode": "x",\n          "serviceId": "x"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.upload_results(\n    order_id="orderId",\n    captcha_token="x",\n    order_access_code="x",\n    service_id="x",\n)\nprint(response.message)',
       },
       java: {
         method: 'orders().uploadResults',
@@ -1249,20 +1250,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderUploadResultsParams\nimport com.bluehive.api.models.orders.OrderUploadResultsResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: OrderUploadResultsParams = OrderUploadResultsParams.builder()\n        .orderId("orderId")\n        .captchaToken("x")\n        .orderAccessCode("x")\n        .serviceId("x")\n        .build()\n    val response: OrderUploadResultsResponse = client.orders().uploadResults(params)\n}',
       },
-      python: {
-        method: 'orders.upload_results',
+      go: {
+        method: 'client.Orders.UploadResults',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.upload_results(\n    order_id="orderId",\n    captcha_token="x",\n    order_access_code="x",\n    service_id="x",\n)\nprint(response.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.UploadResults(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUploadResultsParams{\n\t\t\tCaptchaToken:    "x",\n\t\t\tOrderAccessCode: "x",\n\t\t\tServiceID:       "x",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
       },
       ruby: {
         method: 'orders.upload_results',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.upload_results("orderId", captcha_token: "x", order_access_code: "x", service_id: "x")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.orders.uploadResults',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.uploadResults('orderId', {\n  captchaToken: 'x',\n  orderAccessCode: 'x',\n  serviceId: 'x',\n});\n\nconsole.log(response.message);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/upload-results \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "captchaToken": "x",\n          "orderAccessCode": "x",\n          "serviceId": "x"\n        }\'',
       },
     },
   },
@@ -1285,14 +1285,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## schedule_appointment\n\n`client.orders.scheduleAppointment(orderId: string, appointment: { date: string; dateTime: string; time: string; notes?: string; type?: 'appointment'; } | { date?: string; dateTime?: string; notes?: string; time?: string; type?: 'walkin'; }, orderAccessCode: string, providerId?: string): { message: string; success: boolean; }`\n\n**post** `/v1/orders/{orderId}/schedule-appointment`\n\nSchedule an appointment or walk-in for an existing order. Sends HL7 SIU^S12 message for appointment booking.\n\n### Parameters\n\n- `orderId: string`\n\n- `appointment: { date: string; dateTime: string; time: string; notes?: string; type?: 'appointment'; } | { date?: string; dateTime?: string; notes?: string; time?: string; type?: 'walkin'; }`\n\n- `orderAccessCode: string`\n  Order access code for authorization\n\n- `providerId?: string`\n  Provider ID for authorization\n\n### Returns\n\n- `{ message: string; success: boolean; }`\n\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.scheduleAppointment('orderId', {\n  appointment: {\n  date: 'date',\n  dateTime: '2019-12-27T18:11:19.117Z',\n  time: 'time',\n},\n  orderAccessCode: 'orderAccessCode',\n});\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Orders.ScheduleAppointment',
+      typescript: {
+        method: 'client.orders.scheduleAppointment',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\t"time"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.ScheduleAppointment(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParams{\n\t\t\tAppointment: githubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParamsAppointmentUnion{\n\t\t\t\tOfOrderScheduleAppointmentsAppointmentObject: &githubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParamsAppointmentObject{\n\t\t\t\t\tDate:     "date",\n\t\t\t\t\tDateTime: time.Now(),\n\t\t\t\t\tTime:     "time",\n\t\t\t\t},\n\t\t\t},\n\t\t\tOrderAccessCode: "orderAccessCode",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.scheduleAppointment('orderId', {\n  appointment: {\n    date: 'date',\n    dateTime: '2019-12-27T18:11:19.117Z',\n    time: 'time',\n  },\n  orderAccessCode: 'orderAccessCode',\n});\n\nconsole.log(response.message);",
       },
-      http: {
+      python: {
+        method: 'orders.schedule_appointment',
         example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/schedule-appointment \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "appointment": {\n            "date": "date",\n            "dateTime": "2019-12-27T18:11:19.117Z",\n            "time": "time"\n          },\n          "orderAccessCode": "orderAccessCode"\n        }\'',
+          'import os\nfrom datetime import datetime\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.schedule_appointment(\n    order_id="orderId",\n    appointment={\n        "date": "date",\n        "date_time": datetime.fromisoformat("2019-12-27T18:11:19.117"),\n        "time": "time",\n    },\n    order_access_code="orderAccessCode",\n)\nprint(response.message)',
       },
       java: {
         method: 'orders().scheduleAppointment',
@@ -1304,20 +1305,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderScheduleAppointmentParams\nimport com.bluehive.api.models.orders.OrderScheduleAppointmentResponse\nimport java.time.OffsetDateTime\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: OrderScheduleAppointmentParams = OrderScheduleAppointmentParams.builder()\n        .orderId("orderId")\n        .appointment(OrderScheduleAppointmentParams.Appointment.UnionMember0.builder()\n            .date("date")\n            .dateTime(OffsetDateTime.parse("2019-12-27T18:11:19.117Z"))\n            .time("time")\n            .build())\n        .orderAccessCode("orderAccessCode")\n        .build()\n    val response: OrderScheduleAppointmentResponse = client.orders().scheduleAppointment(params)\n}',
       },
-      python: {
-        method: 'orders.schedule_appointment',
+      go: {
+        method: 'client.Orders.ScheduleAppointment',
         example:
-          'import os\nfrom datetime import datetime\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.schedule_appointment(\n    order_id="orderId",\n    appointment={\n        "date": "date",\n        "date_time": datetime.fromisoformat("2019-12-27T18:11:19.117"),\n        "time": "time",\n    },\n    order_access_code="orderAccessCode",\n)\nprint(response.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\t"time"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.ScheduleAppointment(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParams{\n\t\t\tAppointment: githubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParamsAppointmentUnion{\n\t\t\t\tOfOrderScheduleAppointmentsAppointmentObject: &githubcombluehivehealthbluehivesdkgo.OrderScheduleAppointmentParamsAppointmentObject{\n\t\t\t\t\tDate:     "date",\n\t\t\t\t\tDateTime: time.Now(),\n\t\t\t\t\tTime:     "time",\n\t\t\t\t},\n\t\t\t},\n\t\t\tOrderAccessCode: "orderAccessCode",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
       },
       ruby: {
         method: 'orders.schedule_appointment',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.schedule_appointment(\n  "orderId",\n  appointment: {date: "date", dateTime: "2019-12-27T18:11:19.117Z", time: "time"},\n  order_access_code: "orderAccessCode"\n)\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.orders.scheduleAppointment',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.scheduleAppointment('orderId', {\n  appointment: {\n    date: 'date',\n    dateTime: '2019-12-27T18:11:19.117Z',\n    time: 'time',\n  },\n  orderAccessCode: 'orderAccessCode',\n});\n\nconsole.log(response.message);",
+          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/schedule-appointment \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "appointment": {\n            "date": "date",\n            "dateTime": "2019-12-27T18:11:19.117Z",\n            "time": "time"\n          },\n          "orderAccessCode": "orderAccessCode"\n        }\'',
       },
     },
   },
@@ -1347,14 +1347,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.employees.create(email: string, firstName: string, lastName: string, activeAccount?: 'Active' | 'Inactive', address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }, blurb?: string, departments?: string[], dob?: string, employer_id?: string, extendedFields?: { name: string; value: string; }[], phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[], title?: string): { employeeId: string; message: string; success: boolean; }`\n\n**post** `/v1/employees`\n\nCreate a new employee in the system.\n\n### Parameters\n\n- `email: string`\n\n- `firstName: string`\n\n- `lastName: string`\n\n- `activeAccount?: 'Active' | 'Inactive'`\n\n- `address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }`\n  - `city: string`\n  - `postalCode: string`\n  - `state: string`\n  - `street1: string`\n  - `country?: string`\n  - `county?: string`\n  - `street2?: string`\n\n- `blurb?: string`\n\n- `departments?: string[]`\n\n- `dob?: string`\n\n- `employer_id?: string`\n\n- `extendedFields?: { name: string; value: string; }[]`\n\n- `phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]`\n\n- `title?: string`\n\n### Returns\n\n- `{ employeeId: string; message: string; success: boolean; }`\n  Employee created successfully\n\n  - `employeeId: string`\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employee = await client.employees.create({\n  email: 'dev@stainless.com',\n  firstName: 'x',\n  lastName: 'x',\n});\n\nconsole.log(employee);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.New',
+      typescript: {
+        method: 'client.employees.create',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeNewParams{\n\t\tEmail:     "dev@stainless.com",\n\t\tFirstName: "x",\n\t\tLastName:  "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.EmployeeID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.create({\n  email: 'dev@stainless.com',\n  firstName: 'x',\n  lastName: 'x',\n});\n\nconsole.log(employee.employeeId);",
       },
-      http: {
+      python: {
+        method: 'employees.create',
         example:
-          'curl https://api.bluehive.com/v1/employees \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "email": "dev@stainless.com",\n          "firstName": "x",\n          "lastName": "x"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.create(\n    email="dev@stainless.com",\n    first_name="x",\n    last_name="x",\n)\nprint(employee.employee_id)',
       },
       java: {
         method: 'employees().create',
@@ -1366,20 +1367,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeCreateParams\nimport com.bluehive.api.models.employees.EmployeeCreateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployeeCreateParams = EmployeeCreateParams.builder()\n        .email("dev@stainless.com")\n        .firstName("x")\n        .lastName("x")\n        .build()\n    val employee: EmployeeCreateResponse = client.employees().create(params)\n}',
       },
-      python: {
-        method: 'employees.create',
+      go: {
+        method: 'client.Employees.New',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.create(\n    email="dev@stainless.com",\n    first_name="x",\n    last_name="x",\n)\nprint(employee.employee_id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.New(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeNewParams{\n\t\tEmail:     "dev@stainless.com",\n\t\tFirstName: "x",\n\t\tLastName:  "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.EmployeeID)\n}\n',
       },
       ruby: {
         method: 'employees.create',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployee = blue_hive.employees.create(email: "dev@stainless.com", first_name: "x", last_name: "x")\n\nputs(employee)',
       },
-      typescript: {
-        method: 'client.employees.create',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.create({\n  email: 'dev@stainless.com',\n  firstName: 'x',\n  lastName: 'x',\n});\n\nconsole.log(employee.employeeId);",
+          'curl https://api.bluehive.com/v1/employees \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "email": "dev@stainless.com",\n          "firstName": "x",\n          "lastName": "x"\n        }\'',
       },
     },
   },
@@ -1410,14 +1410,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update\n\n`client.employees.update(_id: string, activeAccount?: 'Active' | 'Inactive', address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }, blurb?: string, departments?: string[], dob?: string, email?: string, employer_id?: string, extendedFields?: { name: string; value: string; }[], firstName?: string, lastName?: string, phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[], title?: string): { message: string; success: boolean; }`\n\n**put** `/v1/employees`\n\nUpdate an existing employee in the system.\n\n### Parameters\n\n- `_id: string`\n\n- `activeAccount?: 'Active' | 'Inactive'`\n\n- `address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }`\n  - `city: string`\n  - `postalCode: string`\n  - `state: string`\n  - `street1: string`\n  - `country?: string`\n  - `county?: string`\n  - `street2?: string`\n\n- `blurb?: string`\n\n- `departments?: string[]`\n\n- `dob?: string`\n\n- `email?: string`\n\n- `employer_id?: string`\n\n- `extendedFields?: { name: string; value: string; }[]`\n\n- `firstName?: string`\n\n- `lastName?: string`\n\n- `phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]`\n\n- `title?: string`\n\n### Returns\n\n- `{ message: string; success: boolean; }`\n  Employee updated successfully\n\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employee = await client.employees.update({ _id: 'x' });\n\nconsole.log(employee);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.Update',
+      typescript: {
+        method: 'client.employees.update',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Update(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeUpdateParams{\n\t\tID: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.update({ _id: 'x' });\n\nconsole.log(employee.message);",
       },
-      http: {
+      python: {
+        method: 'employees.update',
         example:
-          'curl https://api.bluehive.com/v1/employees \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "_id": "x"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.update(\n    _id="x",\n)\nprint(employee.message)',
       },
       java: {
         method: 'employees().update',
@@ -1429,20 +1430,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeUpdateParams\nimport com.bluehive.api.models.employees.EmployeeUpdateResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployeeUpdateParams = EmployeeUpdateParams.builder()\n        ._id("x")\n        .build()\n    val employee: EmployeeUpdateResponse = client.employees().update(params)\n}',
       },
-      python: {
-        method: 'employees.update',
+      go: {
+        method: 'client.Employees.Update',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.update(\n    _id="x",\n)\nprint(employee.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Update(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeUpdateParams{\n\t\tID: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Message)\n}\n',
       },
       ruby: {
         method: 'employees.update',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployee = blue_hive.employees.update(_id: "x")\n\nputs(employee)',
       },
-      typescript: {
-        method: 'client.employees.update',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.update({ _id: 'x' });\n\nconsole.log(employee.message);",
+          'curl https://api.bluehive.com/v1/employees \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "_id": "x"\n        }\'',
       },
     },
   },
@@ -1466,13 +1466,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.employees.list(employerId: string, activeAccount?: 'Active' | 'Inactive', limit?: string, offset?: string, search?: string): { employees: object[]; message: string; success: boolean; total: number; }`\n\n**get** `/v1/employees`\n\nList all employees for a given employer with pagination.\n\n### Parameters\n\n- `employerId: string`\n  ID of the employer to list employees for\n\n- `activeAccount?: 'Active' | 'Inactive'`\n  Filter by account status. If omitted, returns all employees regardless of status.\n\n- `limit?: string`\n  Maximum number of employees to return (default: 50)\n\n- `offset?: string`\n  Number of employees to skip (default: 0)\n\n- `search?: string`\n  Search term to filter employees by first name, last name, or email (case-insensitive)\n\n### Returns\n\n- `{ employees: { _id: string; email: string; employer_id: string; firstName: string; lastName: string; activeAccount?: 'Active' | 'Inactive'; address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }; blurb?: string; createdAt?: string; createdBy?: string; departments?: string[]; dob?: string; extendedFields?: { name: string; value: string; }[]; phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]; title?: string; updatedAt?: string; updatedBy?: string; }[]; message: string; success: boolean; total: number; }`\n  Employees retrieved successfully\n\n  - `employees: { _id: string; email: string; employer_id: string; firstName: string; lastName: string; activeAccount?: 'Active' | 'Inactive'; address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }; blurb?: string; createdAt?: string; createdBy?: string; departments?: string[]; dob?: string; extendedFields?: { name: string; value: string; }[]; phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]; title?: string; updatedAt?: string; updatedBy?: string; }[]`\n  - `message: string`\n  - `success: boolean`\n  - `total: number`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employees = await client.employees.list({ employerId: 'employerId' });\n\nconsole.log(employees);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.List',
+      typescript: {
+        method: 'client.employees.list',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployees, err := client.Employees.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeListParams{\n\t\tEmployerID: "employerId",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employees.Employees)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employees = await client.employees.list({ employerId: 'employerId' });\n\nconsole.log(employees.employees);",
       },
-      http: {
-        example: 'curl https://api.bluehive.com/v1/employees \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+      python: {
+        method: 'employees.list',
+        example:
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployees = client.employees.list(\n    employer_id="employerId",\n)\nprint(employees.employees)',
       },
       java: {
         method: 'employees().list',
@@ -1484,20 +1486,18 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeListParams\nimport com.bluehive.api.models.employees.EmployeeListResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployeeListParams = EmployeeListParams.builder()\n        .employerId("employerId")\n        .build()\n    val employees: EmployeeListResponse = client.employees().list(params)\n}',
       },
-      python: {
-        method: 'employees.list',
+      go: {
+        method: 'client.Employees.List',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployees = client.employees.list(\n    employer_id="employerId",\n)\nprint(employees.employees)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployees, err := client.Employees.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeListParams{\n\t\tEmployerID: "employerId",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employees.Employees)\n}\n',
       },
       ruby: {
         method: 'employees.list',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployees = blue_hive.employees.list(employer_id: "employerId")\n\nputs(employees)',
       },
-      typescript: {
-        method: 'client.employees.list',
-        example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employees = await client.employees.list({ employerId: 'employerId' });\n\nconsole.log(employees.employees);",
+      http: {
+        example: 'curl https://api.bluehive.com/v1/employees \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1515,14 +1515,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.employees.retrieve(employeeId: string): { employee: object; message: string; success: boolean; }`\n\n**get** `/v1/employees/{employeeId}`\n\nRetrieve an employee by their unique ID.\n\n### Parameters\n\n- `employeeId: string`\n\n### Returns\n\n- `{ employee: { _id: string; email: string; employer_id: string; firstName: string; lastName: string; activeAccount?: 'Active' | 'Inactive'; address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }; blurb?: string; createdAt?: string; createdBy?: string; departments?: string[]; dob?: string; extendedFields?: { name: string; value: string; }[]; phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]; title?: string; updatedAt?: string; updatedBy?: string; }; message: string; success: boolean; }`\n  Employee found successfully\n\n  - `employee: { _id: string; email: string; employer_id: string; firstName: string; lastName: string; activeAccount?: 'Active' | 'Inactive'; address?: { city: string; postalCode: string; state: string; street1: string; country?: string; county?: string; street2?: string; }; blurb?: string; createdAt?: string; createdBy?: string; departments?: string[]; dob?: string; extendedFields?: { name: string; value: string; }[]; phone?: { number: string; type: 'Cell' | 'Home' | 'Work' | 'Other'; }[]; title?: string; updatedAt?: string; updatedBy?: string; }`\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employee = await client.employees.retrieve('employeeId');\n\nconsole.log(employee);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.Get',
+      typescript: {
+        method: 'client.employees.retrieve',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Get(context.TODO(), "employeeId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Employee)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.retrieve('employeeId');\n\nconsole.log(employee.employee);",
       },
-      http: {
+      python: {
+        method: 'employees.retrieve',
         example:
-          'curl https://api.bluehive.com/v1/employees/$EMPLOYEE_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.retrieve(\n    "employeeId",\n)\nprint(employee.employee)',
       },
       java: {
         method: 'employees().retrieve',
@@ -1534,20 +1535,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeRetrieveParams\nimport com.bluehive.api.models.employees.EmployeeRetrieveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val employee: EmployeeRetrieveResponse = client.employees().retrieve("employeeId")\n}',
       },
-      python: {
-        method: 'employees.retrieve',
+      go: {
+        method: 'client.Employees.Get',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.retrieve(\n    "employeeId",\n)\nprint(employee.employee)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Get(context.TODO(), "employeeId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Employee)\n}\n',
       },
       ruby: {
         method: 'employees.retrieve',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployee = blue_hive.employees.retrieve("employeeId")\n\nputs(employee)',
       },
-      typescript: {
-        method: 'client.employees.retrieve',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.retrieve('employeeId');\n\nconsole.log(employee.employee);",
+          'curl https://api.bluehive.com/v1/employees/$EMPLOYEE_ID \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1564,14 +1564,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## delete\n\n`client.employees.delete(employeeId: string): { message: string; success: boolean; }`\n\n**delete** `/v1/employees/{employeeId}`\n\nDelete an employee from the system. Cannot delete employees with existing orders.\n\n### Parameters\n\n- `employeeId: string`\n\n### Returns\n\n- `{ message: string; success: boolean; }`\n  Employee deleted successfully\n\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst employee = await client.employees.delete('employeeId');\n\nconsole.log(employee);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.Delete',
+      typescript: {
+        method: 'client.employees.delete',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Delete(context.TODO(), "employeeId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.delete('employeeId');\n\nconsole.log(employee.message);",
       },
-      http: {
+      python: {
+        method: 'employees.delete',
         example:
-          'curl https://api.bluehive.com/v1/employees/$EMPLOYEE_ID \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.delete(\n    "employeeId",\n)\nprint(employee.message)',
       },
       java: {
         method: 'employees().delete',
@@ -1583,20 +1584,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeDeleteParams\nimport com.bluehive.api.models.employees.EmployeeDeleteResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val employee: EmployeeDeleteResponse = client.employees().delete("employeeId")\n}',
       },
-      python: {
-        method: 'employees.delete',
+      go: {
+        method: 'client.Employees.Delete',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nemployee = client.employees.delete(\n    "employeeId",\n)\nprint(employee.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\temployee, err := client.Employees.Delete(context.TODO(), "employeeId")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", employee.Message)\n}\n',
       },
       ruby: {
         method: 'employees.delete',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nemployee = blue_hive.employees.delete("employeeId")\n\nputs(employee)',
       },
-      typescript: {
-        method: 'client.employees.delete',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst employee = await client.employees.delete('employeeId');\n\nconsole.log(employee.message);",
+          'curl https://api.bluehive.com/v1/employees/$EMPLOYEE_ID \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1613,14 +1613,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## link_user\n\n`client.employees.linkUser(employeeId: string, userId: string, role?: string[]): { linkId: string; message: string; success: boolean; }`\n\n**post** `/v1/employees/link-user`\n\nLink an employee to a user account with specified roles\n\n### Parameters\n\n- `employeeId: string`\n\n- `userId: string`\n\n- `role?: string[]`\n\n### Returns\n\n- `{ linkId: string; message: string; success: boolean; }`\n  Employee linked successfully\n\n  - `linkId: string`\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.employees.linkUser({ employeeId: 'x', userId: 'x' });\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.LinkUser',
+      typescript: {
+        method: 'client.employees.linkUser',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Employees.LinkUser(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeLinkUserParams{\n\t\tEmployeeID: "x",\n\t\tUserID:     "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.LinkID)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.employees.linkUser({ employeeId: 'x', userId: 'x' });\n\nconsole.log(response.linkId);",
       },
-      http: {
+      python: {
+        method: 'employees.link_user',
         example:
-          'curl https://api.bluehive.com/v1/employees/link-user \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "x",\n          "userId": "x"\n        }\'',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.employees.link_user(\n    employee_id="x",\n    user_id="x",\n)\nprint(response.link_id)',
       },
       java: {
         method: 'employees().linkUser',
@@ -1632,20 +1633,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeLinkUserParams\nimport com.bluehive.api.models.employees.EmployeeLinkUserResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployeeLinkUserParams = EmployeeLinkUserParams.builder()\n        .employeeId("x")\n        .userId("x")\n        .build()\n    val response: EmployeeLinkUserResponse = client.employees().linkUser(params)\n}',
       },
-      python: {
-        method: 'employees.link_user',
+      go: {
+        method: 'client.Employees.LinkUser',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.employees.link_user(\n    employee_id="x",\n    user_id="x",\n)\nprint(response.link_id)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Employees.LinkUser(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeLinkUserParams{\n\t\tEmployeeID: "x",\n\t\tUserID:     "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.LinkID)\n}\n',
       },
       ruby: {
         method: 'employees.link_user',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.employees.link_user(employee_id: "x", user_id: "x")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.employees.linkUser',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.employees.linkUser({ employeeId: 'x', userId: 'x' });\n\nconsole.log(response.linkId);",
+          'curl https://api.bluehive.com/v1/employees/link-user \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "employeeId": "x",\n          "userId": "x"\n        }\'',
       },
     },
   },
@@ -1662,14 +1662,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## unlink_user\n\n`client.employees.unlinkUser(employeeId: string, userId: string): { message: string; success: boolean; }`\n\n**delete** `/v1/employees/unlink-user`\n\nRemove the link between an employee and a user account\n\n### Parameters\n\n- `employeeId: string`\n  ID of the employee to unlink\n\n- `userId: string`\n  ID of the user to unlink from\n\n### Returns\n\n- `{ message: string; success: boolean; }`\n  Employee unlinked successfully\n\n  - `message: string`\n  - `success: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.employees.unlinkUser({ employeeId: 'employeeId', userId: 'userId' });\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Employees.UnlinkUser',
+      typescript: {
+        method: 'client.employees.unlinkUser',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Employees.UnlinkUser(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeUnlinkUserParams{\n\t\tEmployeeID: "employeeId",\n\t\tUserID:     "userId",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.employees.unlinkUser({ employeeId: 'employeeId', userId: 'userId' });\n\nconsole.log(response.message);",
       },
-      http: {
+      python: {
+        method: 'employees.unlink_user',
         example:
-          'curl https://api.bluehive.com/v1/employees/unlink-user \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.employees.unlink_user(\n    employee_id="employeeId",\n    user_id="userId",\n)\nprint(response.message)',
       },
       java: {
         method: 'employees().unlinkUser',
@@ -1681,20 +1682,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.employees.EmployeeUnlinkUserParams\nimport com.bluehive.api.models.employees.EmployeeUnlinkUserResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: EmployeeUnlinkUserParams = EmployeeUnlinkUserParams.builder()\n        .employeeId("employeeId")\n        .userId("userId")\n        .build()\n    val response: EmployeeUnlinkUserResponse = client.employees().unlinkUser(params)\n}',
       },
-      python: {
-        method: 'employees.unlink_user',
+      go: {
+        method: 'client.Employees.UnlinkUser',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.employees.unlink_user(\n    employee_id="employeeId",\n    user_id="userId",\n)\nprint(response.message)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Employees.UnlinkUser(context.TODO(), githubcombluehivehealthbluehivesdkgo.EmployeeUnlinkUserParams{\n\t\tEmployeeID: "employeeId",\n\t\tUserID:     "userId",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
       },
       ruby: {
         method: 'employees.unlink_user',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.employees.unlink_user(employee_id: "employeeId", user_id: "userId")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.employees.unlinkUser',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.employees.unlinkUser({ employeeId: 'employeeId', userId: 'userId' });\n\nconsole.log(response.message);",
+          'curl https://api.bluehive.com/v1/employees/unlink-user \\\n    -X DELETE \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1712,14 +1712,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.integrations.list(x-brand-id: string): { integrations: object; }`\n\n**get** `/v1/integrations`\n\nReturns the current brand integrations object keyed by integration name (empty object if none). Brand resolved via x-brand-id header.\n\n### Parameters\n\n- `x-brand-id: string`\n\n### Returns\n\n- `{ integrations: object; }`\n\n  - `integrations: object`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst integrations = await client.integrations.list({ 'x-brand-id': 'x' });\n\nconsole.log(integrations);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Integrations.List',
+      typescript: {
+        method: 'client.integrations.list',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tintegrations, err := client.Integrations.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.IntegrationListParams{\n\t\tXBrandID: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", integrations.Integrations)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst integrations = await client.integrations.list({ 'x-brand-id': 'x' });\n\nconsole.log(integrations.integrations);",
       },
-      http: {
+      python: {
+        method: 'integrations.list',
         example:
-          'curl https://api.bluehive.com/v1/integrations \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nintegrations = client.integrations.list(\n    x_brand_id="x",\n)\nprint(integrations.integrations)',
       },
       java: {
         method: 'integrations().list',
@@ -1731,20 +1732,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.integrations.IntegrationListParams\nimport com.bluehive.api.models.integrations.IntegrationListResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: IntegrationListParams = IntegrationListParams.builder()\n        .xBrandId("x")\n        .build()\n    val integrations: IntegrationListResponse = client.integrations().list(params)\n}',
       },
-      python: {
-        method: 'integrations.list',
+      go: {
+        method: 'client.Integrations.List',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nintegrations = client.integrations.list(\n    x_brand_id="x",\n)\nprint(integrations.integrations)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tintegrations, err := client.Integrations.List(context.TODO(), githubcombluehivehealthbluehivesdkgo.IntegrationListParams{\n\t\tXBrandID: "x",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", integrations.Integrations)\n}\n',
       },
       ruby: {
         method: 'integrations.list',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nintegrations = blue_hive.integrations.list(x_brand_id: "x")\n\nputs(integrations)',
       },
-      typescript: {
-        method: 'client.integrations.list',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst integrations = await client.integrations.list({ 'x-brand-id': 'x' });\n\nconsole.log(integrations.integrations);",
+          'curl https://api.bluehive.com/v1/integrations \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
@@ -1762,14 +1762,15 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## check_active\n\n`client.integrations.checkActive(name: string, x-brand-id: string): { active: boolean; }`\n\n**get** `/v1/integrations/{name}`\n\nReturns true if the named integration is active for the given brand (brand resolved via x-brand-id header).\n\n### Parameters\n\n- `name: string`\n\n- `x-brand-id: string`\n\n### Returns\n\n- `{ active: boolean; }`\n\n  - `active: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.integrations.checkActive('name', { 'x-brand-id': 'x' });\n\nconsole.log(response);\n```",
     perLanguage: {
-      go: {
-        method: 'client.Integrations.CheckActive',
+      typescript: {
+        method: 'client.integrations.checkActive',
         example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Integrations.CheckActive(\n\t\tcontext.TODO(),\n\t\t"name",\n\t\tgithubcombluehivehealthbluehivesdkgo.IntegrationCheckActiveParams{\n\t\t\tXBrandID: "x",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Active)\n}\n',
+          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.integrations.checkActive('name', { 'x-brand-id': 'x' });\n\nconsole.log(response.active);",
       },
-      http: {
+      python: {
+        method: 'integrations.check_active',
         example:
-          'curl https://api.bluehive.com/v1/integrations/$NAME \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
+          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.integrations.check_active(\n    name="name",\n    x_brand_id="x",\n)\nprint(response.active)',
       },
       java: {
         method: 'integrations().checkActive',
@@ -1781,20 +1782,19 @@ const EMBEDDED_METHODS: MethodEntry[] = [
         example:
           'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.integrations.IntegrationCheckActiveParams\nimport com.bluehive.api.models.integrations.IntegrationCheckActiveResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: IntegrationCheckActiveParams = IntegrationCheckActiveParams.builder()\n        .name("name")\n        .xBrandId("x")\n        .build()\n    val response: IntegrationCheckActiveResponse = client.integrations().checkActive(params)\n}',
       },
-      python: {
-        method: 'integrations.check_active',
+      go: {
+        method: 'client.Integrations.CheckActive',
         example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.integrations.check_active(\n    name="name",\n    x_brand_id="x",\n)\nprint(response.active)',
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Integrations.CheckActive(\n\t\tcontext.TODO(),\n\t\t"name",\n\t\tgithubcombluehivehealthbluehivesdkgo.IntegrationCheckActiveParams{\n\t\t\tXBrandID: "x",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Active)\n}\n',
       },
       ruby: {
         method: 'integrations.check_active',
         example:
           'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.integrations.check_active("name", x_brand_id: "x")\n\nputs(response)',
       },
-      typescript: {
-        method: 'client.integrations.checkActive',
+      http: {
         example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.integrations.checkActive('name', { 'x-brand-id': 'x' });\n\nconsole.log(response.active);",
+          'curl https://api.bluehive.com/v1/integrations/$NAME \\\n    -H "Authorization: $BLUEHIVE_API_KEY"',
       },
     },
   },
