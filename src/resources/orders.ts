@@ -27,11 +27,7 @@ export class Orders extends APIResource {
    * Update order details and associated order items. Allows updating order status,
    * metadata, and modifying order item services.
    */
-  update(
-    orderID: string,
-    body: OrderUpdateParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<OrderUpdateResponse> {
+  update(orderID: string, body: OrderUpdateParams | null | undefined = {}, options?: RequestOptions): APIPromise<OrderUpdateResponse> {
     return this._client.post(path`/v1/orders/${orderID}`, { body, ...options });
   }
 
@@ -39,11 +35,7 @@ export class Orders extends APIResource {
    * Retrieve results for an order. Supports filtering by serviceId, status, date
    * window, and pagination.
    */
-  retrieveResults(
-    orderID: string,
-    query: OrderRetrieveResultsParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<OrderRetrieveResultsResponse> {
+  retrieveResults(orderID: string, query: OrderRetrieveResultsParams | null | undefined = {}, options?: RequestOptions): APIPromise<OrderRetrieveResultsResponse> {
     return this._client.get(path`/v1/orders/${orderID}/results`, { query, ...options });
   }
 
@@ -51,11 +43,7 @@ export class Orders extends APIResource {
    * Schedule an appointment or walk-in for an existing order. Sends HL7 SIU^S12
    * message for appointment booking.
    */
-  scheduleAppointment(
-    orderID: string,
-    body: OrderScheduleAppointmentParams,
-    options?: RequestOptions,
-  ): APIPromise<OrderScheduleAppointmentResponse> {
+  scheduleAppointment(orderID: string, body: OrderScheduleAppointmentParams, options?: RequestOptions): APIPromise<OrderScheduleAppointmentResponse> {
     return this._client.post(path`/v1/orders/${orderID}/schedule-appointment`, { body, ...options });
   }
 
@@ -63,26 +51,15 @@ export class Orders extends APIResource {
    * Send an order for a specific employee. Requires API key, login token, and user
    * ID. This endpoint specifically handles employer-to-employee order sending.
    */
-  sendForEmployee(
-    params: OrderSendForEmployeeParams,
-    options?: RequestOptions,
-  ): APIPromise<OrderSendForEmployeeResponse> {
-    const { 'login-token': loginToken, 'user-id': userID, ...body } = params;
-    return this._client.post('/v1/orders/send', {
-      body,
-      ...options,
-      headers: buildHeaders([{ 'login-token': loginToken, 'user-id': userID }, options?.headers]),
-    });
+  sendForEmployee(params: OrderSendForEmployeeParams, options?: RequestOptions): APIPromise<OrderSendForEmployeeResponse> {
+    const { 'login-token': loginToken, 'user-id': userID, ...body } = params
+    return this._client.post('/v1/orders/send', { body, ...options, headers: buildHeaders([{'login-token': loginToken, 'user-id': userID}, options?.headers]) });
   }
 
   /**
    * Update the status of an existing order
    */
-  updateStatus(
-    orderID: string,
-    body: OrderUpdateStatusParams,
-    options?: RequestOptions,
-  ): APIPromise<OrderUpdateStatusResponse> {
+  updateStatus(orderID: string, body: OrderUpdateStatusParams, options?: RequestOptions): APIPromise<OrderUpdateStatusResponse> {
     return this._client.put(path`/v1/orders/${orderID}/status`, { body, ...options });
   }
 
@@ -90,16 +67,12 @@ export class Orders extends APIResource {
    * Upload test results for a specific order item. Supports both existing fileIds
    * and base64 encoded files. Requires order access code and employee verification.
    */
-  uploadResults(
-    orderID: string,
-    body: OrderUploadResultsParams,
-    options?: RequestOptions,
-  ): APIPromise<OrderUploadResultsResponse> {
+  uploadResults(orderID: string, body: OrderUploadResultsParams, options?: RequestOptions): APIPromise<OrderUploadResultsResponse> {
     return this._client.post(path`/v1/orders/${orderID}/upload-results`, { body, ...options });
   }
 }
 
-export type OrderCreateResponse = OrderCreateResponse.UnionMember0 | OrderCreateResponse.UnionMember1;
+export type OrderCreateResponse = OrderCreateResponse.UnionMember0 | OrderCreateResponse.UnionMember1
 
 export namespace OrderCreateResponse {
   export interface UnionMember0 {
@@ -240,9 +213,7 @@ export interface OrderScheduleAppointmentResponse {
 /**
  * Order sent successfully (single or split)
  */
-export type OrderSendForEmployeeResponse =
-  | OrderSendForEmployeeResponse.UnionMember0
-  | OrderSendForEmployeeResponse.UnionMember1;
+export type OrderSendForEmployeeResponse = OrderSendForEmployeeResponse.UnionMember0 | OrderSendForEmployeeResponse.UnionMember1
 
 export namespace OrderSendForEmployeeResponse {
   export interface UnionMember0 {
@@ -332,11 +303,7 @@ export interface OrderUploadResultsResponse {
   success?: boolean;
 }
 
-export type OrderCreateParams =
-  | OrderCreateParams.Variant0
-  | OrderCreateParams.Variant1
-  | OrderCreateParams.Variant2
-  | OrderCreateParams.Variant3;
+export type OrderCreateParams = OrderCreateParams.Variant0 | OrderCreateParams.Variant1 | OrderCreateParams.Variant2 | OrderCreateParams.Variant3
 
 export declare namespace OrderCreateParams {
   export interface Variant0 {
@@ -725,13 +692,7 @@ export interface OrderUpdateParams {
 
   services?: Array<OrderUpdateParams.Service>;
 
-  status?:
-    | 'order_sent'
-    | 'order_accepted'
-    | 'order_refused'
-    | 'employee_confirmed'
-    | 'order_fulfilled'
-    | 'order_complete';
+  status?: 'order_sent' | 'order_accepted' | 'order_refused' | 'employee_confirmed' | 'order_fulfilled' | 'order_complete';
 }
 
 export namespace OrderUpdateParams {
@@ -908,13 +869,7 @@ export namespace OrderSendForEmployeeParams {
 }
 
 export interface OrderUpdateStatusParams {
-  status:
-    | 'order_sent'
-    | 'order_accepted'
-    | 'order_refused'
-    | 'employee_confirmed'
-    | 'order_fulfilled'
-    | 'order_complete';
+  status: 'order_sent' | 'order_accepted' | 'order_refused' | 'employee_confirmed' | 'order_fulfilled' | 'order_complete';
 
   message?: string;
 }
@@ -964,6 +919,6 @@ export declare namespace Orders {
     type OrderScheduleAppointmentParams as OrderScheduleAppointmentParams,
     type OrderSendForEmployeeParams as OrderSendForEmployeeParams,
     type OrderUpdateStatusParams as OrderUpdateStatusParams,
-    type OrderUploadResultsParams as OrderUploadResultsParams,
+    type OrderUploadResultsParams as OrderUploadResultsParams
   };
 }

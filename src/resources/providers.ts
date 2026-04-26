@@ -8,10 +8,7 @@ export class Providers extends APIResource {
   /**
    * Search for healthcare providers by NPI number, name, or location proximity.
    */
-  lookup(
-    query: ProviderLookupParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<ProviderLookupResponse> {
+  lookup(query: ProviderLookupParams | null | undefined = {}, options?: RequestOptions): APIPromise<ProviderLookupResponse> {
     return this._client.get('/v1/providers/lookup', { query, ...options });
   }
 }
@@ -117,6 +114,6 @@ export interface ProviderLookupParams {
 export declare namespace Providers {
   export {
     type ProviderLookupResponse as ProviderLookupResponse,
-    type ProviderLookupParams as ProviderLookupParams,
+    type ProviderLookupParams as ProviderLookupParams
   };
 }
