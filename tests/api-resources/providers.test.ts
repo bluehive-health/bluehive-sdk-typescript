@@ -2,10 +2,7 @@
 
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive({
-  apiKey: 'My API Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-});
+const client = new BlueHive({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
 
 describe('resource providers', () => {
   // Mock server tests are disabled
@@ -23,16 +20,13 @@ describe('resource providers', () => {
   // Mock server tests are disabled
   test.skip('lookup: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.providers.lookup(
-        {
-          firstname: 'firstname',
-          lastname: 'lastname',
-          npi: 'npi',
-          zipcode: 'zipcode',
-        },
-        { path: '/_stainless_unknown_path' },
-      ),
-    ).rejects.toThrow(BlueHive.NotFoundError);
+    await expect(client.providers.lookup({
+    firstname: 'firstname',
+    lastname: 'lastname',
+    npi: 'npi',
+    zipcode: 'zipcode',
+  }, { path: '/_stainless_unknown_path' }))
+      .rejects
+      .toThrow(BlueHive.NotFoundError);
   });
 });

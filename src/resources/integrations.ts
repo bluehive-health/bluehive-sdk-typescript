@@ -12,27 +12,17 @@ export class Integrations extends APIResource {
    * object if none). Brand resolved via x-brand-id header.
    */
   list(params: IntegrationListParams, options?: RequestOptions): APIPromise<IntegrationListResponse> {
-    const { 'x-brand-id': xBrandID } = params;
-    return this._client.get('/v1/integrations', {
-      ...options,
-      headers: buildHeaders([{ 'x-brand-id': xBrandID }, options?.headers]),
-    });
+    const { 'x-brand-id': xBrandID } = params
+    return this._client.get('/v1/integrations', { ...options, headers: buildHeaders([{'x-brand-id': xBrandID}, options?.headers]) });
   }
 
   /**
    * Returns true if the named integration is active for the given brand (brand
    * resolved via x-brand-id header).
    */
-  checkActive(
-    name: string,
-    params: IntegrationCheckActiveParams,
-    options?: RequestOptions,
-  ): APIPromise<IntegrationCheckActiveResponse> {
-    const { 'x-brand-id': xBrandID } = params;
-    return this._client.get(path`/v1/integrations/${name}`, {
-      ...options,
-      headers: buildHeaders([{ 'x-brand-id': xBrandID }, options?.headers]),
-    });
+  checkActive(name: string, params: IntegrationCheckActiveParams, options?: RequestOptions): APIPromise<IntegrationCheckActiveResponse> {
+    const { 'x-brand-id': xBrandID } = params
+    return this._client.get(path`/v1/integrations/${name}`, { ...options, headers: buildHeaders([{'x-brand-id': xBrandID}, options?.headers]) });
   }
 }
 
@@ -67,6 +57,6 @@ export declare namespace Integrations {
     type IntegrationListResponse as IntegrationListResponse,
     type IntegrationCheckActiveResponse as IntegrationCheckActiveResponse,
     type IntegrationListParams as IntegrationListParams,
-    type IntegrationCheckActiveParams as IntegrationCheckActiveParams,
+    type IntegrationCheckActiveParams as IntegrationCheckActiveParams
   };
 }
