@@ -10,23 +10,35 @@ export class ServiceBundles extends APIResource {
   /**
    * Create Service Bundle
    */
-  create(employerID: string, body: ServiceBundleCreateParams, options?: RequestOptions): APIPromise<ServiceBundleCreateResponse> {
+  create(
+    employerID: string,
+    body: ServiceBundleCreateParams,
+    options?: RequestOptions,
+  ): APIPromise<ServiceBundleCreateResponse> {
     return this._client.post(path`/v1/employers/${employerID}/service-bundles`, { body, ...options });
   }
 
   /**
    * Get Service Bundle
    */
-  retrieve(id: string, params: ServiceBundleRetrieveParams, options?: RequestOptions): APIPromise<ServiceBundleRetrieveResponse> {
-    const { employerId } = params
+  retrieve(
+    id: string,
+    params: ServiceBundleRetrieveParams,
+    options?: RequestOptions,
+  ): APIPromise<ServiceBundleRetrieveResponse> {
+    const { employerId } = params;
     return this._client.get(path`/v1/employers/${employerId}/service-bundles/${id}`, options);
   }
 
   /**
    * Update Service Bundle
    */
-  update(id: string, params: ServiceBundleUpdateParams, options?: RequestOptions): APIPromise<ServiceBundleUpdateResponse> {
-    const { employerId, ...body } = params
+  update(
+    id: string,
+    params: ServiceBundleUpdateParams,
+    options?: RequestOptions,
+  ): APIPromise<ServiceBundleUpdateResponse> {
+    const { employerId, ...body } = params;
     return this._client.put(path`/v1/employers/${employerId}/service-bundles/${id}`, { body, ...options });
   }
 
@@ -41,8 +53,11 @@ export class ServiceBundles extends APIResource {
    * Delete Service Bundle
    */
   delete(id: string, params: ServiceBundleDeleteParams, options?: RequestOptions): APIPromise<void> {
-    const { employerId } = params
-    return this._client.delete(path`/v1/employers/${employerId}/service-bundles/${id}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]) });
+    const { employerId } = params;
+    return this._client.delete(path`/v1/employers/${employerId}/service-bundles/${id}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+    });
   }
 }
 
@@ -208,7 +223,7 @@ export namespace ServiceBundleUpdateResponse {
   }
 }
 
-export type ServiceBundleListResponse = Array<ServiceBundleListResponse.ServiceBundleListResponseItem>
+export type ServiceBundleListResponse = Array<ServiceBundleListResponse.ServiceBundleListResponseItem>;
 
 export namespace ServiceBundleListResponse {
   export interface ServiceBundleListResponseItem {
@@ -348,6 +363,6 @@ export declare namespace ServiceBundles {
     type ServiceBundleCreateParams as ServiceBundleCreateParams,
     type ServiceBundleRetrieveParams as ServiceBundleRetrieveParams,
     type ServiceBundleUpdateParams as ServiceBundleUpdateParams,
-    type ServiceBundleDeleteParams as ServiceBundleDeleteParams
+    type ServiceBundleDeleteParams as ServiceBundleDeleteParams,
   };
 }

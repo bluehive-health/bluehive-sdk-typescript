@@ -16,7 +16,7 @@ export class Hl7 extends APIResource {
 /**
  * Result of HL7 message send
  */
-export type Hl7SendResultsResponse = string
+export type Hl7SendResultsResponse = string;
 
 export interface Hl7SendResultsParams {
   /**
@@ -55,6 +55,6 @@ export namespace Hl7SendResultsParams {
 export declare namespace Hl7 {
   export {
     type Hl7SendResultsResponse as Hl7SendResultsResponse,
-    type Hl7SendResultsParams as Hl7SendResultsParams
+    type Hl7SendResultsParams as Hl7SendResultsParams,
   };
 }

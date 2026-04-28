@@ -189,7 +189,14 @@ export namespace FaxSendParams {
     /**
      * MIME type of the document
      */
-    contentType: 'application/pdf' | 'image/tiff' | 'image/tif' | 'image/jpeg' | 'image/jpg' | 'image/png' | 'text/plain';
+    contentType:
+      | 'application/pdf'
+      | 'image/tiff'
+      | 'image/tif'
+      | 'image/jpeg'
+      | 'image/jpg'
+      | 'image/png'
+      | 'text/plain';
 
     /**
      * Optional filename for the document
@@ -203,6 +210,6 @@ export declare namespace Fax {
     type FaxListProvidersResponse as FaxListProvidersResponse,
     type FaxRetrieveStatusResponse as FaxRetrieveStatusResponse,
     type FaxSendResponse as FaxSendResponse,
-    type FaxSendParams as FaxSendParams
+    type FaxSendParams as FaxSendParams,
   };
 }
