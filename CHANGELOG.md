@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.1.0-alpha.42 (2026-04-28)
+
+Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
+
+### Features
+
+* support setting headers via env ([af5c0e0](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/af5c0e0ca777ff50725bac86b50622c2beda89a2))
+
+
+### Chores
+
+* **ci:** escape input path in publish-npm workflow ([a1031b7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/a1031b70bd393c7ad662377de22e90ddfa4fb4e9))
+* **formatter:** run prettier and eslint separately ([77b5540](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/77b5540d6a305302bab63219e01d46c3597d01a5))
+* **internal:** codegen related update ([9254309](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9254309ecedd51e2b2c471acf50659b4179efeb9))
+* **internal:** codegen related update ([d149e54](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d149e5430e4357b34481c16d989294482717219b))
+* **internal:** codegen related update ([bc004eb](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/bc004eb736c46c29f8eb1a4db6fe1c7393f7d19d))
+* **internal:** fix MCP docker image builds in yarn projects ([5f48e69](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5f48e692934befef76584a6a429e486b87f0fa88))
+* **internal:** fix MCP server import ordering ([6b8d775](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/6b8d775cdb4b58826293392b5e66459775a6a354))
+* **internal:** improve local docs search for MCP servers ([520d2d2](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/520d2d225ef77718b584c2140d7a775dc3a08752))
+* **internal:** improve local docs search for MCP servers ([529a8e6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/529a8e6f48326de2464a20c60e6e5bf0f12c4c7e))
+* **internal:** more robust bootstrap script ([7d56005](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7d56005d28c0e77b9ecd771085700d9fde17cd1f))
+* **internal:** show error causes in MCP servers when running in local mode ([0203c6a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0203c6aceb1c3ad2a0ca00ef84cc29b009af5727))
+* **internal:** support local docs search in MCP servers ([077c1ce](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/077c1ce1be4f5dc0dea03633b85b7439c90c979d))
+* **internal:** support type annotations when running MCP in local execution mode ([5462ea3](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5462ea38efb89bfbefa09c5827f1db28be5989fa))
+* **internal:** update docs ordering ([1321617](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/132161774ca7ecc1948cadc8336e5eafd91b5080))
+* **internal:** use link instead of file in MCP server package.json files ([2225971](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2225971d7c7b84e86ce7f4d128a6494e84f022c6))
+* **mcp-server:** add support for session id, forward client info ([c44d40e](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c44d40e29859f40664a8761488a7003639b0780e))
+* **mcp-server:** increase local docs search result count from 5 to 10 ([ef423d7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/ef423d7c460494908cd9b79c1813ad401bdbf114))
+* **mcp-server:** log client info ([5709686](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/5709686ecc44e91860d6984ccf1316dfe973bfaa))
+* restructure docs search code ([348b2cf](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/348b2cf3e7d3d934ee3ac2703844324d765c7d2b))
+
 ## 0.1.0-alpha.41 (2026-03-27)
 
 Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
