@@ -2,12 +2,18 @@
 
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
+const client = new BlueHive({
+  apiKey: 'My API Key',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
 
 describe('resource serviceBundles', () => {
   // Mock server tests are disabled
   test.skip('create: only required params', async () => {
-    const responsePromise = client.employers.serviceBundles.create('employerId', { bundleName: 'x', serviceIds: ['string'] });
+    const responsePromise = client.employers.serviceBundles.create('employerId', {
+      bundleName: 'x',
+      serviceIds: ['string'],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -20,15 +26,15 @@ describe('resource serviceBundles', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employers.serviceBundles.create('employerId', {
-    bundleName: 'x',
-    serviceIds: ['string'],
-    _id: '_id',
-    limit: 0,
-    occurrence: 'occurrence',
-    recurring: true,
-    roles: ['string'],
-    startDate: 'startDate',
-  });
+      bundleName: 'x',
+      serviceIds: ['string'],
+      _id: '_id',
+      limit: 0,
+      occurrence: 'occurrence',
+      recurring: true,
+      roles: ['string'],
+      startDate: 'startDate',
+    });
   });
 
   // Mock server tests are disabled
@@ -51,10 +57,10 @@ describe('resource serviceBundles', () => {
   // Mock server tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.employers.serviceBundles.update('id', {
-    employerId: 'employerId',
-    bundleName: 'x',
-    serviceIds: ['string'],
-  });
+      employerId: 'employerId',
+      bundleName: 'x',
+      serviceIds: ['string'],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -67,16 +73,16 @@ describe('resource serviceBundles', () => {
   // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.employers.serviceBundles.update('id', {
-    employerId: 'employerId',
-    bundleName: 'x',
-    serviceIds: ['string'],
-    _id: '_id',
-    limit: 0,
-    occurrence: 'occurrence',
-    recurring: true,
-    roles: ['string'],
-    startDate: 'startDate',
-  });
+      employerId: 'employerId',
+      bundleName: 'x',
+      serviceIds: ['string'],
+      _id: '_id',
+      limit: 0,
+      occurrence: 'occurrence',
+      recurring: true,
+      roles: ['string'],
+      startDate: 'startDate',
+    });
   });
 
   // Mock server tests are disabled

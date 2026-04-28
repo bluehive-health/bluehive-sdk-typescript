@@ -18,7 +18,5 @@ export interface HealthCheckResponse {
 }
 
 export declare namespace Health {
-  export {
-    type HealthCheckResponse as HealthCheckResponse
-  };
+  export { type HealthCheckResponse as HealthCheckResponse };
 }

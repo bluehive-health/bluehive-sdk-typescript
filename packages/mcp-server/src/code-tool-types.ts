@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { ClientOptions } from '@bluehive/sdk'
+import { ClientOptions } from '@bluehive/sdk';
 
 export type WorkerInput = {
   project_name: string;

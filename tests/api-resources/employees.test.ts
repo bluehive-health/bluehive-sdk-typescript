@@ -2,16 +2,19 @@
 
 import BlueHive from '@bluehive/sdk';
 
-const client = new BlueHive({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
+const client = new BlueHive({
+  apiKey: 'My API Key',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
 
 describe('resource employees', () => {
   // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.employees.create({
-    email: 'dev@stainless.com',
-    firstName: 'x',
-    lastName: 'x',
-  });
+      email: 'dev@stainless.com',
+      firstName: 'x',
+      lastName: 'x',
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -24,27 +27,27 @@ describe('resource employees', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.employees.create({
-    email: 'dev@stainless.com',
-    firstName: 'x',
-    lastName: 'x',
-    activeAccount: 'Active',
-    address: {
-    city: 'x',
-    postalCode: 'x',
-    state: 'x',
-    street1: 'x',
-    country: 'country',
-    county: 'county',
-    street2: 'street2',
-  },
-    blurb: 'blurb',
-    departments: ['string'],
-    dob: '7321-69-10',
-    employer_id: 'employer_id',
-    extendedFields: [{ name: 'x', value: 'x' }],
-    phone: [{ number: 'x', type: 'Cell' }],
-    title: 'title',
-  });
+      email: 'dev@stainless.com',
+      firstName: 'x',
+      lastName: 'x',
+      activeAccount: 'Active',
+      address: {
+        city: 'x',
+        postalCode: 'x',
+        state: 'x',
+        street1: 'x',
+        country: 'country',
+        county: 'county',
+        street2: 'street2',
+      },
+      blurb: 'blurb',
+      departments: ['string'],
+      dob: '7321-69-10',
+      employer_id: 'employer_id',
+      extendedFields: [{ name: 'x', value: 'x' }],
+      phone: [{ number: 'x', type: 'Cell' }],
+      title: 'title',
+    });
   });
 
   // Mock server tests are disabled
@@ -74,28 +77,28 @@ describe('resource employees', () => {
   // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.employees.update({
-    _id: 'x',
-    activeAccount: 'Active',
-    address: {
-    city: 'x',
-    postalCode: 'x',
-    state: 'x',
-    street1: 'x',
-    country: 'country',
-    county: 'county',
-    street2: 'street2',
-  },
-    blurb: 'blurb',
-    departments: ['string'],
-    dob: '7321-69-10',
-    email: 'dev@stainless.com',
-    employer_id: 'employer_id',
-    extendedFields: [{ name: 'x', value: 'x' }],
-    firstName: 'x',
-    lastName: 'x',
-    phone: [{ number: 'x', type: 'Cell' }],
-    title: 'title',
-  });
+      _id: 'x',
+      activeAccount: 'Active',
+      address: {
+        city: 'x',
+        postalCode: 'x',
+        state: 'x',
+        street1: 'x',
+        country: 'country',
+        county: 'county',
+        street2: 'street2',
+      },
+      blurb: 'blurb',
+      departments: ['string'],
+      dob: '7321-69-10',
+      email: 'dev@stainless.com',
+      employer_id: 'employer_id',
+      extendedFields: [{ name: 'x', value: 'x' }],
+      firstName: 'x',
+      lastName: 'x',
+      phone: [{ number: 'x', type: 'Cell' }],
+      title: 'title',
+    });
   });
 
   // Mock server tests are disabled
@@ -113,12 +116,12 @@ describe('resource employees', () => {
   // Mock server tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.employees.list({
-    employerId: 'employerId',
-    activeAccount: 'Active',
-    limit: '269125115713',
-    offset: '269125115713',
-    search: 'search',
-  });
+      employerId: 'employerId',
+      activeAccount: 'Active',
+      limit: '269125115713',
+      offset: '269125115713',
+      search: 'search',
+    });
   });
 
   // Mock server tests are disabled
@@ -148,10 +151,10 @@ describe('resource employees', () => {
   // Mock server tests are disabled
   test.skip('linkUser: required and optional params', async () => {
     const response = await client.employees.linkUser({
-    employeeId: 'x',
-    userId: 'x',
-    role: ['string'],
-  });
+      employeeId: 'x',
+      userId: 'x',
+      role: ['string'],
+    });
   });
 
   // Mock server tests are disabled
