@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2026-05-05)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Chores
+
+* avoid formatting file that gets changed during releases ([0369f00](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0369f008a52ffd425e1faae04f2dc9e42b66e083))
+* **format:** run eslint and prettier separately ([8f40730](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8f40730e03e545026470396b3b87cb02951b664b))
+
+
+### Documentation
+
+* clarify forwards compat behavior ([3e506dd](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3e506dd6cd937c82cb12296eb56b109a271202c3))
+
 ## 0.1.0-alpha.42 (2026-04-28)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
