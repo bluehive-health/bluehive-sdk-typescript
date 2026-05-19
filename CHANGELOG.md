@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2026-05-19)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Bug Fixes
+
+* **typescript:** upgrade tsc-multi so that it works with Node 26 ([7ceed1d](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/7ceed1d05bc7ba4d62ae59127c233d74193b032f))
+
+
+### Chores
+
+* avoid formatting file that gets changed during releases ([0369f00](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/0369f008a52ffd425e1faae04f2dc9e42b66e083))
+* **format:** run eslint and prettier separately ([8f40730](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/8f40730e03e545026470396b3b87cb02951b664b))
+* redact api-key headers in debug logs ([b0a0b00](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/b0a0b00657a6c32ff59d545b88e7bf0c09b79b7d))
+* **tests:** remove redundant File import ([78fefee](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/78fefee76f9a7599245110e5dc27c2447fefccc3))
+
+
+### Documentation
+
+* clarify forwards compat behavior ([3e506dd](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/3e506dd6cd937c82cb12296eb56b109a271202c3))
+* update logging docs ([2e5c62b](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2e5c62bb2f1cc02b5176619777952cfcf0b20abb))
+* update with proxy auth info ([6410e90](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/6410e90eb6ca359f174ada7c34c9b2b6936f680a))
+
 ## 0.1.0-alpha.42 (2026-04-28)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
