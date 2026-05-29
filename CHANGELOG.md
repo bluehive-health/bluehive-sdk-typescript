@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.44 (2026-05-29)
+
+Full Changelog: [v0.1.0-alpha.43...v0.1.0-alpha.44](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.43...v0.1.0-alpha.44)
+
+### Bug Fixes
+
+* **mcp:** use `pure-lockfile` when building mcp server ([2f379a4](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/2f379a470911c82f06e2b369a5a61dfcdc36b636))
+
+
+### Chores
+
+* **internal:** codegen related update ([c560275](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c560275bb6eda149c2bbacf2c2d7959185baab84))
+
 ## 0.1.0-alpha.43 (2026-05-19)
 
 Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
