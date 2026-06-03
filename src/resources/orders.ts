@@ -718,6 +718,12 @@ export declare namespace OrderCreateParams {
 
 export interface OrderUpdateParams {
   /**
+   * Order expiration date (ISO 8601 format). Set to null to remove the expiration
+   * date.
+   */
+  expirationDate?: string | null;
+
+  /**
    * Arbitrary metadata to update on the order (non-indexed passthrough, <=10KB when
    * JSON stringified)
    */
@@ -739,6 +745,11 @@ export namespace OrderUpdateParams {
     serviceId: string;
 
     dueDate?: string;
+
+    /**
+     * Service-level expiration date
+     */
+    expirationDate?: string;
 
     results?: { [key: string]: unknown };
 
@@ -870,6 +881,11 @@ export interface OrderSendForEmployeeParams {
    * Body param: Array of due dates per service
    */
   dueDates?: Array<string>;
+
+  /**
+   * Body param: Expiration date for the order (date or date-time ISO string)
+   */
+  expirationDate?: string;
 
   /**
    * Body param: Optional arbitrary metadata to store on the order (non-indexed

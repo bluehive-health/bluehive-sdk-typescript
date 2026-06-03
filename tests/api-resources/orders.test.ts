@@ -110,11 +110,13 @@ describe('resource orders', () => {
       client.orders.update(
         'orderId',
         {
+          expirationDate: '2019-12-27T18:11:19.117Z',
           metadata: { foo: 'bar' },
           services: [
             {
               serviceId: 'x',
               dueDate: '2019-12-27T18:11:19.117Z',
+              expirationDate: '2019-12-27T18:11:19.117Z',
               results: { foo: 'bar' },
               status: 'pending',
             },
@@ -222,6 +224,7 @@ describe('resource orders', () => {
       brandId: 'brandId',
       dueDate: 'dueDate',
       dueDates: ['string'],
+      expirationDate: 'expirationDate',
       metadata: { foo: 'bar' },
       priority: 'normal',
       providerCreated: true,
