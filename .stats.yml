@@ -1,4 +1,4 @@
 configured_endpoints: 33
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/bluehive-health--llc-dash/bluehive-be474aec1901d5da4c88daa32e91900d2367c7e31729c30ee30572755a6e471f.yml
-openapi_spec_hash: bf2ccb2dc52b78611281c6fdcdcb27ed
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/bluehive-health--llc-dash/bluehive-833ac10f52e0240593d1cdb27cba6205cb2c4a17ffb23d7267eb73afbd3282e7.yml
+openapi_spec_hash: 977f29d53369a38065a08b93eeadffec
 config_hash: d7ceaf625fef770580638f406620f727
