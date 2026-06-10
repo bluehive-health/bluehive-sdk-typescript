@@ -234,26 +234,6 @@ describe('resource orders', () => {
   });
 
   // Mock server tests are disabled
-  test.skip('updateStatus: only required params', async () => {
-    const responsePromise = client.orders.updateStatus('orderId', { status: 'order_sent' });
-    const rawResponse = await responsePromise.asResponse();
-    expect(rawResponse).toBeInstanceOf(Response);
-    const response = await responsePromise;
-    expect(response).not.toBeInstanceOf(Response);
-    const dataAndResponse = await responsePromise.withResponse();
-    expect(dataAndResponse.data).toBe(response);
-    expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // Mock server tests are disabled
-  test.skip('updateStatus: required and optional params', async () => {
-    const response = await client.orders.updateStatus('orderId', {
-      status: 'order_sent',
-      message: 'message',
-    });
-  });
-
-  // Mock server tests are disabled
   test.skip('uploadResults: only required params', async () => {
     const responsePromise = client.orders.uploadResults('orderId', {
       captchaToken: 'x',
