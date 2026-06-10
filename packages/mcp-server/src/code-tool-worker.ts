@@ -130,7 +130,6 @@ const fuse = new Fuse(
     'client.orders.scheduleAppointment',
     'client.orders.sendForEmployee',
     'client.orders.update',
-    'client.orders.updateStatus',
     'client.orders.uploadResults',
     'client.employees.create',
     'client.employees.delete',

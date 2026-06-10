@@ -143,12 +143,6 @@ export const sdkMethods: SdkMethod[] = [
     httpPath: '/v1/orders/send',
   },
   {
-    clientCallName: 'client.orders.updateStatus',
-    fullyQualifiedName: 'orders.updateStatus',
-    httpMethod: 'put',
-    httpPath: '/v1/orders/{orderId}/status',
-  },
-  {
     clientCallName: 'client.orders.uploadResults',
     fullyQualifiedName: 'orders.uploadResults',
     httpMethod: 'post',

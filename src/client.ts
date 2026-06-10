@@ -61,8 +61,6 @@ import {
   OrderSendForEmployeeResponse,
   OrderUpdateParams,
   OrderUpdateResponse,
-  OrderUpdateStatusParams,
-  OrderUpdateStatusResponse,
   OrderUploadResultsParams,
   OrderUploadResultsResponse,
   Orders,
@@ -858,14 +856,12 @@ export declare namespace BlueHive {
     type OrderRetrieveResultsResponse as OrderRetrieveResultsResponse,
     type OrderScheduleAppointmentResponse as OrderScheduleAppointmentResponse,
     type OrderSendForEmployeeResponse as OrderSendForEmployeeResponse,
-    type OrderUpdateStatusResponse as OrderUpdateStatusResponse,
     type OrderUploadResultsResponse as OrderUploadResultsResponse,
     type OrderCreateParams as OrderCreateParams,
     type OrderUpdateParams as OrderUpdateParams,
     type OrderRetrieveResultsParams as OrderRetrieveResultsParams,
     type OrderScheduleAppointmentParams as OrderScheduleAppointmentParams,
     type OrderSendForEmployeeParams as OrderSendForEmployeeParams,
-    type OrderUpdateStatusParams as OrderUpdateStatusParams,
     type OrderUploadResultsParams as OrderUploadResultsParams,
   };
 
