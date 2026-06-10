@@ -1094,55 +1094,6 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     },
   },
   {
-    name: 'update_status',
-    endpoint: '/v1/orders/{orderId}/status',
-    httpMethod: 'put',
-    summary: 'Update order status',
-    description: 'Update the status of an existing order',
-    stainlessPath: '(resource) orders > (method) update_status',
-    qualified: 'client.orders.updateStatus',
-    params: ['orderId: string;', 'status: string;', 'message?: string;'],
-    response: '{ message?: string; success?: boolean; }',
-    markdown:
-      "## update_status\n\n`client.orders.updateStatus(orderId: string, status: string, message?: string): { message?: string; success?: boolean; }`\n\n**put** `/v1/orders/{orderId}/status`\n\nUpdate the status of an existing order\n\n### Parameters\n\n- `orderId: string`\n\n- `status: string`\n\n- `message?: string`\n\n### Returns\n\n- `{ message?: string; success?: boolean; }`\n\n  - `message?: string`\n  - `success?: boolean`\n\n### Example\n\n```typescript\nimport BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive();\n\nconst response = await client.orders.updateStatus('orderId', { status: 'order_sent' });\n\nconsole.log(response);\n```",
-    perLanguage: {
-      typescript: {
-        method: 'client.orders.updateStatus',
-        example:
-          "import BlueHive from '@bluehive/sdk';\n\nconst client = new BlueHive({\n  apiKey: process.env['BLUEHIVE_API_KEY'], // This is the default and can be omitted\n});\n\nconst response = await client.orders.updateStatus('orderId', { status: 'order_sent' });\n\nconsole.log(response.message);",
-      },
-      python: {
-        method: 'orders.update_status',
-        example:
-          'import os\nfrom bluehive import BlueHive\n\nclient = BlueHive(\n    api_key=os.environ.get("BLUEHIVE_API_KEY"),  # This is the default and can be omitted\n)\nresponse = client.orders.update_status(\n    order_id="orderId",\n    status="order_sent",\n)\nprint(response.message)',
-      },
-      java: {
-        method: 'orders().updateStatus',
-        example:
-          'package com.bluehive.api.example;\n\nimport com.bluehive.api.client.BlueHiveClient;\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient;\nimport com.bluehive.api.models.orders.OrderUpdateStatusParams;\nimport com.bluehive.api.models.orders.OrderUpdateStatusResponse;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        BlueHiveClient client = BlueHiveOkHttpClient.fromEnv();\n\n        OrderUpdateStatusParams params = OrderUpdateStatusParams.builder()\n            .orderId("orderId")\n            .status(OrderUpdateStatusParams.Status.ORDER_SENT)\n            .build();\n        OrderUpdateStatusResponse response = client.orders().updateStatus(params);\n    }\n}',
-      },
-      kotlin: {
-        method: 'orders().updateStatus',
-        example:
-          'package com.bluehive.api.example\n\nimport com.bluehive.api.client.BlueHiveClient\nimport com.bluehive.api.client.okhttp.BlueHiveOkHttpClient\nimport com.bluehive.api.models.orders.OrderUpdateStatusParams\nimport com.bluehive.api.models.orders.OrderUpdateStatusResponse\n\nfun main() {\n    val client: BlueHiveClient = BlueHiveOkHttpClient.fromEnv()\n\n    val params: OrderUpdateStatusParams = OrderUpdateStatusParams.builder()\n        .orderId("orderId")\n        .status(OrderUpdateStatusParams.Status.ORDER_SENT)\n        .build()\n    val response: OrderUpdateStatusResponse = client.orders().updateStatus(params)\n}',
-      },
-      go: {
-        method: 'client.Orders.UpdateStatus',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/bluehive-health/bluehive-sdk-go"\n\t"github.com/bluehive-health/bluehive-sdk-go/option"\n)\n\nfunc main() {\n\tclient := githubcombluehivehealthbluehivesdkgo.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tresponse, err := client.Orders.UpdateStatus(\n\t\tcontext.TODO(),\n\t\t"orderId",\n\t\tgithubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParams{\n\t\t\tStatus: githubcombluehivehealthbluehivesdkgo.OrderUpdateStatusParamsStatusOrderSent,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", response.Message)\n}\n',
-      },
-      ruby: {
-        method: 'orders.update_status',
-        example:
-          'require "blue_hive"\n\nblue_hive = BlueHive::Client.new(api_key: "My API Key")\n\nresponse = blue_hive.orders.update_status("orderId", status: :order_sent)\n\nputs(response)',
-      },
-      http: {
-        example:
-          'curl https://api.bluehive.com/v1/orders/$ORDER_ID/status \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Authorization: $BLUEHIVE_API_KEY" \\\n    -d \'{\n          "status": "order_sent"\n        }\'',
-      },
-    },
-  },
-  {
     name: 'send_for_employee',
     endpoint: '/v1/orders/send',
     httpMethod: 'post',

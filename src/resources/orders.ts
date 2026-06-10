@@ -76,17 +76,6 @@ export class Orders extends APIResource {
   }
 
   /**
-   * Update the status of an existing order
-   */
-  updateStatus(
-    orderID: string,
-    body: OrderUpdateStatusParams,
-    options?: RequestOptions,
-  ): APIPromise<OrderUpdateStatusResponse> {
-    return this._client.put(path`/v1/orders/${orderID}/status`, { body, ...options });
-  }
-
-  /**
    * Upload test results for a specific order item. Supports both existing fileIds
    * and base64 encoded files. Requires order access code and employee verification.
    */
@@ -318,12 +307,6 @@ export namespace OrderSendForEmployeeResponse {
       serviceName?: string;
     }
   }
-}
-
-export interface OrderUpdateStatusResponse {
-  message?: string;
-
-  success?: boolean;
 }
 
 export interface OrderUploadResultsResponse {
@@ -923,18 +906,6 @@ export namespace OrderSendForEmployeeParams {
   }
 }
 
-export interface OrderUpdateStatusParams {
-  status:
-    | 'order_sent'
-    | 'order_accepted'
-    | 'order_refused'
-    | 'employee_confirmed'
-    | 'order_fulfilled'
-    | 'order_complete';
-
-  message?: string;
-}
-
 export interface OrderUploadResultsParams {
   captchaToken: string;
 
@@ -972,14 +943,12 @@ export declare namespace Orders {
     type OrderRetrieveResultsResponse as OrderRetrieveResultsResponse,
     type OrderScheduleAppointmentResponse as OrderScheduleAppointmentResponse,
     type OrderSendForEmployeeResponse as OrderSendForEmployeeResponse,
-    type OrderUpdateStatusResponse as OrderUpdateStatusResponse,
     type OrderUploadResultsResponse as OrderUploadResultsResponse,
     type OrderCreateParams as OrderCreateParams,
     type OrderUpdateParams as OrderUpdateParams,
     type OrderRetrieveResultsParams as OrderRetrieveResultsParams,
     type OrderScheduleAppointmentParams as OrderScheduleAppointmentParams,
     type OrderSendForEmployeeParams as OrderSendForEmployeeParams,
-    type OrderUpdateStatusParams as OrderUpdateStatusParams,
     type OrderUploadResultsParams as OrderUploadResultsParams,
   };
 }

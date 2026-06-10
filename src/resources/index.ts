@@ -48,14 +48,12 @@ export {
   type OrderRetrieveResultsResponse,
   type OrderScheduleAppointmentResponse,
   type OrderSendForEmployeeResponse,
-  type OrderUpdateStatusResponse,
   type OrderUploadResultsResponse,
   type OrderCreateParams,
   type OrderUpdateParams,
   type OrderRetrieveResultsParams,
   type OrderScheduleAppointmentParams,
   type OrderSendForEmployeeParams,
-  type OrderUpdateStatusParams,
   type OrderUploadResultsParams,
 } from './orders';
 export { Providers, type ProviderLookupResponse, type ProviderLookupParams } from './providers';

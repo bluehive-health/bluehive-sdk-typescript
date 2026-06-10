@@ -103,7 +103,6 @@ Types:
 - <code><a href="./src/resources/orders.ts">OrderRetrieveResultsResponse</a></code>
 - <code><a href="./src/resources/orders.ts">OrderScheduleAppointmentResponse</a></code>
 - <code><a href="./src/resources/orders.ts">OrderSendForEmployeeResponse</a></code>
-- <code><a href="./src/resources/orders.ts">OrderUpdateStatusResponse</a></code>
 - <code><a href="./src/resources/orders.ts">OrderUploadResultsResponse</a></code>
 
 Methods:
@@ -114,7 +113,6 @@ Methods:
 - <code title="get /v1/orders/{orderId}/results">client.orders.<a href="./src/resources/orders.ts">retrieveResults</a>(orderID, { ...params }) -> OrderRetrieveResultsResponse</code>
 - <code title="post /v1/orders/{orderId}/schedule-appointment">client.orders.<a href="./src/resources/orders.ts">scheduleAppointment</a>(orderID, { ...params }) -> OrderScheduleAppointmentResponse</code>
 - <code title="post /v1/orders/send">client.orders.<a href="./src/resources/orders.ts">sendForEmployee</a>({ ...params }) -> OrderSendForEmployeeResponse</code>
-- <code title="put /v1/orders/{orderId}/status">client.orders.<a href="./src/resources/orders.ts">updateStatus</a>(orderID, { ...params }) -> OrderUpdateStatusResponse</code>
 - <code title="post /v1/orders/{orderId}/upload-results">client.orders.<a href="./src/resources/orders.ts">uploadResults</a>(orderID, { ...params }) -> OrderUploadResultsResponse</code>
 
 # Employees
