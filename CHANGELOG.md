@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.47 (2026-06-17)
+
+Full Changelog: [v0.1.0-alpha.46...v0.1.0-alpha.47](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.46...v0.1.0-alpha.47)
+
+### Bug Fixes
+
+* **client:** send content-type header for requests with an omitted optional body ([e6aa6f8](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/e6aa6f8d07e6a8c6b2962f24fbac48d35fc03e0c))
+
 ## 0.1.0-alpha.46 (2026-06-10)
 
 Full Changelog: [v0.1.0-alpha.45...v0.1.0-alpha.46](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.45...v0.1.0-alpha.46)
