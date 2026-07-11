@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.49 (2026-07-11)
+
+Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
+
+### Bug Fixes
+
+* **ci:** bump @arethetypeswrong/cli to ^0.18.0 and run CI workflows on Node 24 ([599b360](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/599b3601aa96779eb08f34afa9adaadb000e9897))
+
 ## 0.1.0-alpha.48 (2026-07-10)
 
 Full Changelog: [v0.1.0-alpha.47...v0.1.0-alpha.48](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.47...v0.1.0-alpha.48)
