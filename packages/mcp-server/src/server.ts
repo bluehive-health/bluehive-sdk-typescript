@@ -28,7 +28,7 @@ export const newMcpServer = async ({
   new McpServer(
     {
       name: 'blue_hive_sdk_api',
-      version: '0.1.0-alpha.48',
+      version: '0.1.0-alpha.49',
     },
     {
       instructions: await getInstructions({ stainlessApiKey, customInstructionsPath }),
