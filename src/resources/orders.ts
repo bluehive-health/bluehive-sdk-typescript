@@ -335,6 +335,11 @@ export declare namespace OrderCreateParams {
 
     brandId?: string;
 
+    /**
+     * Map of serviceId to bundleId for per-bundle pricing disambiguation
+     */
+    bundleIds?: { [key: string]: string };
+
     dueDate?: string;
 
     dueDates?: Array<string>;
@@ -426,6 +431,11 @@ export declare namespace OrderCreateParams {
     _id?: string;
 
     brandId?: string;
+
+    /**
+     * Map of serviceId to bundleId for per-bundle pricing disambiguation
+     */
+    bundleIds?: { [key: string]: string };
 
     dueDate?: string;
 
@@ -523,6 +533,11 @@ export declare namespace OrderCreateParams {
 
     brandId?: string;
 
+    /**
+     * Map of serviceId to bundleId for per-bundle pricing disambiguation
+     */
+    bundleIds?: { [key: string]: string };
+
     dueDate?: string;
 
     dueDates?: Array<string>;
@@ -616,6 +631,11 @@ export declare namespace OrderCreateParams {
     _id?: string;
 
     brandId?: string;
+
+    /**
+     * Map of serviceId to bundleId for per-bundle pricing disambiguation
+     */
+    bundleIds?: { [key: string]: string };
 
     dueDate?: string;
 
