@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.50 (2026-07-18)
+
+Full Changelog: [v0.1.0-alpha.49...v0.1.0-alpha.50](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.49...v0.1.0-alpha.50)
+
+### Features
+
+* **api:** api update ([155234c](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/155234cbc5626aeac05c08075cf6a40c6356540c))
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([d09cbd6](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/d09cbd645c2ee4eb552242af8c36f2caccad631e))
+
 ## 0.1.0-alpha.49 (2026-07-11)
 
 Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
