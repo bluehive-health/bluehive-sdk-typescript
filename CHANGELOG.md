@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.51 (2026-07-31)
+
+Full Changelog: [v0.1.0-alpha.50...v0.1.0-alpha.51](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.50...v0.1.0-alpha.51)
+
+### Bug Fixes
+
+* **stlc:** stop hand-edited CI workflows from blocking seals and builds ([9ec4662](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/9ec4662bf3d8722ed2e57e0a2c67d97aa3b67968))
+
+
+### Chores
+
+* **internal:** codegen related update ([65e022a](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/65e022a4a739958677f74149961d30134ba9f98c))
+
 ## 0.1.0-alpha.50 (2026-07-18)
 
 Full Changelog: [v0.1.0-alpha.49...v0.1.0-alpha.50](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.49...v0.1.0-alpha.50)
