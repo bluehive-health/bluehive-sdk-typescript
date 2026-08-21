@@ -871,6 +871,12 @@ export interface OrderSendForEmployeeParams {
   'user-id': string;
 
   /**
+   * Body param: Order IDs from a prior 409 DUPLICATE_OPEN_ORDER response the user
+   * chose to override; new duplicates still trigger a fresh 409
+   */
+  acknowledgedDuplicateOrderIds?: Array<string>;
+
+  /**
    * Body param: Brand ID for branded orders
    */
   brandId?: string;
