@@ -222,6 +222,7 @@ describe('resource orders', () => {
       servicesIds: ['string'],
       'login-token': 'login-token',
       'user-id': 'user-id',
+      acknowledgedDuplicateOrderIds: ['string'],
       brandId: 'brandId',
       dueDate: 'dueDate',
       dueDates: ['string'],
