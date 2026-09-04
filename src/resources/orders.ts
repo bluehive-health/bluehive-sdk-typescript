@@ -882,6 +882,12 @@ export interface OrderSendForEmployeeParams {
   brandId?: string;
 
   /**
+   * Body param: Per-service bundle mapping (serviceId → bundleId) used to scope the
+   * OBR-18 parent bill id lookup to the ordered bundle.
+   */
+  bundleIds?: { [key: string]: string };
+
+  /**
    * Body param: Due date for the order (date or date-time ISO string)
    */
   dueDate?: string;

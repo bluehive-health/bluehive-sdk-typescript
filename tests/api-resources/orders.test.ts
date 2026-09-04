@@ -224,6 +224,7 @@ describe('resource orders', () => {
       'user-id': 'user-id',
       acknowledgedDuplicateOrderIds: ['string'],
       brandId: 'brandId',
+      bundleIds: { foo: 'string' },
       dueDate: 'dueDate',
       dueDates: ['string'],
       expirationDate: 'expirationDate',
