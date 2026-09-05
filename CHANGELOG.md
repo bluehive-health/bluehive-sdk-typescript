@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.53 (2026-09-05)
+
+Full Changelog: [v0.1.0-alpha.52...v0.1.0-alpha.53](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.52...v0.1.0-alpha.53)
+
+### Features
+
+* **api:** api update ([458a390](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/458a390c2d22db1d29377634e6a2f62245f9f213))
+
+
+### Documentation
+
+* **mcp:** document code execution modes and the local code runner ([c2ec7e7](https://github.com/bluehive-health/bluehive-sdk-typescript/commit/c2ec7e727105131a1e2a2b17ae350ffd98805d89))
+
 ## 0.1.0-alpha.52 (2026-08-21)
 
 Full Changelog: [v0.1.0-alpha.51...v0.1.0-alpha.52](https://github.com/bluehive-health/bluehive-sdk-typescript/compare/v0.1.0-alpha.51...v0.1.0-alpha.52)
