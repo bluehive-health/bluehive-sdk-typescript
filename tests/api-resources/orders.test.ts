@@ -238,11 +238,7 @@ describe('resource orders', () => {
 
   // Mock server tests are disabled
   test.skip('uploadResults: only required params', async () => {
-    const responsePromise = client.orders.uploadResults('orderId', {
-      captchaToken: 'x',
-      orderAccessCode: 'x',
-      serviceId: 'x',
-    });
+    const responsePromise = client.orders.uploadResults('orderId', { orderAccessCode: 'x', serviceId: 'x' });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -255,9 +251,9 @@ describe('resource orders', () => {
   // Mock server tests are disabled
   test.skip('uploadResults: required and optional params', async () => {
     const response = await client.orders.uploadResults('orderId', {
-      captchaToken: 'x',
       orderAccessCode: 'x',
       serviceId: 'x',
+      captchaToken: 'captchaToken',
       dob: '7321-69-10',
       fileIds: ['x'],
       files: [
