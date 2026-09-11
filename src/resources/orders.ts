@@ -77,7 +77,10 @@ export class Orders extends APIResource {
 
   /**
    * Upload test results for a specific order item. Supports both existing fileIds
-   * and base64 encoded files. Requires order access code and employee verification.
+   * and base64 encoded files. Public SPA requests require an order access code and
+   * CAPTCHA. Delegated requests require an internal API key and
+   * x-provider-spa-session, send base64 file contents, and the API stores them in
+   * BlueHive file storage.
    */
   uploadResults(
     orderID: string,
@@ -310,6 +313,8 @@ export namespace OrderSendForEmployeeResponse {
 }
 
 export interface OrderUploadResultsResponse {
+  fileIds?: Array<string>;
+
   message?: string;
 
   success?: boolean;
@@ -939,11 +944,11 @@ export namespace OrderSendForEmployeeParams {
 }
 
 export interface OrderUploadResultsParams {
-  captchaToken: string;
-
   orderAccessCode: string;
 
   serviceId: string;
+
+  captchaToken?: string;
 
   /**
    * Date of birth in YYYY-MM-DD format

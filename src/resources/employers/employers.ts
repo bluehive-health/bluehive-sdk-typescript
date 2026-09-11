@@ -68,6 +68,8 @@ export interface EmployerCreateResponse {
 
   onsiteClinic?: boolean;
 
+  status?: 'active' | 'waitlisted';
+
   website?: string;
 }
 
